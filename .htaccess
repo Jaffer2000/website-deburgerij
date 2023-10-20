@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteBase /wijkcentrumdeburgerij
+
+RewriteRule ^homepage              index.php?pagina=homepage
+RewriteRule ^overons               index.php?pagina=overons
+RewriteRule ^actueel               index.php?pagina=actueel
+RewriteRule ^agenda                index.php?pagina=agenda
+RewriteRule ^verhuur               index.php?pagina=verhuur
+RewriteRule ^contact               index.php?pagina=contact
+
+ErrorDocument 404 /wijkcentrumdeburgerij/404.php
