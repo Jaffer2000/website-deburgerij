@@ -1,3 +1,7 @@
+html, body{
+    background-color: #FAFAF5;
+}
+
 /* nav */
 .nav-list li {
     padding-top: 5px;
@@ -40,4 +44,13 @@ ul, ol {
     opacity: 0;
     visibility: hidden;
     transition: .22s ease;
+}
+
+
+
+/* contact */
+.contacth3{
+    text-align: center;
+    color: #03629D;
+    border: 1px solid gray;
 }
