@@ -51,7 +51,7 @@
                 $tekst = $row['tekst'];
 
                
-                echo "<h1>", $title, "</h1>";
+                echo "<h1>", $titel, "</h1>";
                 echo "<p>", $tekst, "</p>";
                
             }
@@ -67,5 +67,57 @@
 
     <div class="col-sm-2"></div> 
 
+</div>
+
+
+<div class="row">
+
+    <div class="col-sm-2"></div>
+
+
+    <div class="col-sm-8">google maps hier</div>
+
+    <div class="col-sm-2"></div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-sm-2"></div>
+
+
+    <div class="col-sm-8"> 
+        
+        <h2>Stel hier uw vraag!</h2>
+
+        <form class="contactform" action="">
+
+            <div>
+                <label for="naam" class="contactformnaam">Naam</label> <br>
+                <input class="contactform" type="text" name="naam" required>
+            </div>
+
+            <div>
+                <label for="email" class="contactformemail">Email</label> <br>
+                <input class="contactform" type="text" name="email" required>
+            </div>
+
+            <div>
+                <label for="bericht" class="contactformbericht">Bericht</label> <br>
+                <input class="contactform" type="text" name="bericht" required>
+            </div>
+
+            <div class="contactformbutten">
+                <input type="submit" name="submit" value="Verzenden">
+            </div>
+
+
+        </form> 
+
+
+
+    </div>
+
+    <div class="col-sm-2"></div>
 
 </div>
