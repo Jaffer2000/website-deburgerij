@@ -8,24 +8,36 @@
 
 
 <div class="row">
-    <div class="col-sm-4"></div>
-
-    <div class="col-sm-4">
+    <div class="col-sm-12" style="text-align: center;">
         <h3 class="contacth3">Service & contact</h3>
     </div>
-    <div class="col-sm-4"></div>
-
 </div>
 
 <div class="row">
 
     <div class="col-sm-3"></div>
 
-    <div class="col-sm-6">
-       <div> <p class="telnummer">0118-855523</p>  <p class="email">Wijkcentrumdeburgerij@gmail.com</p> </div>
-    </div>
+    <div class="col-sm-3">
+
+    <div style="border: 1px solid gold; display: flex; align-items: center;">
+    <span class="gg-phone" style="margin-right: 5px;"></span>
+    <p style="margin: 0;">0118-855523</p>
+</div>
+
+
+</div>
+
+
+<div class="col-sm-3">
+
+<div style="border: 1px solid gold; display: flex; align-items: center;">
+<span class="gg-phone" style="margin-right: 5px;"></span>
+<p style="margin: 0;">Wijkcentrumdeburgerij@gmail.com</p>
+</div>
 
     <div class="col-sm-3"></div>
+</div>
+
 </div>
 
 <div class="row">

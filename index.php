@@ -22,6 +22,9 @@ if (isset($_GET["pagina"])) {
     <!--Own css-->
     <link href="css/css.css" rel="stylesheet">
 
+    <!-- Icons -->
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+
 </head>
 
 <body>
