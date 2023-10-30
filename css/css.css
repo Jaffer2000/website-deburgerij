@@ -139,16 +139,48 @@ ul, ol {
 }
 
 .contactformnaamfill, .contactformemailfill {
-    width: 100%;
+    width: 80%;
     background-color: #A3D0EB;
     border-color: #A3D0EB;
     border-radius: 10px; /* Adjust the value to control the roundness of the corners */
 }
 
 .contactformberichtfill{
-    width: 100%;
+    width: 80%;
     height: 250px;
     background-color: #A3D0EB;
     border-color: #A3D0EB;
-    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+}
+
+.contactformbutton{
+    background-color: #E9603A;
+    font-weight: bold;
+    width: 120px;
+    height: 55px;
+    border-radius: 25px;
+    color: white;
+}
+
+.contactformbutten, .contactformcenter{
+    text-align: center;
+}
+
+.contactformspacing{
+    margin-bottom: 35px;
+}
+
+.contactformtekst{
+    border: 0px solid blue;
+    width: 25%;
+    margin-left: 10%;
+}
+
+.contactformnaam, .contactformemail, .contactformbericht{
+    color: #03629D;
+    font-weight: 600;
+}
+
+.contactformbox{
+    margin-bottom: 25px;
 }

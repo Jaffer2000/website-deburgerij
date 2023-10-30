@@ -104,26 +104,46 @@
 
         <form class="contactform" action="">
 
-            <div>
-                <label for="naam" class="contactformnaam">Naam</label> <br>
-                <input class="contactform contactformnaamfill" type="text" name="naam" required>
+            <div class="contactformbox">
+                <div class="contactformtekst">
+                    <label for="naam" class="contactformnaam">Naam</label> <br> 
+                </div>
+                
+                <div class="contactformcenter">
+                    <input class="contactform contactformnaamfill" type="text" name="naam" required>
+                </div>
+
             </div>
 
-            <div>
+            <div class="contactformbox">
+                <div class="contactformtekst">
                 <label for="email" class="contactformemail">Email</label> <br>
-                <input class="contactform contactformemailfill" type="text" name="email" required>
+                </div>
+                    <div class="contactformcenter">
+                        <input class="contactform contactformemailfill" type="text" name="email" required>
+                    </div>
             </div>
 
-            <div>
-                <label for="bericht" class="contactformbericht">Bericht</label> <br>
-                <input class="contactform contactformberichtfill" type="text" name="bericht" required>
+            <div class="contactformbox">
+                <div class="contactformtekst">
+                    <label for="bericht" class="contactformbericht">Bericht</label> <br> 
+                </div>
+
+                <div class="contactformcenter">
+                    <input class="contactform contactformberichtfill" type="text" name="bericht" required>
+                </div>
+            
             </div>
 
-            <div class="contactformbutten">
-                <input type="submit" name="submit" value="Verzenden">
+            <div class="contactformspacing"></div> 
+            
+            <div class="contactformbox">
+                <div class="contactformbutten">
+                    <input type="submit" name="submit" value="Verzenden" class="contactformbutton">
+                </div>
             </div>
 
-
+            <div class="contactformspacing"></div> 
         </form> 
 
 
