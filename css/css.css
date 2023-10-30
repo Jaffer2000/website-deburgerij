@@ -53,7 +53,7 @@ ul, ol {
 .contacth3{
     text-align: center;
     color: #03629D;
-    border: 1px solid gray;
+    font-weight: bold;
 }
 
 /* Phone icon */
@@ -64,8 +64,9 @@ ul, ol {
     width: 22px;
     height: 22px;
     transform: scale(var(--ggs,1));
-
+    color: orange;
  }
+ 
  .gg-phone::after,
  .gg-phone::before {
     content: "";
@@ -111,3 +112,43 @@ ul, ol {
  .telnummer{
     display: inline-block;
  }
+.openingstijdentitel{
+    font-weight: bold;
+    color: #03629D;
+    margin-top: 15%;
+}
+
+.openingstijdentekst{
+    color: #03629D;
+}
+
+.emailphonecss{
+    color: #03629D;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contactgegevens{
+    text-align: center;
+}
+
+.contacth2{
+    color: #03629D;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contactformnaamfill, .contactformemailfill {
+    width: 100%;
+    background-color: #A3D0EB;
+    border-color: #A3D0EB;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+}
+
+.contactformberichtfill{
+    width: 100%;
+    height: 250px;
+    background-color: #A3D0EB;
+    border-color: #A3D0EB;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+}
