@@ -126,19 +126,42 @@ ul, ol {
     color: #03629D;
     font-weight: bold;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 .contactgegevens{
     text-align: center;
 }
 
+.contactgegevens{
+    text-align: center;
+}
+
+.phonemargin{
+    margin-left: 200px;
+}
+
+.atbackground{
+    margin-left: 35px;
+    background-color: #E9603A;
+    width: 45px;
+    height: 45px;
+    padding: 10px 10px;
+    border-radius: 35px;
+}
+
+.atinfo{
+    color: white;
+}
+
 .contacth2{
     color: #03629D;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 35px;
 }
 
-.contactformnaamfill, .contactformemailfill {
+.contactformnaamfill, .contactformtelefoonnummerfill {
     width: 80%;
     background-color: #A3D0EB;
     border-color: #A3D0EB;
@@ -176,11 +199,23 @@ ul, ol {
     margin-left: 10%;
 }
 
-.contactformnaam, .contactformemail, .contactformbericht{
+.contactformnaam, .contactformtelefoonnummer, .contactformbericht{
     color: #03629D;
     font-weight: 600;
 }
 
 .contactformbox{
     margin-bottom: 25px;
+}
+
+.googlelocatie{
+    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+    margin-bottom: 45px;
+}
+
+.googlelocatielocatie{
+    color: #03629D;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
