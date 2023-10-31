@@ -219,3 +219,131 @@ ul, ol {
     font-size: 30px;
     margin-bottom: 20px;
 }
+
+
+
+
+/* verhuur */
+
+.verhuurh11{
+    color: #03629D;
+    text-align: center;
+    font-weight: bold;
+}
+
+.verhuurtekst1{
+    margin-top: -25px;
+    color: #03629D;
+    text-align: center;
+    font-weight: 600;
+}
+
+#prijslijstbutton{
+    background-color: #E9603A;
+    font-weight: bold;
+    width: 220px;
+    height: 55px;
+    border-radius: 25px;
+    color: white;
+}
+
+.prijslijstbuttondiv{
+    margin-top: 35px;
+    text-align: center;
+}
+
+.verhuurh12{
+    color: #03629D;
+    margin-left: 45px;
+    font-weight: bold;   
+}
+
+.verhuurtekst2{
+    color: #03629D;
+    margin-left: 45px;
+    font-weight: 600;  
+}
+
+.verhuurh13{
+    color: #03629D;
+    text-align: center;
+    font-weight: bold;  
+    margin-top: 50px;
+}
+
+.verhuurtekst3{
+    margin-top: -25px;
+    color: #03629D;
+    text-align: center;
+    font-weight: 600;   
+    font-size: 20px;
+}
+
+.verhuurh14{
+    color: #03629D;
+    font-weight: bold;  
+    margin-top: 85px;
+}
+
+.verhuurtekst4{
+    margin-top: -25px;
+    color: #03629D;
+    font-weight: 600;   
+    font-size: 20px;
+}
+
+.verhuurh15{
+    color: #03629D;
+    text-align: center;
+    font-weight: bold;  
+    margin-top: 50px;  
+}
+
+.bullet1, .bullet2, .bullet3{
+    color:#03629D;
+    margin-left: 45px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.verhuurklaarh1{
+    text-align: center;
+    color: #03629D;
+    font-weight: bold;
+}
+
+.verhuurh36{
+    margin-top: -25px;
+    text-align: center;
+    font-weight: 600;
+    color: #03629D;
+}
+
+.verhuurh16{
+    color: #03629D;
+    font-weight: bold;
+}
+
+.verhuurtekst6{
+    color: #03629D;
+    font-weight: 600;
+}
+
+.orange-dot {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 55px;
+}
+
+.orange-dot::before {
+    content: "\2022"; /* Unicode character for bullet point */
+    color: orange;
+    font-size: 50px; /* Adjust the dot size */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px; /* Adjust the distance between dot and text */
+}
+
+
+
