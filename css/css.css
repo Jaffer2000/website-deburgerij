@@ -95,14 +95,6 @@ ul, ol {
     text-decoration: underline;
 }
 
-.contactgegevens{
-    text-align: center;
-}
-
-.contactgegevens{
-    text-align: center;
-}
-
 .phonemargin{
     margin-left: 200px;
 }
@@ -190,6 +182,15 @@ ul, ol {
     width: 20%;
     margin-top: -75px;
     margin-right: -40px;
+}
+
+.contactgegevens{
+    margin-top: 25px;
+    text-align: right;
+}
+
+.telefoondiv{
+    border: 1px solid gold;
 }
 
 
