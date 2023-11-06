@@ -349,3 +349,117 @@ ul, ol {
 .img4right{
     text-align: right;
 }
+
+
+/* Over ons */
+.overonsh11{
+    color: #03629D;
+    font-weight: bold;
+    
+}
+
+.overonsp11{
+    color: #03629D;
+    font-size: 20px;
+    font-weight: 600;
+    width: 75%;
+
+}
+
+.overonsfoto1{
+    border: 1px solid gold;
+}
+
+.overonsh12{
+    color: #03629D;
+    font-weight: bold;
+    margin-left: 275px;
+}
+
+.overonsp12{
+    color: #03629D;
+    font-size: 20px;
+    font-weight: 600;
+    width: 75%;
+    text-align: right;
+    margin-left: 225px;
+    
+}
+
+.overonsfoto2{
+    border: 1px solid gold;
+}
+
+.overonsh13{
+    color: #03629D;
+    font-weight: bold;
+    
+}
+
+.overonsp13{
+    color: #03629D;
+    font-size: 20px;
+    font-weight: 600;
+    width: 60%;
+
+}
+
+.overonsfoto3{
+    border: 1px solid gold;
+    width: 65%;
+}
+
+.overonsfoto3right{
+    text-align: right;
+}
+
+.overonsh14{
+    color: #03629D;
+    font-weight: bold;
+    margin-left: 275px;
+}
+
+.overonsp14{
+    color: #03629D;
+    font-size: 20px;
+    font-weight: 600;
+    width: 75%;
+    text-align: right;
+    margin-left: 225px;
+}
+
+.overonsfoto4{
+    border: 1px solid gold;
+    width: 65%;
+}
+
+.overonsfoto3left{
+    text-align: left;
+}
+
+#beleidsplanbutton, #Wijkplanbutton, #Vrijwilligersbeleidbutton{
+    width: 250px;
+    height: 55px;
+    border-radius: 25px;
+    background-color: #E8613C;
+    border: 0px;
+    font-weight: bold;
+    color: white;
+}
+
+.pdffoto{
+    background-color: white;
+    width: 15%;  
+}
+
+.buttonoveronsalign{
+    text-align: center;
+}
+
+.buttonoveronsalignbeleidsplan{
+    text-align: right;
+}
+
+.buttonoveronsalignvrijwilligers{
+    text-align: left;
+}
