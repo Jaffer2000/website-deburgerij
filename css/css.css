@@ -1,5 +1,7 @@
 body {
     background-color: #FAFAF5 !important;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -48,66 +50,30 @@ ul, ol {
 }
 
 
+/* universeel CSS */
+.contactbackgroundimg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 67vh;
+    width: 100%;
+    margin-top: -50px;
+}
 
+.headertext{
+    font-size: 75px;
+    color: white;
+    padding-top: 225px;
+    padding-left: 305px;
+}
+ 
 /* contact */
+
 .contacth3{
     text-align: center;
     color: #03629D;
     font-weight: bold;
 }
-
-/* Phone icon */
-.gg-phone {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    width: 22px;
-    height: 22px;
-    transform: scale(var(--ggs,1));
-    color: orange;
- }
- 
- .gg-phone::after,
- .gg-phone::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
- }
- .gg-phone::after {
-    width: 18px;
-    height: 18px;
-    border-top-left-radius: 1px;
-    border-bottom-right-radius: 1px;
-    border-bottom-left-radius: 12px;
-    border-left: 4px solid;
-    border-bottom: 4px solid;
-    left: 2px;
-    bottom: 2px;
-    background:
-       linear-gradient(
-          to left,
-          currentColor 10px,
-          transparent 0
-       ) no-repeat right 11px/6px 4px,
-       linear-gradient(
-          to left,
-          currentColor 10px,
-          transparent 0
-       ) no-repeat -1px 0/4px 6px
- }
- .gg-phone::before {
-    width: 20px;
-    height: 20px;
-    border: 6px double;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    bottom: 2px;
-    left: 2px
- }
 
  .telnummer{
     display: inline-block;
@@ -220,7 +186,11 @@ ul, ol {
     margin-bottom: 20px;
 }
 
-
+.telcontact, .emailcontact{
+    width: 20%;
+    margin-top: -75px;
+    margin-right: -40px;
+}
 
 
 /* verhuur */
@@ -236,6 +206,7 @@ ul, ol {
     color: #03629D;
     text-align: center;
     font-weight: 600;
+    font-size: 20px;
 }
 
 #prijslijstbutton{
@@ -250,18 +221,21 @@ ul, ol {
 .prijslijstbuttondiv{
     margin-top: 35px;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .verhuurh12{
     color: #03629D;
-    margin-left: 45px;
-    font-weight: bold;   
+    margin-left: 430px;
+    font-weight: bold; 
+    
 }
 
 .verhuurtekst2{
     color: #03629D;
-    margin-left: 45px;
+    margin-left: 430px;
     font-weight: 600;  
+    font-size: 20px;
 }
 
 .verhuurh13{
@@ -269,6 +243,7 @@ ul, ol {
     text-align: center;
     font-weight: bold;  
     margin-top: 50px;
+   
 }
 
 .verhuurtekst3{
@@ -277,12 +252,13 @@ ul, ol {
     text-align: center;
     font-weight: 600;   
     font-size: 20px;
+    margin-bottom: 100px;
 }
 
 .verhuurh14{
     color: #03629D;
     font-weight: bold;  
-    margin-top: 85px;
+    margin-top: -60px;
 }
 
 .verhuurtekst4{
@@ -290,6 +266,8 @@ ul, ol {
     color: #03629D;
     font-weight: 600;   
     font-size: 20px;
+    width: 60%;
+    padding-left: 20px;
 }
 
 .verhuurh15{
@@ -320,6 +298,7 @@ ul, ol {
 }
 
 .verhuurh16{
+    padding-left: -150px;
     color: #03629D;
     font-weight: bold;
 }
@@ -345,5 +324,28 @@ ul, ol {
     left: -20px; /* Adjust the distance between dot and text */
 }
 
+.verhuurimg2{
+    width: 50%;
+}
 
+.verhuurimg3{
+    width: 50%;
+}
 
+.paddingbullet{
+    padding-top: 15px;
+}
+
+.img3right{
+    text-align: right;
+}
+
+.verhuurimg4{
+    width: 75%;
+    margin-top: -150px;
+    margin-right: -150px;
+}
+
+.img4right{
+    text-align: right;
+}

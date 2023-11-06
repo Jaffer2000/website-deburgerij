@@ -1,6 +1,6 @@
 <?php 
     // Prepare the query
-    $query = "SELECT id, titel1, tekst1, titel2, tekst2, titel3, tekst3, titel4, tekst4, titel5, Bullet1, Bullet2, Bullet3, titel6, tekst6 FROM verhuur ";
+    $query = "SELECT id, titel1, tekst1, titel2, tekst2, titel3, tekst3, titel4, tekst4, titel5, Bullet1, Bullet2, Bullet3, titel6, tekst6, img1, img2, img3, img4 FROM verhuur ";
 
     // Execute the query
     $result = $conn->query($query);
@@ -29,10 +29,15 @@
 
             $titel6 = $row['titel6'];
             $tekst6 = $row['tekst6'];
+
+            $backgroundImagePath = $row['img1'];
+            $img2 = $row['img2'];
+            $img3 = $row['img3'];
+            $img4 = $row['img4'];
                
         }
     } else {
-        echo "Der is geen tekst gevonden!";
+        echo "Der is geen data gevonden!";
     }
 
     // Close the result set
@@ -49,8 +54,8 @@
 
 <div class="row">
 
-    <div class="jumbotron">
-        <p> Verhuur</p>
+    <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
+    <h1 class="headertext">Verhuur</h1>
     </div>
 
 </div>
@@ -86,7 +91,7 @@
 
     <div class="col-sm-6">
 
-        <img class="verhuurimg1" alt="img1" src="#">
+        <img class="verhuurimg2" alt="img2" src="img/<?php echo $img2 ?>">
 
     </div>
 
@@ -98,6 +103,7 @@
 
         <?php 
             echo"<h1 class=\"verhuurh13\">$titel3</h1>";
+            
             echo "<br>";
             echo "<p class=\"verhuurtekst3\">$tekst3</p>";
         ?>
@@ -108,9 +114,9 @@
 
 <div class="row">
 
-    <div class="col-sm-6">
+    <div class="col-sm-6 img3right">
 
-        <img class="verhuurimg2" alt="img2" src="#">
+        <img class="verhuurimg3" alt="img3" src="img/<?php echo $img3 ?>">
 
     </div>
 
@@ -128,19 +134,23 @@
 
 <div class="row">
 
-        <div class="col-sm-12">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6">
 
             <?php
                 echo"<h1 class=\"verhuurh15\">$titel5</h1>";
                 echo"<br>";
-                echo '<span class="orange-dot"><span class="bullet1">' . $bullet1 . '</span></span> <br>';
-                echo '<span class="orange-dot"><span class="bullet2">' . $bullet2 . '</span></span> <br>';
-                echo '<span class="orange-dot"><span class="bullet3">' . $bullet3 . '</span></span>';
+                echo '<div class="paddingbullet"><span class="orange-dot "><span class="bullet1">' . $bullet1 . '</span></span> <br></div>';
+                echo '<div class="paddingbullet"><span class="orange-dot"><span class="bullet2">' . $bullet2 . '</span></span> <br></div>';
+                echo '<div class="paddingbullet"><span class="orange-dot"><span class="bullet3">' . $bullet3 . '</span></span></div>';
 
 
             ?>
 
         </div>
+
+        <div class="col-sm-3"></div>
 
 </div>
 
@@ -160,22 +170,22 @@
 
 </div>
 
-
 <div class="row">
 
-    <div class="col-sm-6">
+<div class="col-sm-6 img4right">
 
-        <img class="verhuurimg3" alt="img3" src="#">
+        <img class="verhuurimg4" alt="img4" src="img/<?php echo $img4 ?>">
 
     </div>
-
     <div class="col-sm-6">
-
-        <?php
+        
+        <?php 
             echo"<h1 class=\"verhuurh16\">$titel6 </h1>";
             echo "<p class=\"verhuurtekst6\">$tekst6</p>";
         ?>
 
     </div>
+
+    
 
 </div>
