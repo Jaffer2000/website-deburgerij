@@ -223,6 +223,28 @@ ul {
   }
 }
 
+/* 404 */
+
+.rowpadding404{
+    padding-top: 75px;
+}
+
+.h1404{
+    text-align: center;
+    color: #03629D;
+    font-size: bold;
+}
+
+.p404{
+    text-align: none;
+    color: #03629D;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.a404{
+    color: #a2be70;
+}
 
 
 /* universeel CSS */
