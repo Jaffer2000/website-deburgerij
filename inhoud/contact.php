@@ -37,32 +37,25 @@
     </div>
 </div>
 
-<div class="row contactgegevens">
-
+<div class="row ">
     <div class="col-sm-6">
-        <!-- aan gpt vragen of die kan helpen, heb de display flex nodig zodat het aan mekaar staat maar kan nu niet naar rechts alignen met text-algin right -->
         <div class="telefoondiv">
-            <div style="display: flex;">
+            <div style="display: flex; align-items: center; justify-content: flex-end;">
                 <img src="img/telcontact.png" class="telcontact" alt="telefoonnummer">
                 <p style="margin: 0;" class="emailphonecss">0118-855523</p>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-6">
-
-        <div style="display: flex;">
-
+    <div class="col-sm-6 justify-content-start">
+        <div style="display: flex; align-items: center;">
             <img src="img/At.png" class="emailcontact" alt="telefoonnummer">
             <p style="margin: 0;" class="emailphonecss">Wijkcentrumdeburgerij@gmail.com</p>
-
         </div>
-
     </div>
-
 </div>
 
-</div>
+
 
 <div class="row">
 

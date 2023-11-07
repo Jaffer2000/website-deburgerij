@@ -49,6 +49,181 @@ ul, ol {
     transition: .22s ease;
 }
 
+.custom-header {
+  background-color: #c0db8f;
+  padding: 32px 0;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: -197px;
+  width: 370px;
+  height: 370px;
+  border-radius: 70% / 55%;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+.navbar {
+  justify-content: flex-end;
+  position: relative;
+}
+
+.nav-item {
+  margin: 0px; /* Adjust this value for more space between links */
+}
+
+.nav-link {
+  color: #01619d;
+  font-weight: 800;
+}
+
+ul {
+  margin-left: 45%;
+}
+
+.search-icon {
+  fill: #01619d;
+  position: absolute;
+  top: 50%; /* Adjust this value to vertically center the icon */
+  right: 10px; /* Adjust this value to control the horizontal position */
+  transform: translateY(-50%); /* Vertically center the icon */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -70%;
+  width: 70%;
+  height: 100%;
+  padding-top: 8%;
+  background-color: #c0db8f;
+  z-index: 1;
+  transition: right 0.3s ease;
+  color: #01619d;
+}
+
+.sidebar ul li a {
+  color: #01619d;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 0;
+}
+
+/* Add styles for the "X" button to close the sidebar */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  color: #01619d;
+  border: none;
+  position: relative;
+}
+
+/* Media query for tablet and mobile devices */
+@media (max-width: 768px) {
+  .custom-header {
+    padding: 12px 0;
+  }
+
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .sidebar-square {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #e9603a;
+    margin-left: 8%;
+    margin-right: 10px;
+  }
+
+  .sidebar-line {
+    border-top: 2px solid #a2be70;
+    margin-top: 12px;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+
+  .content {
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  .sidebar-open .content {
+    transform: translateX(
+      -70%
+    ); /* Move the content to the left when the sidebar is open */
+  }
+
+  /* Apply styles to the content when the sidebar is open */
+  .sidebar-open .custom-header {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .logo-container {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .sidebar {
+    right: 0;
+  }
+
+  button {
+    margin-right: 7%;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none; /* Remove the underline */
+  }
+}
+
+
 
 /* universeel CSS */
 .contactbackgroundimg {
@@ -119,11 +294,12 @@ ul, ol {
     margin-bottom: 35px;
 }
 
-.contactformnaamfill, .contactformtelefoonnummerfill {
+.contactformnaamfill, .contactformtelefoonnummerfill  {
     width: 80%;
     background-color: #A3D0EB;
     border-color: #A3D0EB;
     border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
 }
 
 .contactformberichtfill{
@@ -176,22 +352,24 @@ ul, ol {
     font-weight: 700;
     font-size: 30px;
     margin-bottom: 20px;
+    width: 75%;
 }
 
-.telcontact, .emailcontact{
+.telcontact, .emailcontact {
     width: 20%;
-    margin-top: -75px;
-    margin-right: -40px;
+    margin-right: -50px;
+    margin-left: -50px;
 }
 
-.contactgegevens{
+.contactgegevens {
     margin-top: 25px;
     text-align: right;
 }
 
-.telefoondiv{
-    border: 1px solid gold;
+.telefoondiv {
+    padding: 10px; /* Add padding for better appearance */
 }
+
 
 
 /* verhuur */
@@ -307,6 +485,7 @@ ul, ol {
 .verhuurtekst6{
     color: #03629D;
     font-weight: 600;
+    width: 65%;
 }
 
 .orange-dot {
