@@ -68,6 +68,10 @@ ul, ol {
   overflow: hidden;
 }
 
+.logo-image {
+  z-index: 1;
+}
+
 .logo-img {
   max-width: 100%;
   height: auto;
@@ -82,7 +86,7 @@ ul, ol {
 }
 
 .nav-item {
-  margin: 0px; /* Adjust this value for more space between links */
+  margin: 0px;
 }
 
 .nav-link {
@@ -97,9 +101,9 @@ ul {
 .search-icon {
   fill: #01619d;
   position: absolute;
-  top: 50%; /* Adjust this value to vertically center the icon */
-  right: 10px; /* Adjust this value to control the horizontal position */
-  transform: translateY(-50%); /* Vertically center the icon */
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
 }
 
 /* Sidebar Styles */
@@ -130,18 +134,59 @@ ul {
   padding: 0;
 }
 
-/* Add styles for the "X" button to close the sidebar */
-.close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
 .navbar-toggler {
   color: #01619d;
   border: none;
   position: relative;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #a2be70;
+  margin-top: 4%;
+}
+
+.info {
+  background-color: #c0db8f;
+  color: #606060;
+  padding-top: 3%;
+  padding-bottom: 0.8%;
+}
+
+.navbar-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.navbar-footer a {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 5px 10px;
+  color: #606060;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.info p {
+  margin-left: 30%;
+}
+
+.boekhouden-logo {
+  margin-top: 11%;
+  margin-right: 2%;
 }
 
 /* Media query for tablet and mobile devices */
@@ -192,16 +237,13 @@ ul {
   }
 
   .content {
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    transition: transform 0.3s ease;
   }
 
   .sidebar-open .content {
-    transform: translateX(
-      -70%
-    ); /* Move the content to the left when the sidebar is open */
+    transform: translateX(-70%);
   }
 
-  /* Apply styles to the content when the sidebar is open */
   .sidebar-open .custom-header {
     transform: translateX(-70%);
   }
@@ -219,7 +261,54 @@ ul {
   }
 
   .sidebar ul li a {
-    text-decoration: none; /* Remove the underline */
+    text-decoration: none;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .navbar-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-footer a {
+    margin: 5px 6px;
+  }
+
+  .links {
+    margin: 10px 0;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  .boekhouden-logo,
+  .anbi-logo {
+    width: 100%;
+    max-width: 120px;
+    margin: 10px 0;
+  }
+
+  .boekhouden-logo {
+    width: 120px;
+    margin-top: 16%;
+    margin-right: 2%;
+  }
+
+  .anbi-logo {
+    width: 100px;
+  }
+
+  .info {
+    padding-top: 6%;
   }
 }
 
