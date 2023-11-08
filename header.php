@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo-container">
             <div class="logo-image">
-                <img src="images/burgerijlogomock.png" alt="Logo" class="logo-img">
+                <a href="homepage"><img src="images/burgerijlogomock.png" alt="Logo" class="logo-img"></a>
             </div>
         </div>
 
