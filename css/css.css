@@ -155,13 +155,13 @@ ul {
   display: flex;
   flex-direction: column;
   background-color: #a2be70;
-  margin-top: auto;
+  margin-top: 4%;
 }
 
 .info {
   background-color: #c0db8f;
   color: #606060;
-  padding-top: 3.5%;
+  padding-top: 3%;
   padding-bottom: 0.8%;
 }
 
