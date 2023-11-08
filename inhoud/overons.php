@@ -40,7 +40,7 @@
 <div class="row">
 
     <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
-    <h1 class="headertext">Verhuur</h1>
+    <h1 class="headertext">Over ons</h1>
     </div>
 
 </div>
@@ -133,30 +133,36 @@
 
 
 <div class="row">
-
-    <div class="col-sm-4 buttonoveronsalignbeleidsplan">
-
+    <div class="col-sm-4" style="text-align: right;">
         <div class="beleidsplan">
-            <button id="beleidsplanbutton" onClick="beleidsplan()">beleidsplan <img class="pdffoto" src="img/overonspdf.png" style="width:15%;"></button>
+            <button class="pdf-button">
+                beleidsplan
+                <div class="pdfbackground">
+                    <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
+                </div>
+            </button>
         </div>
-
     </div>
 
-    <div class="col-sm-4 buttonoveronsalign">
-
+    <div class="col-sm-4" style="text-align: center;">
         <div class="Wijkplan">
-            <button id="Wijkplanbutton" onClick="Wijkplan()">Wijkplan <img class="pdffoto" src="img/overonspdf.png" style="width:15%;"></button>
+            <button class="pdf-button">
+                Wijkplan
+                <div class="pdfbackground">
+                    <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
+                </div>
+            </button>
         </div>
-
     </div>
 
-    <div class="col-sm-4">
-
-        <div class="Vrijwilligers buttonoveronsalignvrijwilligers">
-            <button id="Vrijwilligersbeleidbutton" onClick="Vrijwilligersbeleid()">Vrijwilligersbeleid <img class="pdffoto" src="img/overonspdf.png" ></button>
+    <div class="col-sm-4" style="text-align: left;">
+        <div class="Vrijwilligers">
+            <button class="pdf-button">
+                Vrijwilligersbeleid
+                <div class="pdfbackground">
+                    <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
+                </div>
+            </button>
         </div>
-
     </div>
-
-
 </div>

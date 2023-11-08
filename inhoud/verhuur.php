@@ -144,8 +144,6 @@
                 echo '<div class="paddingbullet"><span class="orange-dot "><span class="bullet1">' . $bullet1 . '</span></span> <br></div>';
                 echo '<div class="paddingbullet"><span class="orange-dot"><span class="bullet2">' . $bullet2 . '</span></span> <br></div>';
                 echo '<div class="paddingbullet"><span class="orange-dot"><span class="bullet3">' . $bullet3 . '</span></span></div>';
-
-
             ?>
 
         </div>

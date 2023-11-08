@@ -478,10 +478,9 @@ ul {
     margin-top: 50px;  
 }
 
-.bullet1, .bullet2, .bullet3{
-    color:#03629D;
-    margin-left: 45px;
-    font-size: 20px;
+.bullet1, .bullet2, .bullet3 {
+    color: #03629D;
+    font-size: 1.1em; /* You can adjust the font size using em units */
     font-weight: 600;
 }
 
@@ -489,6 +488,7 @@ ul {
     text-align: center;
     color: #03629D;
     font-weight: bold;
+    padding-top: 5%;
 }
 
 .verhuurh36{
@@ -534,8 +534,8 @@ ul {
     width: 50%;
 }
 
-.paddingbullet{
-    padding-top: 15px;
+.paddingbullet {
+    padding-bottom: 0.5em; /* Adjust the padding as needed */
 }
 
 .img3right{
@@ -544,7 +544,7 @@ ul {
 
 .verhuurimg4{
     width: 75%;
-    margin-top: -150px;
+    margin-top: -15%;
     margin-right: -150px;
 }
 
@@ -607,7 +607,7 @@ ul {
 }
 
 .overonsfoto3{
-    border: 1px solid gold;
+    border: 0px solid gold;
     width: 65%;
 }
 
@@ -631,7 +631,7 @@ ul {
 }
 
 .overonsfoto4{
-    border: 1px solid gold;
+    border: 0px solid gold;
     width: 65%;
 }
 
@@ -639,29 +639,48 @@ ul {
     text-align: left;
 }
 
-#beleidsplanbutton, #Wijkplanbutton, #Vrijwilligersbeleidbutton{
-    width: 250px;
-    height: 55px;
-    border-radius: 25px;
-    background-color: #E8613C;
-    border: 0px;
-    font-weight: bold;
-    color: white;
-}
-
 .pdffoto{
     background-color: white;
     width: 15%;  
 }
 
-.buttonoveronsalign{
-    text-align: center;
+.pdf-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 30px;
+    background-color: #E8613C ; /* Orange background color */
+    border: none;
+    border-radius: 30px; /* Round border */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.buttonoveronsalignbeleidsplan{
-    text-align: right;
+.pdf-icon {
+    width: 55px; /* Adjust the width of the PDF icon */
+    height: 55px; /* Adjust the height of the PDF icon */
+    padding: 5px;
+   
 }
 
-.buttonoveronsalignvrijwilligers{
-    text-align: left;
+.pdfbackground{
+    margin-left: 25px;
+    margin-right: -25px;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.align-center {
+    text-align: center !important;
+}
+
+.align-left {
+    text-align: left !important;
 }
