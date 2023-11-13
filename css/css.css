@@ -678,7 +678,9 @@ ul {
 }
 
 .overonsfoto2{
-    border: 1px solid gold;
+    width: 100%;
+    margin-left: -25%;
+    margin-top: -19%;
 }
 
 .overonsh13{
@@ -687,12 +689,19 @@ ul {
     
 }
 
-.overonsp13{
-    color: #03629D;
-    font-size: 20px;
-    font-weight: 600;
-    width: 60%;
+#textContainer .visible-text {
+  color: green !important;
+}
 
+#textContainer .hidden-text {
+/* Styles for hidden text */
+color: red !important;
+}
+
+.read-more-text {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #007bff !important; /* Use !important to override conflicting styles */ 
 }
 
 .overonsfoto3{
