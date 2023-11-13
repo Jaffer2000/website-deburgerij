@@ -771,14 +771,37 @@ color: red !important;
     border-radius: 30px;
 }
 
-.align-right {
-    text-align: right !important;
+
+.row-centered .pdf-button {
+  margin: 0 100px; /* Voeg hier de gewenste ruimte toe tussen de knoppen */
 }
 
-.align-center {
-    text-align: center !important;
+
+
+.verkort {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Toon maximaal 3 regels */
+  -webkit-box-orient: vertical;
 }
 
-.align-left {
-    text-align: left !important;
+.toonVolledig {
+  -webkit-line-clamp: initial; /* Toon alle regels */
+}
+
+.hidden {
+  display: none;
+}
+
+
+#leesMeerBtn, #verminderBtn{
+  color: #E9603A;
+  font-weight: bold;
+}
+
+#volledigeTekst{
+  color: #03629D;
+  font-weight: 600;
+  font-size: 20px;
 }

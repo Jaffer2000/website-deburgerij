@@ -101,9 +101,16 @@
         <?php 
             echo"<h1 class=\"overonsh13\">$titel3</h1>";
             echo"<br>";
-            echo"<p class=\"overonsp13\">$tekst3</p>";
-            echo "<p onClick\"leesmeer()\">Lees meer</p>"
+            $volledigeTekst = $tekst3;
         ?>
+        
+        <p id="volledigeTekst" class="verkort"><?php echo $volledigeTekst; ?></p>
+        <a id="leesMeerBtn">Lees meer ></a>
+        <a id="verminderBtn" class="hidden">Lees minder ></a>
+
+    
+        
+        <script src="script.js" defer></script>
 
     </div>
 
@@ -132,32 +139,28 @@
 </div>
 
 
-<div class="row">
-    <div class="col-sm-4" style="text-align: right;">
+<div class="row" >
+    <div class="col-sm-12" style="display: flex; justify-content: center;">
         <div class="beleidsplan">
-            <button class="pdf-button">
+            <button class="pdf-button" style="margin: 0 10px;">
                 beleidsplan
                 <div class="pdfbackground">
                     <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
                 </div>
             </button>
         </div>
-    </div>
 
-    <div class="col-sm-4" style="text-align: center;">
         <div class="Wijkplan">
-            <button class="pdf-button">
+            <button class="pdf-button" style="margin: 0 10px;">
                 Wijkplan
                 <div class="pdfbackground">
                     <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
                 </div>
             </button>
         </div>
-    </div>
 
-    <div class="col-sm-4" style="text-align: left;">
         <div class="Vrijwilligers">
-            <button class="pdf-button"></button>
+            <button class="pdf-button" style="margin: 0 10px;">
                 Vrijwilligersbeleid
                 <div class="pdfbackground">
                     <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
