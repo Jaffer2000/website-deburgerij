@@ -53,7 +53,9 @@ ul, ol {
   background-color: #c0db8f;
   padding: 32px 0;
   position: relative;
+  z-index: 1;
 }
+
 
 .logo-container {
   position: absolute;
@@ -273,6 +275,8 @@ ul {
     font-size: 14px;
   }
 
+  /* Footer */
+
   .navbar-footer {
     flex-direction: column;
     text-align: center;
@@ -338,20 +342,36 @@ ul {
 
 /* universeel CSS */
 .contactbackgroundimg {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 67vh;
-    width: 100%;
-    margin-top: -50px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75vh;
+  width: 100%;
+  margin-top: -50px;
 }
 
-.headertext{
-    font-size: 75px;
-    color: white;
-    padding-top: 225px;
-    padding-left: 305px;
+.contactbackgroundimg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 98, 157, 0.5); /* RGB-waarden van lichtblauw met een transparantie van 0.5 */
+  z-index: 0; /* Zet de z-index naar 0, zodat de transparante laag onder de tekst ligt */
 }
+
+.headertext {
+  font-size: 75px;
+  color: white;
+  padding-top: 15%;
+  padding-left: 15%;
+  position: relative; /* Voeg position: relative toe aan de tekst om de z-index te beïnvloeden */
+  z-index: 1; /* Zet de z-index naar 1, zodat de tekst boven de transparante laag ligt */
+}
+
+
  
 /* contact */
 
