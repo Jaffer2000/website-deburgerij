@@ -2,7 +2,6 @@ body {
   background-color: #fafaf5 !important;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 /* nav */
@@ -69,7 +68,6 @@ ol {
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  z-index: 1;
 }
 
 .logo-image {
@@ -149,8 +147,6 @@ ul {
   flex-direction: column;
   background-color: #a2be70;
   margin-top: 4%;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 .info {
@@ -158,10 +154,6 @@ ul {
   color: #606060;
   padding-top: 3%;
   padding-bottom: 0.8%;
-}
-
-.info p {
-  margin-left: 30%;
 }
 
 .navbar-footer {
@@ -190,6 +182,10 @@ ul {
   margin-left: 8%;
 }
 
+.info p {
+  margin-left: 30%;
+}
+
 .boekhouden-logo {
   margin-top: 11%;
   margin-right: 2%;
@@ -199,6 +195,19 @@ ul {
 @media (max-width: 768px) {
   .custom-header {
     padding: 12px 0;
+  }
+
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
   }
 
   .navbar-nav {
@@ -265,8 +274,6 @@ ul {
     margin-left: 0;
     font-size: 14px;
   }
-
-  /* Footer */
 
   .navbar-footer {
     flex-direction: column;
@@ -988,19 +995,11 @@ ul {
   font-weight: bold;
 }
 
-#textContainer .visible-text {
-  color: green !important;
-}
-
-#textContainer .hidden-text {
-  /* Styles for hidden text */
-  color: red !important;
-}
-
-.read-more-text {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #007bff !important; /* Use !important to override conflicting styles */
+.overonsp13 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 60%;
 }
 
 .overonsfoto3 {
