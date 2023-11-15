@@ -676,10 +676,12 @@ ul {
   font-weight: bold;
   color: #03629d;
   margin-top: 15%;
+  margin-left: 2%;
 }
 
 .openingstijdentekst {
   color: #03629d;
+  margin-left: 2%;
 }
 
 .emailphonecss {
@@ -715,7 +717,7 @@ ul {
 
 .contactformnaamfill,
 .contactformtelefoonnummerfill {
-  width: 80%;
+  width: 65%;
   background-color: #a3d0eb;
   border-color: #a3d0eb;
   border-radius: 10px; /* Adjust the value to control the roundness of the corners */
@@ -723,7 +725,7 @@ ul {
 }
 
 .contactformberichtfill {
-  width: 80%;
+  width: 65%;
   height: 250px;
   background-color: #a3d0eb;
   border-color: #a3d0eb;
@@ -751,7 +753,7 @@ ul {
 .contactformtekst {
   border: 0px solid blue;
   width: 25%;
-  margin-left: 10%;
+  margin-left: 17.5%;
 }
 
 .contactformnaam,
@@ -776,6 +778,7 @@ ul {
   font-size: 30px;
   margin-bottom: 20px;
   width: 75%;
+  margin-left: 15%;
 }
 
 .telcontact,
@@ -792,6 +795,10 @@ ul {
 
 .telefoondiv {
   padding: 10px; /* Add padding for better appearance */
+}
+
+.googlefotolocatie{
+  text-align: center;
 }
 
 /* verhuur */
