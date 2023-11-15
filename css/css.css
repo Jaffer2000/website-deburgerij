@@ -674,7 +674,21 @@ ul {
 .openingstijdentekst {
   color: #03629d;
 }
+.rowcustom {
+  justify-content: flex-start; /* Voeg deze regel toe om de inhoud naar links uit te lijnen */
+}
 
+.telcontact, .emailcontact {
+  width: 20%;
+  margin-right: -50px;
+  margin-left: -50px;
+}
+
+.telefoondiv {
+  padding: 10px; /* Voeg padding toe voor een betere uitstraling */
+}
+
+<<<<<<< Updated upstream
 .emailphonecss {
   color: #03629d;
   font-weight: bold;
@@ -697,6 +711,13 @@ ul {
 
 .atinfo {
   color: white;
+=======
+.emailphonecss{
+  color: #03629D;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+>>>>>>> Stashed changes
 }
 
 .contacth2 {
@@ -706,6 +727,7 @@ ul {
   margin-bottom: 35px;
 }
 
+<<<<<<< Updated upstream
 .contactformnaamfill,
 .contactformtelefoonnummerfill {
   width: 80%;
@@ -730,6 +752,36 @@ ul {
   height: 55px;
   border-radius: 25px;
   color: white;
+=======
+.contactformnaamfill, .contactformtelefoonnummerfill  {
+    width: 55%;
+    background-color: #A3D0EB;
+    border-color: #A3D0EB;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
+}
+
+.contactformberichtfill{
+    width: 55%;
+    height: 250px;
+    background-color: #A3D0EB;
+    border-color: #A3D0EB;
+    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+}
+
+.contactformtekst {
+  border-color: transparent !important;
+}
+
+
+.contactformbutton{
+    background-color: #E9603A;
+    font-weight: bold;
+    width: 120px;
+    height: 55px;
+    border-radius: 25px;
+    color: white;
+>>>>>>> Stashed changes
 }
 
 .contactformbutten,
@@ -747,6 +799,7 @@ ul {
   margin-left: 10%;
 }
 
+<<<<<<< Updated upstream
 .contactformnaam,
 .contactformtelefoonnummer,
 .contactformbericht {
@@ -777,15 +830,49 @@ ul {
   margin-right: -50px;
   margin-left: -50px;
 }
+=======
+.contactformnaam, .contactformtelefoonnummer, .contactformbericht{
+    color: #03629D;
+    font-weight: 600;
+    padding-left: 50%;
+}
+
+
+
+.contactformbox{
+    margin-bottom: 25px;
+}
+
+.googlefotolocatie{
+  text-align: center;
+}
+
+.googlelocatie{
+    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+    margin-bottom: 45px;
+}
+
+.googlelocatielocatie{
+    color: #03629D;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 25% ;
+  }
+>>>>>>> Stashed changes
 
 .contactgegevens {
   margin-top: 25px;
   text-align: right;
 }
 
+<<<<<<< Updated upstream
 .telefoondiv {
   padding: 10px; /* Add padding for better appearance */
 }
+=======
+
+>>>>>>> Stashed changes
 
 /* verhuur */
 
