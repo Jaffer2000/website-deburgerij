@@ -195,209 +195,6 @@ ul {
   margin-right: 2%;
 }
 
-/* Media query for tablet and mobile devices */
-@media (max-width: 768px) {
-  .custom-header {
-    padding: 12px 0;
-  }
-
-  .navbar-nav {
-    display: none;
-  }
-
-  ul {
-    margin-left: 0;
-  }
-
-  .navbar-toggler:focus {
-    outline: none;
-  }
-
-  .sidebar-square {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #e9603a;
-    margin-left: 8%;
-    margin-right: 10px;
-  }
-
-  .sidebar-line {
-    border-top: 2px solid #a2be70;
-    margin-top: 12px;
-    padding-bottom: 5%;
-    width: 100%;
-  }
-
-  .content {
-    transition: transform 0.3s ease;
-  }
-
-  .sidebar-open .content {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .custom-header {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .logo-container {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .sidebar {
-    right: 0;
-  }
-
-  button {
-    margin-right: 7%;
-  }
-
-  .sidebar ul li a {
-    text-decoration: none;
-  }
-
-  .info {
-    text-align: center;
-  }
-
-  .info p {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
-  /* Footer */
-
-  .navbar-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-footer a {
-    margin: 5px 6px;
-  }
-
-  .links {
-    margin: 10px 0;
-  }
-
-  .social-icons {
-    margin-left: 0;
-  }
-
-  .boekhouden-logo,
-  .anbi-logo {
-    width: 100%;
-    max-width: 120px;
-    margin: 10px 0;
-  }
-
-  .boekhouden-logo {
-    width: 120px;
-    margin-top: 16%;
-    margin-right: 2%;
-  }
-
-  .anbi-logo {
-    width: 100px;
-  }
-
-  .info {
-    padding-top: 6%;
-  }
-
-  .info p {
-    font-size: 14px;
-    margin-left: 20%;
-  }
-
-  .homeh1-1 {
-    font-size: 26px;
-    padding: 0 2%;
-  }
-
-  .homeh1-2 {
-    font-size: 26px;
-  }
-
-  .hometekst1 {
-    max-width: 95%;
-    font-size: 14px;
-  }
-
-  .breaks {
-    display: none;
-  }
-
-  .buttons-homepage {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .overons-homepage {
-    margin-top: -100px;
-  }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 750px) {
-  .logo-container {
-    width: 220px;
-    height: 220px;
-    top: -120px;
-    border-radius: 70%;
-  }
-
-  .logo-img {
-    padding-bottom: 5%;
-    padding-left: 13%;
-    padding-right: 13%;
-  }
-
-  .welkom {
-    margin-top: 7%;
-  }
-
-  .container.references {
-    padding-top: 5%;
-  }
-
-  .square {
-    padding: 30px;
-    margin-bottom: 35px;
-  }
-
-  .overons-homepage {
-    margin-top: 30px;
-    padding-bottom: 8%;
-  }
-
-  .hometekst2 {
-    padding: 0 2px;
-  }
-
-  .overons-homepage-text {
-    margin-top: 20px;
-    padding: 30px;
-  }
-
-  .info {
-    text-align: center;
-  }
-
-  .info p {
-    margin-left: 0;
-  }
-
-  .jumbotron-img-home img {
-    height: 250px;
-  }
-
-  .jumbotron-content h1 {
-    font-size: 40px !important;
-  }
-}
-
 /* Homepage */
 
 .jumbotron-img-home {
@@ -445,6 +242,10 @@ ul {
   align-items: center;
   justify-content: center;
   border: none;
+}
+
+.jumbotron-content button:focus {
+  outline: none;
 }
 
 .welkom {
@@ -500,6 +301,12 @@ ul {
   align-items: center;
   justify-content: center;
   border: none;
+}
+
+.custom-button1:focus,
+.custom-button2:focus,
+.custom-button3:focus {
+  outline: none;
 }
 
 .homeh1-1 {
@@ -1099,4 +906,205 @@ ul {
   color: #03629d;
   font-weight: 600;
   font-size: 20px;
+}
+
+/* Media query for tablet and mobile devices */
+@media (max-width: 768px) {
+  .custom-header {
+    padding: 12px 0;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .sidebar-square {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #e9603a;
+    margin-left: 8%;
+    margin-right: 10px;
+  }
+
+  .sidebar-line {
+    border-top: 2px solid #a2be70;
+    margin-top: 12px;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+
+  .content {
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-open .content {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .custom-header {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .logo-container {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .sidebar {
+    right: 0;
+  }
+
+  button {
+    margin-right: 7%;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .navbar-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-footer a {
+    margin: 5px 6px;
+  }
+
+  .links {
+    margin: 10px 0;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  .boekhouden-logo,
+  .anbi-logo {
+    width: 100%;
+    max-width: 120px;
+    margin: 10px 0;
+  }
+
+  .boekhouden-logo {
+    width: 120px;
+    margin-top: 16%;
+    margin-right: 2%;
+  }
+
+  .anbi-logo {
+    width: 100px;
+  }
+
+  .info {
+    padding-top: 6%;
+  }
+
+  .info p {
+    font-size: 14px;
+    margin-left: 20%;
+  }
+
+  .homeh1-1 {
+    font-size: 26px;
+    padding: 0 2%;
+  }
+
+  .homeh1-2 {
+    font-size: 26px;
+  }
+
+  .hometekst1 {
+    max-width: 95%;
+    font-size: 20px;
+  }
+
+  .breaks {
+    display: none;
+  }
+
+  .buttons-homepage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .overons-homepage {
+    margin-top: -100px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 750px) {
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .welkom {
+    margin-top: 7%;
+  }
+
+  .container.references {
+    padding-top: 5%;
+  }
+
+  .square {
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  .overons-homepage {
+    margin-top: 30px;
+    padding-bottom: 8%;
+  }
+
+  .hometekst2 {
+    padding: 0 2px;
+  }
+
+  .overons-homepage-text {
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+  }
+
+  .jumbotron-img-home img {
+    height: 250px;
+  }
+
+  .jumbotron-content h1 {
+    font-size: 40px !important;
+  }
 }
