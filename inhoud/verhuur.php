@@ -45,17 +45,17 @@
 ?>
 
 <script>
-    // JavaScript function to navigate to a different page
-    function prijslijst() {
-        var url = "https://www.google.com";
-        window.open(url, "_blank"); // Opens the link in a new tab
-    }
+// JavaScript function to navigate to a different page
+function prijslijst() {
+    var url = "https://www.google.com";
+    window.open(url, "_blank"); // Opens the link in a new tab
+}
 </script>
 
 <div class="row">
 
-    <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
-    <h1 class="headertext">Verhuur</h1>
+    <div class="jumbotron jumbotron-img" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
+        <h1 class="headertext">Verhuur</h1>
     </div>
 
 </div>
@@ -68,11 +68,11 @@
               echo "<br>";
               echo "<p class=\"verhuurtekst1\">$tekst1</p>";
         ?>
-        
+
         <div class="prijslijstbuttondiv">
             <button id="prijslijstbutton" onClick="prijslijst()">Bekijk de prijslijst</button>
         </div>
-    
+
     </div>
 
 </div>
@@ -80,7 +80,7 @@
 <div class="row">
 
     <div class="col-sm-6">
-        
+
         <?php 
             echo"<h1 class=\"verhuurh12\">$titel2</h1>";
             echo "<br>";
@@ -122,23 +122,23 @@
 
     <div class="col-sm-6">
 
-    <?php 
+        <?php 
         echo"<h1 class=\"verhuurh14\">$titel4</h1>";
         echo "<br>";
         echo "<p class=\"verhuurtekst4\">$tekst4</p>";
     ?>
-    
+
     </div>
 
 </div>
 
 <div class="row">
 
-        <div class="col-sm-3"></div>
+    <div class="col-sm-3"></div>
 
-        <div class="col-sm-6">
+    <div class="col-sm-6">
 
-            <?php
+        <?php
                 echo"<h1 class=\"verhuurh15\">$titel5</h1>";
                 echo"<br>";
                 echo '<div class="paddingbullet"><span class="orange-dot "><span class="bullet1">' . $bullet1 . '</span></span> <br></div>';
@@ -146,37 +146,37 @@
                 echo '<div class="paddingbullet"><span class="orange-dot"><span class="bullet3">' . $bullet3 . '</span></span></div>';
             ?>
 
-        </div>
+    </div>
 
-        <div class="col-sm-3"></div>
+    <div class="col-sm-3"></div>
 
 </div>
 
 
 <div class="row">
 
-        <div class="col-sm-12">
+    <div class="col-sm-12">
 
-            <?php 
+        <?php 
                 echo" <br> <h1 class=\"verhuurklaarh1\">Klaar, nu opruimen !</h1> 
                 <br>
                 <h3 class=\"verhuurh36\">Der zijn verschillende schoonmaakmiddelen aanwezig</h3>";
                 echo "<br>";
             ?>
 
-        </div>
+    </div>
 
 </div>
 
 <div class="row">
 
-<div class="col-sm-6 img4right">
+    <div class="col-sm-6 img4right">
 
         <img class="verhuurimg4" alt="img4" src="img/<?php echo $img4 ?>">
 
     </div>
     <div class="col-sm-6">
-        
+
         <?php 
             echo"<h1 class=\"verhuurh16\">$titel6 </h1>";
             echo "<p class=\"verhuurtekst6\">$tekst6</p>";
@@ -184,6 +184,6 @@
 
     </div>
 
-    
+
 
 </div>

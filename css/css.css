@@ -1,52 +1,54 @@
 body {
-    background-color: #FAFAF5 !important;
-    margin: 0;
-    padding: 0;
+  background-color: #fafaf5 !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-
 
 /* nav */
 .nav-list li {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .nav-list li a:hover:before {
-    margin-left: 0;
-    opacity: 1;
-    visibility: visible;
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
-ul, ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 23px;
-    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
 }
 .social-container .col {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .nav-list li a:before {
-    content: "\f14f";
-    font: 400 21px/1 "Material Design Icons";
-    color: #5A9A96;
-    display: inline-block;
-    vertical-align: baseline;
-    margin-left: -28px;
-    margin-right: 7px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .22s ease;
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: #5a9a96;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.22s ease;
 }
 
 .custom-header {
@@ -66,6 +68,7 @@ ul, ol {
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .logo-image {
@@ -145,6 +148,8 @@ ul {
   flex-direction: column;
   background-color: #a2be70;
   margin-top: 4%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .info {
@@ -152,6 +157,10 @@ ul {
   color: #606060;
   padding-top: 3%;
   padding-bottom: 0.8%;
+}
+
+.info p {
+  margin-left: 30%;
 }
 
 .navbar-footer {
@@ -180,10 +189,6 @@ ul {
   margin-left: 8%;
 }
 
-.info p {
-  margin-left: 30%;
-}
-
 .boekhouden-logo {
   margin-top: 11%;
   margin-right: 2%;
@@ -193,19 +198,6 @@ ul {
 @media (max-width: 768px) {
   .custom-header {
     padding: 12px 0;
-  }
-
-  .logo-container {
-    width: 220px;
-    height: 220px;
-    top: -120px;
-    border-radius: 70%;
-  }
-
-  .logo-img {
-    padding-bottom: 5%;
-    padding-left: 13%;
-    padding-right: 13%;
   }
 
   .navbar-nav {
@@ -264,15 +256,6 @@ ul {
     text-decoration: none;
   }
 
-  .info {
-    text-align: center;
-  }
-
-  .info p {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
   .navbar-footer {
     flex-direction: column;
     text-align: center;
@@ -310,466 +293,757 @@ ul {
   .info {
     padding-top: 6%;
   }
+
+  .info p {
+    font-size: 14px;
+    margin-left: 20%;
+  }
+
+  .homeh1-1 {
+    font-size: 26px;
+    padding: 0 2%;
+  }
+
+  .homeh1-2 {
+    font-size: 26px;
+  }
+
+  .hometekst1 {
+    max-width: 95%;
+    font-size: 14px;
+  }
+
+  .breaks {
+    display: none;
+  }
+
+  .buttons-homepage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .overons-homepage {
+    margin-top: -100px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 750px) {
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .welkom {
+    margin-top: 7%;
+  }
+
+  .container.references {
+    padding-top: 5%;
+  }
+
+  .square {
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  .overons-homepage {
+    margin-top: 30px;
+    padding-bottom: 8%;
+  }
+
+  .hometekst2 {
+    padding: 0 2px;
+  }
+
+  .overons-homepage-text {
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+  }
+
+  .jumbotron-img-home img {
+    height: 250px;
+  }
+
+  .jumbotron-content h1 {
+    font-size: 40px !important;
+  }
+}
+
+/* Homepage */
+
+.jumbotron-img-home {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron-img-home img {
+  width: 100%;
+  margin-top: -24px;
+}
+
+.jumbotron-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+.jumbotron-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.jumbotron-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.jumbotron-content button {
+  border-radius: 50px;
+  width: 160px;
+  height: 60px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.welkom {
+  padding-top: 4%;
+  text-align: center;
+}
+
+.homeh1-1 {
+  color: #03629d;
+  font-weight: bold;
+}
+
+.homeh1-2 {
+  color: #03629d;
+  font-weight: bold;
+}
+
+.hometekst1 {
+  padding-top: 1%;
+  color: #03629d;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hometekst2 {
+  color: #03629d;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.buttons-homepage {
+  padding-top: 2%;
+  padding-bottom: 6%;
+}
+
+.container.references {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 40px; /* Add margin between squares */
+}
+
+.square img {
+  width: 100%; /* Adjust this as needed */
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.square-footer {
+  background-color: #3d67ad;
+  padding: 50px;
+  width: 100%; /* Adjust this as needed */
+  position: absolute;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
+
+.square-footer h3 {
+  position: absolute;
+  bottom: 0;
+  top: 18%;
+  font-size: 18px;
+  color: #fff;
+  left: 0;
+  right: 0;
+}
+
+.overons-homepage {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.overons-img {
+  padding-left: 7%;
+}
+
+.overons-img.img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.overons-homepage-text {
+  padding-right: 7%;
+  padding-top: 3%;
 }
 
 /* 404 */
 
-.rowpadding404{
-    padding-top: 75px;
+.rowpadding404 {
+  padding-top: 75px;
 }
 
-.h1404{
-    text-align: center;
-    color: #03629D;
-    font-size: bold;
+.h1404 {
+  text-align: center;
+  color: #03629d;
+  font-size: bold;
 }
 
-.p404{
-    text-align: none;
-    color: #03629D;
-    font-weight: 600;
-    font-size: 20px;
+.p404 {
+  text-align: none;
+  color: #03629d;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.a404{
-    color: #a2be70;
+.a404 {
+  color: #a2be70;
 }
-
 
 /* universeel CSS */
-.contactbackgroundimg {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 67vh;
-    width: 100%;
-    margin-top: -50px;
+.jumbotron-img {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 67vh;
+  margin-top: -50px;
 }
 
-.headertext{
-    font-size: 75px;
-    color: white;
-    padding-top: 225px;
-    padding-left: 305px;
+.headertext {
+  font-size: 75px;
+  color: white;
+  padding-top: 225px;
+  padding-left: 305px;
 }
- 
+
+.custom-button {
+  border-radius: 50px;
+  width: 170px;
+  height: 60px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.custom-button1 {
+  border-radius: 50px;
+  width: 180px;
+  height: 50px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.custom-button2 {
+  border-radius: 50px;
+  width: 250px;
+  height: 50px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.custom-button3 {
+  border-radius: 50px;
+  width: 180px;
+  height: 50px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.header-content {
+  margin-top: 10%;
+  margin-left: 10%;
+  color: #fff;
+}
+
 /* contact */
 
-.contacth3{
-    text-align: center;
-    color: #03629D;
-    font-weight: bold;
+.contacth3 {
+  text-align: center;
+  color: #03629d;
+  font-weight: bold;
 }
 
- .telnummer{
-    display: inline-block;
- }
-.openingstijdentitel{
-    font-weight: bold;
-    color: #03629D;
-    margin-top: 15%;
+.telnummer {
+  display: inline-block;
+}
+.openingstijdentitel {
+  font-weight: bold;
+  color: #03629d;
+  margin-top: 15%;
 }
 
-.openingstijdentekst{
-    color: #03629D;
+.openingstijdentekst {
+  color: #03629d;
 }
 
-.emailphonecss{
-    color: #03629D;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: underline;
+.emailphonecss {
+  color: #03629d;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
-.phonemargin{
-    margin-left: 200px;
+.phonemargin {
+  margin-left: 200px;
 }
 
-.atbackground{
-    margin-left: 35px;
-    background-color: #E9603A;
-    width: 45px;
-    height: 45px;
-    padding: 10px 10px;
-    border-radius: 35px;
+.atbackground {
+  margin-left: 35px;
+  background-color: #e9603a;
+  width: 45px;
+  height: 45px;
+  padding: 10px 10px;
+  border-radius: 35px;
 }
 
-.atinfo{
-    color: white;
+.atinfo {
+  color: white;
 }
 
-.contacth2{
-    color: #03629D;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 35px;
+.contacth2 {
+  color: #03629d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
-.contactformnaamfill, .contactformtelefoonnummerfill  {
-    width: 80%;
-    background-color: #A3D0EB;
-    border-color: #A3D0EB;
-    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
-    outline: none;
+.contactformnaamfill,
+.contactformtelefoonnummerfill {
+  width: 80%;
+  background-color: #a3d0eb;
+  border-color: #a3d0eb;
+  border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  outline: none;
 }
 
-.contactformberichtfill{
-    width: 80%;
-    height: 250px;
-    background-color: #A3D0EB;
-    border-color: #A3D0EB;
-    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+.contactformberichtfill {
+  width: 80%;
+  height: 250px;
+  background-color: #a3d0eb;
+  border-color: #a3d0eb;
+  border-radius: 25px; /* Adjust the value to control the roundness of the corners */
 }
 
-.contactformbutton{
-    background-color: #E9603A;
-    font-weight: bold;
-    width: 120px;
-    height: 55px;
-    border-radius: 25px;
-    color: white;
+.contactformbutton {
+  background-color: #e9603a;
+  font-weight: bold;
+  width: 120px;
+  height: 55px;
+  border-radius: 25px;
+  color: white;
 }
 
-.contactformbutten, .contactformcenter{
-    text-align: center;
+.contactformbutten,
+.contactformcenter {
+  text-align: center;
 }
 
-.contactformspacing{
-    margin-bottom: 35px;
+.contactformspacing {
+  margin-bottom: 35px;
 }
 
-.contactformtekst{
-    border: 0px solid blue;
-    width: 25%;
-    margin-left: 10%;
+.contactformtekst {
+  border: 0px solid blue;
+  width: 25%;
+  margin-left: 10%;
 }
 
-.contactformnaam, .contactformtelefoonnummer, .contactformbericht{
-    color: #03629D;
-    font-weight: 600;
+.contactformnaam,
+.contactformtelefoonnummer,
+.contactformbericht {
+  color: #03629d;
+  font-weight: 600;
 }
 
-.contactformbox{
-    margin-bottom: 25px;
+.contactformbox {
+  margin-bottom: 25px;
 }
 
-.googlelocatie{
-    border-radius: 25px; /* Adjust the value to control the roundness of the corners */
-    margin-bottom: 45px;
+.googlelocatie {
+  border-radius: 25px; /* Adjust the value to control the roundness of the corners */
+  margin-bottom: 45px;
 }
 
-.googlelocatielocatie{
-    color: #03629D;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 20px;
-    width: 75%;
+.googlelocatielocatie {
+  color: #03629d;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+  width: 75%;
 }
 
-.telcontact, .emailcontact {
-    width: 20%;
-    margin-right: -50px;
-    margin-left: -50px;
+.telcontact,
+.emailcontact {
+  width: 20%;
+  margin-right: -50px;
+  margin-left: -50px;
 }
 
 .contactgegevens {
-    margin-top: 25px;
-    text-align: right;
+  margin-top: 25px;
+  text-align: right;
 }
 
 .telefoondiv {
-    padding: 10px; /* Add padding for better appearance */
+  padding: 10px; /* Add padding for better appearance */
 }
-
-
 
 /* verhuur */
 
-.verhuurh11{
-    color: #03629D;
-    text-align: center;
-    font-weight: bold;
+.verhuurh11 {
+  color: #03629d;
+  text-align: center;
+  font-weight: bold;
 }
 
-.verhuurtekst1{
-    margin-top: -25px;
-    color: #03629D;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
+.verhuurtekst1 {
+  margin-top: -25px;
+  color: #03629d;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-#prijslijstbutton{
-    background-color: #E9603A;
-    font-weight: bold;
-    width: 220px;
-    height: 55px;
-    border-radius: 25px;
-    color: white;
+#prijslijstbutton {
+  background-color: #e9603a;
+  font-weight: bold;
+  width: 220px;
+  height: 55px;
+  border-radius: 25px;
+  color: white;
 }
 
-.prijslijstbuttondiv{
-    margin-top: 35px;
-    text-align: center;
-    margin-bottom: 100px;
+.prijslijstbuttondiv {
+  margin-top: 35px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
-.verhuurh12{
-    color: #03629D;
-    margin-left: 430px;
-    font-weight: bold; 
-    
+.verhuurh12 {
+  color: #03629d;
+  margin-left: 430px;
+  font-weight: bold;
 }
 
-.verhuurtekst2{
-    color: #03629D;
-    margin-left: 430px;
-    font-weight: 600;  
-    font-size: 20px;
+.verhuurtekst2 {
+  color: #03629d;
+  margin-left: 430px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.verhuurh13{
-    color: #03629D;
-    text-align: center;
-    font-weight: bold;  
-    margin-top: 50px;
-   
+.verhuurh13 {
+  color: #03629d;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
-.verhuurtekst3{
-    margin-top: -25px;
-    color: #03629D;
-    text-align: center;
-    font-weight: 600;   
-    font-size: 20px;
-    margin-bottom: 100px;
+.verhuurtekst3 {
+  margin-top: -25px;
+  color: #03629d;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 100px;
 }
 
-.verhuurh14{
-    color: #03629D;
-    font-weight: bold;  
-    margin-top: -60px;
+.verhuurh14 {
+  color: #03629d;
+  font-weight: bold;
+  margin-top: -60px;
 }
 
-.verhuurtekst4{
-    margin-top: -25px;
-    color: #03629D;
-    font-weight: 600;   
-    font-size: 20px;
-    width: 60%;
-    padding-left: 20px;
+.verhuurtekst4 {
+  margin-top: -25px;
+  color: #03629d;
+  font-weight: 600;
+  font-size: 20px;
+  width: 60%;
+  padding-left: 20px;
 }
 
-.verhuurh15{
-    color: #03629D;
-    text-align: center;
-    font-weight: bold;  
-    margin-top: 50px;  
+.verhuurh15 {
+  color: #03629d;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
-.bullet1, .bullet2, .bullet3 {
-    color: #03629D;
-    font-size: 1.1em; /* You can adjust the font size using em units */
-    font-weight: 600;
+.bullet1,
+.bullet2,
+.bullet3 {
+  color: #03629d;
+  font-size: 1.1em; /* You can adjust the font size using em units */
+  font-weight: 600;
 }
 
-.verhuurklaarh1{
-    text-align: center;
-    color: #03629D;
-    font-weight: bold;
-    padding-top: 5%;
+.verhuurklaarh1 {
+  text-align: center;
+  color: #03629d;
+  font-weight: bold;
+  padding-top: 5%;
 }
 
-.verhuurh36{
-    margin-top: -25px;
-    text-align: center;
-    font-weight: 600;
-    color: #03629D;
+.verhuurh36 {
+  margin-top: -25px;
+  text-align: center;
+  font-weight: 600;
+  color: #03629d;
 }
 
-.verhuurh16{
-    padding-left: -150px;
-    color: #03629D;
-    font-weight: bold;
+.verhuurh16 {
+  padding-left: -150px;
+  color: #03629d;
+  font-weight: bold;
 }
 
-.verhuurtekst6{
-    color: #03629D;
-    font-weight: 600;
-    width: 65%;
+.verhuurtekst6 {
+  color: #03629d;
+  font-weight: 600;
+  width: 65%;
 }
 
 .orange-dot {
-    position: relative;
-    margin-right: 10px;
-    margin-left: 55px;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 55px;
 }
 
 .orange-dot::before {
-    content: "\2022"; /* Unicode character for bullet point */
-    color: orange;
-    font-size: 50px; /* Adjust the dot size */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -20px; /* Adjust the distance between dot and text */
+  content: "\2022"; /* Unicode character for bullet point */
+  color: orange;
+  font-size: 50px; /* Adjust the dot size */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px; /* Adjust the distance between dot and text */
 }
 
-.verhuurimg2{
-    width: 50%;
+.verhuurimg2 {
+  width: 50%;
 }
 
-.verhuurimg3{
-    width: 50%;
+.verhuurimg3 {
+  width: 50%;
 }
 
 .paddingbullet {
-    padding-bottom: 0.5em; /* Adjust the padding as needed */
+  padding-bottom: 0.5em; /* Adjust the padding as needed */
 }
 
-.img3right{
-    text-align: right;
+.img3right {
+  text-align: right;
 }
 
-.verhuurimg4{
-    width: 75%;
-    margin-top: -15%;
-    margin-right: -150px;
+.verhuurimg4 {
+  width: 75%;
+  margin-top: -15%;
+  margin-right: -150px;
 }
 
-.img4right{
-    text-align: right;
+.img4right {
+  text-align: right;
 }
-
 
 /* Over ons */
-.overonsh11{
-    color: #03629D;
-    font-weight: bold;
-    
+.overonsh11 {
+  color: #03629d;
+  font-weight: bold;
 }
 
-.overonsp11{
-    color: #03629D;
-    font-size: 20px;
-    font-weight: 600;
-    width: 75%;
-
+.overonsp11 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%;
 }
 
-.overonsfoto1{
-    border: 1px solid gold;
+.overonsfoto1 {
+  border: 1px solid gold;
 }
 
-.overonsh12{
-    color: #03629D;
-    font-weight: bold;
-    margin-left: 275px;
+.overonsh12 {
+  color: #03629d;
+  font-weight: bold;
+  margin-left: 275px;
 }
 
-.overonsp12{
-    color: #03629D;
-    font-size: 20px;
-    font-weight: 600;
-    width: 75%;
-    text-align: right;
-    margin-left: 225px;
-    
+.overonsp12 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%;
+  text-align: right;
+  margin-left: 225px;
 }
 
-.overonsfoto2{
-    border: 1px solid gold;
+.overonsfoto2 {
+  border: 1px solid gold;
 }
 
-.overonsh13{
-    color: #03629D;
-    font-weight: bold;
-    
+.overonsh13 {
+  color: #03629d;
+  font-weight: bold;
 }
 
-.overonsp13{
-    color: #03629D;
-    font-size: 20px;
-    font-weight: 600;
-    width: 60%;
-
+.overonsp13 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 60%;
 }
 
-.overonsfoto3{
-    border: 0px solid gold;
-    width: 65%;
+.overonsfoto3 {
+  border: 0px solid gold;
+  width: 65%;
 }
 
-.overonsfoto3right{
-    text-align: right;
+.overonsfoto3right {
+  text-align: right;
 }
 
-.overonsh14{
-    color: #03629D;
-    font-weight: bold;
-    margin-left: 275px;
+.overonsh14 {
+  color: #03629d;
+  font-weight: bold;
+  margin-left: 275px;
 }
 
-.overonsp14{
-    color: #03629D;
-    font-size: 20px;
-    font-weight: 600;
-    width: 75%;
-    text-align: right;
-    margin-left: 225px;
+.overonsp14 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%;
+  text-align: right;
+  margin-left: 225px;
 }
 
-.overonsfoto4{
-    border: 0px solid gold;
-    width: 65%;
+.overonsfoto4 {
+  border: 0px solid gold;
+  width: 65%;
 }
 
-.overonsfoto3left{
-    text-align: left;
+.overonsfoto3left {
+  text-align: left;
 }
 
-.pdffoto{
-    background-color: white;
-    width: 15%;  
+.pdffoto {
+  background-color: white;
+  width: 15%;
 }
 
 .pdf-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px 30px;
-    background-color: #E8613C ; /* Orange background color */
-    border: none;
-    border-radius: 30px; /* Round border */
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 30px;
+  background-color: #e8613c; /* Orange background color */
+  border: none;
+  border-radius: 30px; /* Round border */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .pdf-icon {
-    width: 55px; /* Adjust the width of the PDF icon */
-    height: 55px; /* Adjust the height of the PDF icon */
-    padding: 5px;
-   
+  width: 55px; /* Adjust the width of the PDF icon */
+  height: 55px; /* Adjust the height of the PDF icon */
+  padding: 5px;
 }
 
-.pdfbackground{
-    margin-left: 25px;
-    margin-right: -25px;
-    background-color: white;
-    border: 3px solid white;
-    border-radius: 30px;
+.pdfbackground {
+  margin-left: 25px;
+  margin-right: -25px;
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 30px;
 }
 
 .align-right {
-    text-align: right !important;
+  text-align: right !important;
 }
 
 .align-center {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .align-left {
-    text-align: left !important;
+  text-align: left !important;
 }

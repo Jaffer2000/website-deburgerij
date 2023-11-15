@@ -39,8 +39,8 @@
 
 <div class="row">
 
-    <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
-    <h1 class="headertext">Over ons</h1>
+    <div class="jumbotron jumbotron-img" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
+        <h1 class="headertext">Over ons</h1>
     </div>
 
 </div>
@@ -48,7 +48,7 @@
 
 <div class="row">
 
-    <div class="col-sm-6"> 
+    <div class="col-sm-6">
 
         <img class="overonsfoto1" alt="foto1" src="img/<?php echo $img2; ?>">
 
@@ -68,7 +68,7 @@
 
 <div class="row">
 
-    
+
 
     <div class="col-sm-6">
 
@@ -80,7 +80,7 @@
 
     </div>
 
-    <div class="col-sm-6"> 
+    <div class="col-sm-6">
 
         <img class="overonsfoto2" alt="foto2" src="img/<?php echo $img3; ?>">
 
@@ -90,7 +90,7 @@
 
 <div class="row">
 
-    <div class="col-sm-6 overonsfoto3right"> 
+    <div class="col-sm-6 overonsfoto3right">
 
         <img class="overonsfoto3" alt="foto3" src="img/<?php echo$img4; ?>">
 
@@ -111,7 +111,7 @@
 
 <div class="row">
 
-    
+
 
     <div class="col-sm-6">
 
@@ -123,7 +123,7 @@
 
     </div>
 
-    <div class="col-sm-6 overonsfoto3left"> 
+    <div class="col-sm-6 overonsfoto3left">
 
         <img class="overonsfoto4" alt="foto4" src="img/<?php echo $img5; ?>">
 
@@ -158,10 +158,10 @@
     <div class="col-sm-4" style="text-align: left;">
         <div class="Vrijwilligers">
             <button class="pdf-button"></button>
-                Vrijwilligersbeleid
-                <div class="pdfbackground">
-                    <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
-                </div>
+            Vrijwilligersbeleid
+            <div class="pdfbackground">
+                <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
+            </div>
             </button>
         </div>
     </div>
