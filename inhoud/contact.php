@@ -37,9 +37,8 @@
     </div>
 </div>
 
-<div class="row rowcustom">
-<div class="col-sm-1"></div>
-    <div class="col-sm-4 ">
+<div class="row ">
+    <div class="col-sm-6">
         <div class="telefoondiv">
             <div style="display: flex; align-items: center; justify-content: flex-end;">
                 <img src="img/telcontact.png" class="telcontact" alt="telefoonnummer">
@@ -47,24 +46,22 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-1"></div>
 
-    <div class="col-sm-4 justify-content-start">
+    <div class="col-sm-6 justify-content-start">
         <div style="display: flex; align-items: center;">
             <img src="img/At.png" class="emailcontact" alt="telefoonnummer">
             <p style="margin: 0;" class="emailphonecss">Wijkcentrumdeburgerij@gmail.com</p>
         </div>
     </div>
-    <div class="col-sm-2"></div>
 </div>
 
 
 
 <div class="row">
 
-    <div class="col-sm-3"></div>
+    <div class="col-sm-2"></div>
 
-    <div class="col-sm-5">
+    <div class="col-sm-8">
 
         <?php
             echo "<h1 class=\"openingstijdentitel\">", $titel, "</h1>";
@@ -73,36 +70,22 @@
 
     </div>
 
-<<<<<<< Updated upstream
     <div class="col-sm-2"></div>
-=======
-    <div class="col-sm-4"></div> 
->>>>>>> Stashed changes
 
 </div>
 
 
 <div class="row">
 
-    <div class="col-sm-3"></div>
+    <div class="col-sm-2"></div>
 
 
-    <div class="col-sm-5 ">
+    <div class="col-sm-8">
         <p class="googlelocatielocatie">Locatie</p>
-<<<<<<< Updated upstream
         <img class="googlelocatie" src="img\googlelocatie.png">
     </div>
 
     <div class="col-sm-2"></div>
-=======
-        
-            <div class="googlefotolocatie">
-                <img class="googlelocatie" src="img\googlelocatie.png">
-            </div>
-    </div>
-    
-    <div class="col-sm-4"></div>
->>>>>>> Stashed changes
 
 </div>
 
