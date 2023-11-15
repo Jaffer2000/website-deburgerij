@@ -161,11 +161,11 @@
         </div>
 
         <div class="Vrijwilligers">
-            <button class="pdf-button"></button>
-            Vrijwilligersbeleid
-            <div class="pdfbackground">
-                <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
-            </div>
+            <button class="pdf-button">
+                Vrijwilligersbeleid
+                <div class="pdfbackground">
+                    <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">
+                </div>
             </button>
         </div>
     </div>
