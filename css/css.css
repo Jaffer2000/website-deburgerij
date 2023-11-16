@@ -353,11 +353,11 @@ ul {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin-bottom: 40px; /* Add margin between squares */
+  margin-bottom: 40px;
 }
 
 .square img {
-  width: 100%; /* Adjust this as needed */
+  width: 100%;
   height: auto;
   display: block;
   margin: 0;
@@ -366,7 +366,7 @@ ul {
 .square-footer {
   background-color: #3d67ad;
   padding: 50px;
-  width: 100%; /* Adjust this as needed */
+  width: 100%;
   position: absolute;
   bottom: 0;
   position: relative;
@@ -400,6 +400,21 @@ ul {
 .overons-homepage-text {
   padding-right: 7%;
   padding-top: 3%;
+}
+
+/* Agenda */
+
+.jumbotron-img-agenda {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron-img-agenda img {
+  width: 100%;
+  margin-top: -24px;
 }
 
 /* 404 */
