@@ -39,7 +39,8 @@
 
 <div class="row">
 
-    <div class="jumbotron jumbotron-img" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
+    <div class="jumbotron contactbackgroundimg"
+        style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
         <h1 class="headertext">Over ons</h1>
     </div>
 
@@ -160,7 +161,7 @@
         </div>
 
         <div class="Vrijwilligers">
-            <button class="pdf-button" style="margin: 0 10px;">
+            <button class="pdf-button">
                 Vrijwilligersbeleid
                 <div class="pdfbackground">
                     <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">

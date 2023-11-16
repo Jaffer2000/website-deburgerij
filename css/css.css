@@ -2,7 +2,6 @@ body {
   background-color: #fafaf5 !important;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 /* nav */
@@ -69,7 +68,6 @@ ol {
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  z-index: 1;
 }
 
 .logo-image {
@@ -149,8 +147,6 @@ ul {
   flex-direction: column;
   background-color: #a2be70;
   margin-top: 4%;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 .info {
@@ -158,10 +154,6 @@ ul {
   color: #606060;
   padding-top: 3%;
   padding-bottom: 0.8%;
-}
-
-.info p {
-  margin-left: 30%;
 }
 
 .navbar-footer {
@@ -190,9 +182,227 @@ ul {
   margin-left: 8%;
 }
 
+.info p {
+  margin-left: 30%;
+}
+
 .boekhouden-logo {
   margin-top: 11%;
   margin-right: 2%;
+}
+
+/* Media query for tablet and mobile devices */
+@media (max-width: 768px) {
+  .custom-header {
+    padding: 12px 0;
+  }
+
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .sidebar-square {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #e9603a;
+    margin-left: 8%;
+    margin-right: 10px;
+  }
+
+  .sidebar-line {
+    border-top: 2px solid #a2be70;
+    margin-top: 12px;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+
+  .content {
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-open .content {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .custom-header {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .logo-container {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .sidebar {
+    right: 0;
+  }
+
+  button {
+    margin-right: 7%;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .navbar-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-footer a {
+    margin: 5px 6px;
+  }
+
+  .links {
+    margin: 10px 0;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  .boekhouden-logo,
+  .anbi-logo {
+    width: 100%;
+    max-width: 120px;
+    margin: 10px 0;
+  }
+
+  .boekhouden-logo {
+    width: 120px;
+    margin-top: 16%;
+    margin-right: 2%;
+  }
+
+  .anbi-logo {
+    width: 100px;
+  }
+
+  .info {
+    padding-top: 6%;
+  }
+
+  .info p {
+    font-size: 14px;
+    margin-left: 20%;
+  }
+
+  .homeh1-1 {
+    font-size: 26px;
+    padding: 0 2%;
+  }
+
+  .homeh1-2 {
+    font-size: 26px;
+  }
+
+  .hometekst1 {
+    max-width: 95%;
+    font-size: 14px;
+  }
+
+  .breaks {
+    display: none;
+  }
+
+  .buttons-homepage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .overons-homepage {
+    margin-top: -100px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 750px) {
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .welkom {
+    margin-top: 7%;
+  }
+
+  .container.references {
+    padding-top: 5%;
+  }
+
+  .square {
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  .overons-homepage {
+    margin-top: 30px;
+    padding-bottom: 8%;
+  }
+
+  .hometekst2 {
+    padding: 0 2px;
+  }
+
+  .overons-homepage-text {
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+  }
+
+  .jumbotron-img-home img {
+    height: 250px;
+  }
+
+  .jumbotron-content h1 {
+    font-size: 40px !important;
+  }
 }
 
 /* Homepage */
@@ -491,10 +701,16 @@ ul {
   font-weight: bold;
   color: #03629d;
   margin-top: 15%;
+  margin-left: 2%;
 }
+
+
+
+
 
 .openingstijdentekst {
   color: #03629d;
+  margin-left: 2%;
 }
 
 .emailphonecss {
@@ -503,6 +719,10 @@ ul {
   font-size: 20px;
   text-decoration: underline;
 }
+
+
+
+
 
 .phonemargin {
   margin-left: 200px;
@@ -530,18 +750,18 @@ ul {
 
 .contactformnaamfill,
 .contactformtelefoonnummerfill {
-  width: 80%;
+  width: 65%;
   background-color: #a3d0eb;
-  border-color: #a3d0eb;
+  border: none;
   border-radius: 10px; /* Adjust the value to control the roundness of the corners */
   outline: none;
 }
 
 .contactformberichtfill {
-  width: 80%;
+  width: 65%;
   height: 250px;
   background-color: #a3d0eb;
-  border-color: #a3d0eb;
+  border: none;
   border-radius: 25px; /* Adjust the value to control the roundness of the corners */
 }
 
@@ -566,7 +786,7 @@ ul {
 .contactformtekst {
   border: 0px solid blue;
   width: 25%;
-  margin-left: 10%;
+  margin-left: 17.5%;
 }
 
 .contactformnaam,
@@ -591,6 +811,7 @@ ul {
   font-size: 30px;
   margin-bottom: 20px;
   width: 75%;
+  /* margin-left: 15%; */
 }
 
 .telcontact,
@@ -600,6 +821,8 @@ ul {
   margin-left: -50px;
 }
 
+
+
 .contactgegevens {
   margin-top: 25px;
   text-align: right;
@@ -607,6 +830,10 @@ ul {
 
 .telefoondiv {
   padding: 10px; /* Add padding for better appearance */
+}
+
+.googlefotolocatie{
+  text-align: center;
 }
 
 /* verhuur */
@@ -810,19 +1037,11 @@ ul {
   font-weight: bold;
 }
 
-#textContainer .visible-text {
-  color: green !important;
-}
-
-#textContainer .hidden-text {
-  /* Styles for hidden text */
-  color: red !important;
-}
-
-.read-more-text {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #007bff !important; /* Use !important to override conflicting styles */
+.overonsp13 {
+  color: #03629d;
+  font-size: 20px;
+  font-weight: 600;
+  width: 60%;
 }
 
 .overonsfoto3 {
@@ -1121,5 +1340,64 @@ ul {
 
   .jumbotron-content h1 {
     font-size: 40px !important;
+  }
+}
+
+/* Media query */
+
+@media screen and (min-width: 940px) and (max-width: 1920px) {
+  .googlelocatielocatie {
+    padding-left: 9% !important;  /* pas dit aan naar de gewenste padding-waarde */
+  }
+  .infoopmaakcontact {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+    border: 1px solid gold;
+  }
+  .infoopmaakcontact2 {
+    display: flex; 
+    align-items: center;
+    border: 1px solid gold;
+  }
+  .telcontact, .emailcontact{
+    width: 35% !important;
+  }
+  .contactpaddingopeningstijden{
+    padding-top: 8%;
+  }
+  .googlelocatie {
+    width: 85%;
+  }
+  .emailphonecss {
+    padding-left: 30px; /* pas dit aan naar de gewenste padding-waarde */
+  }
+  .openingstijdentitel, .openingstijdentekst {
+    padding-left: 8% !important;  /* pas dit aan naar de gewenste padding-waarde */
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  .telefoondiv {
+    border: 1px solid gold;
+    padding-left: 25%;
+  }
+  .contactpaddingopeningstijden{
+    padding-top: 8%;
+  }
+  .googlelocatielocatie{
+    padding-left: 1%;
+  }
+  .googlelocatie {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (min-width: 390px) and (max-width: 939px) {
+  .infoopmaakcontact {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
   }
 }
