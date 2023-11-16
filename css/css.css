@@ -679,6 +679,13 @@ ul {
   margin-left: 2%;
 }
 
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  .openingstijdentitel, .openingstijdentekst {
+    padding-left: 8% !important;  /* pas dit aan naar de gewenste padding-waarde */
+  }
+}
+
+
 .openingstijdentekst {
   color: #03629d;
   margin-left: 2%;
@@ -690,6 +697,13 @@ ul {
   font-size: 20px;
   text-decoration: underline;
 }
+
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  .emailphonecss {
+    padding-left: 30px; /* pas dit aan naar de gewenste padding-waarde */
+  }
+}
+
 
 .phonemargin {
   margin-left: 200px;
@@ -719,7 +733,7 @@ ul {
 .contactformtelefoonnummerfill {
   width: 65%;
   background-color: #a3d0eb;
-  border-color: #a3d0eb;
+  border: none;
   border-radius: 10px; /* Adjust the value to control the roundness of the corners */
   outline: none;
 }
@@ -728,7 +742,7 @@ ul {
   width: 65%;
   height: 250px;
   background-color: #a3d0eb;
-  border-color: #a3d0eb;
+  border: none;
   border-radius: 25px; /* Adjust the value to control the roundness of the corners */
 }
 
@@ -772,20 +786,34 @@ ul {
   margin-bottom: 45px;
 }
 
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  .googlelocatie {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 940px) and (max-width: 1920px) {
+  .googlelocatie {
+    width: 85%;
+  }
+}
+
 .googlelocatielocatie {
   color: #03629d;
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 20px;
   width: 75%;
-  margin-left: 15%;
+  /* margin-left: 15%; */
 }
 
-@media screen and (min-width: 350px) and (max-width: 900px) {
-  .googlelocatie {
-    width: 100%;
+@media screen and (min-width: 940px) and (max-width: 1920px) {
+  .googlelocatielocatie {
+    padding-left: 9% !important;  /* pas dit aan naar de gewenste padding-waarde */
   }
 }
+
+
 
 @media screen and (min-width: 350px) and (max-width: 900px) {
   .telefoondiv {
