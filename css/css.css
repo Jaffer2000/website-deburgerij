@@ -679,7 +679,7 @@ ul {
   margin-left: 2%;
 }
 
-@media screen and (min-width: 901px) and (max-width: 1920px) {
+@media screen and (min-width: 940px) and (max-width: 1920px) {
   .openingstijdentitel, .openingstijdentekst {
     padding-left: 8% !important;  /* pas dit aan naar de gewenste padding-waarde */
   }
@@ -698,11 +698,13 @@ ul {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 901px) and (max-width: 1920px) {
+@media screen and (min-width: 940px) and (max-width: 1920px) {
   .emailphonecss {
     padding-left: 30px; /* pas dit aan naar de gewenste padding-waarde */
   }
 }
+
+
 
 
 .phonemargin {
@@ -811,16 +813,41 @@ ul {
   .googlelocatielocatie {
     padding-left: 9% !important;  /* pas dit aan naar de gewenste padding-waarde */
   }
+  .infoopmaakcontact {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+    border: 1px solid gold;
+  }
+  .infoopmaakcontact2 {
+    display: flex; 
+    align-items: center;
+    border: 1px solid gold;
+  }
+  .telcontact, .emailcontact{
+    width: 35% !important;
+  }
+  .contactpaddingopeningstijden{
+    padding-top: 8%;
+  }
 }
-
-
 
 @media screen and (min-width: 350px) and (max-width: 900px) {
   .telefoondiv {
     border: 1px solid gold;
     padding-left: 25%;
   }
+  
 }
+
+@media screen and (min-width: 390px) and (max-width: 939px) {
+  .infoopmaakcontact {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+  }
+}
+
 
 
 
@@ -830,6 +857,8 @@ ul {
   margin-right: -50px;
   margin-left: -50px;
 }
+
+
 
 .contactgegevens {
   margin-top: 25px;
@@ -1149,3 +1178,5 @@ ul {
   font-weight: 600;
   font-size: 20px;
 }
+
+/* Media query */

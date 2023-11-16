@@ -33,7 +33,7 @@
 
 <div class="row">
     <div class="col-sm-12" style="text-align: center;">
-        <h3 class="contacth3">Service & contact</h3>
+        <h1 class="contacth3">Service & contact</h1>
     </div>
 </div>
 
@@ -41,15 +41,15 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-4">
         <div class="telefoondiv">
-            <div style="display: flex; align-items: center; justify-content: flex-end;">
+            <div class="infoopmaakcontact">
                 <img src="img/telcontact.png" class="telcontact" alt="telefoonnummer">
                 <p style="margin: 0;" class="emailphonecss">0118-855523</p>
             </div>
         </div>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-4 justify-content-start">
-        <div style="display: flex; align-items: center;">
+    <div class="col-sm-4">
+        <div class="infoopmaakcontact2">
             <img src="img/At.png" class="emailcontact" alt="telefoonnummer">
             <p style="margin: 0;" class="emailphonecss">Wijkcentrumdeburgerij@gmail.com</p>
         </div>
@@ -77,7 +77,7 @@
 </div>
 
 
-<div class="row">
+<div class="row contactpaddingopeningstijden">
 
     <div class="col-sm-2"></div>
 
