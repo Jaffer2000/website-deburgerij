@@ -69,19 +69,17 @@
 
 <div class="row">
 
-
-
     <div class="col-sm-6">
-
-        <?php 
-            echo"<h1 class=\"overonsh12\">$titel2</h1>";
-            echo"<br>";
-            echo"<p class=\"overonsp12\">$tekst2</p>";
-        ?>
-
+        <div class="responsivepaddingoveronsR1"> 
+            <?php 
+                echo"<h1 class=\"overonsh12\">$titel2</h1>";
+                echo"<br>";
+                echo"<p class=\"overonsp12\">$tekst2</p>";
+            ?>
+        </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-6 responsivepaddingoveronsRF1">
 
         <img class="overonsfoto2" alt="foto2" src="img/<?php echo $img3; ?>">
 
@@ -121,7 +119,7 @@
 
 
 
-    <div class="col-sm-6">
+    <div class="col-sm-6 laatsterowoveronsresponsive">
 
         <?php 
             echo"<h1 class=\"overonsh14\">$titel4</h1>";
@@ -141,9 +139,9 @@
 
 
 <div class="row">
-    <div class="col-sm-12" style="display: flex; justify-content: center;">
+    <div class="col-sm-12 overonsbuttons" >
         <div class="beleidsplan">
-            <button class="pdf-button" style="margin: 0 10px;">
+            <button class="pdf-button" >
                 beleidsplan
                 <div class="pdfbackground">
                     <img src="img/overonspdf.png" alt="PDF Icon" class="pdf-icon">

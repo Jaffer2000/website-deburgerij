@@ -61,7 +61,7 @@
 </div>
 
 
-<div class="row">
+<div class="row ">
 
     <div class="col-sm-12">
         <?php echo"<h1 class=\"verhuurh11\">$titel1</h1>";
@@ -77,12 +77,12 @@
 
 </div>
 
-<div class="row">
+<div class="row mobielformaatpaddingtop">
 
     <div class="col-sm-6">
         
         <?php 
-            echo"<h1 class=\"verhuurh12\">$titel2</h1>";
+            echo"<h1 class=\"verhuurh12\" style=\"border: 5px solid gold;\">$titel2</h1>";
             echo "<br>";
             echo "<p class=\"verhuurtekst2\">$tekst2</p>";
         ?>
@@ -91,7 +91,7 @@
 
     <div class="col-sm-6">
 
-        <img class="verhuurimg2" alt="img2" src="img/<?php echo $img2 ?>">
+        <img class="verhuurimg2" alt="img2" src="img/<?php echo $img2 ?>" />
 
     </div>
 

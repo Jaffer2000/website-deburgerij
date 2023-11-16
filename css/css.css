@@ -968,10 +968,6 @@ ul {
   left: -20px; /* Adjust the distance between dot and text */
 }
 
-.verhuurimg2 {
-  width: 50%;
-}
-
 .verhuurimg3 {
   width: 50%;
 }
@@ -1375,6 +1371,15 @@ ul {
   .openingstijdentitel, .openingstijdentekst {
     padding-left: 8% !important;  /* pas dit aan naar de gewenste padding-waarde */
   }
+  .verhuurimg2 {
+    width: 50%;
+  }
+  .overonsbuttons{
+    display: flex; justify-content: center;
+  }
+  .pdf-button{
+    margin: 0 10px;
+  }
 }
 
 @media screen and (min-width: 350px) and (max-width: 900px) {
@@ -1391,6 +1396,34 @@ ul {
   .googlelocatie {
     width: 100%;
   }
+  .overonsh11, .overonsp11, .overonsh13, #volledigeTekst, #verminderBtn, #leesMeerBtn{
+    padding-left: 4%;
+  }
+  .responsivepaddingoveronsR1, .laatsterowoveronsresponsive {
+    margin-left: -20px; /* Pas dit aan op basis van je behoeften */
+    
+  }
+  .overonsh12, .overonsp12, .overonsh14, .overonsp14 {
+    margin-left: 8%; /* Pas dit aan op basis van je behoeften */
+    text-align: left;
+  }
+  .overonsfoto2{
+    padding-top: 5%;
+  }
+  .responsivepaddingoveronsRF1, .overonsfoto3right, .overonsfoto3left{
+    text-align: center;
+  }
+  .laatsterowoveronsresponsive{
+    padding-top: 10%;
+  }
+  .beleidsplan, .Wijkplan, .Vrijwilligers{
+    padding-bottom: 4% !important;
+  }
+  .overonsbuttons{
+    text-align: center;
+    align-items: center;
+  }
+
   
 }
 
