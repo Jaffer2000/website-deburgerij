@@ -417,6 +417,96 @@ ul {
   margin-top: -24px;
 }
 
+.filter-agenda {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #03629d;
+}
+
+.filter-agenda a {
+  color: #03629d;
+}
+
+.square-agenda {
+  width: 280px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.square-agenda img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+}
+
+.square-footer-agenda {
+  background-color: #3d67ad;
+  padding: 50px;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  text-align: left;
+}
+
+.footer-content-agenda h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-content-agenda p {
+  color: #a2a2a2;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.footer-content-agenda {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.activiteit {
+  margin: 0 -25px;
+}
+
+.modal-header button {
+  color: #03629d;
+}
+
+.modal-button {
+  background-color: #03629d;
+}
+
+.modal-button:hover {
+  background-color: #03629d;
+}
+
+.modal-title {
+  color: #03629d;
+  font-weight: bold;
+}
+
+#popupTitle {
+  color: #03629d;
+  font-weight: bold;
+}
+
+#popupDate {
+  color: #a2a2a2;
+}
+
+#popupText {
+  color: #03629d;
+  font-weight: 600;
+}
+
 /* 404 */
 
 .rowpadding404 {
@@ -1121,5 +1211,27 @@ ul {
 
   .jumbotron-content h1 {
     font-size: 40px !important;
+  }
+
+  .activiteit {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter-agenda {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1026px) {
+  .activiteit {
+    margin: 0 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter-agenda {
+    padding: 12px;
   }
 }
