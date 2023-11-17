@@ -1382,7 +1382,6 @@ ul {
 
 @media screen and (min-width: 350px) and (max-width: 900px) {
   .telefoondiv {
-    border: 1px solid gold;
     padding-left: 25%;
   }
   .contactpaddingopeningstijden{
@@ -1454,6 +1453,29 @@ ul {
   }
   .Vrijwilligers{
     padding: 1%;
+  }
+  .img4right{
+    margin-left: -50%;
+  }
+  .verhuurh16, .verhuurtekst6{
+    padding-left: 2%;
+  }
+  .orange-dot{
+    padding-top: 8%;
+  }
+  .verhuurimg3{
+    padding-bottom: 30%;
+    margin-right: 25%;
+    padding-top: -25%;
+  }
+  .verhuurh14, .verhuurtekst4{
+    padding-left: 2%;
+  }
+   .verhuurh12,
+  .verhuurtekst2 {
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
   }
   
 }
