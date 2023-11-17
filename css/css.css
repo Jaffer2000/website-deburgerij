@@ -1349,12 +1349,10 @@ ul {
     display: flex; 
     align-items: center; 
     justify-content: flex-end;
-    border: 1px solid gold;
   }
   .infoopmaakcontact2 {
     display: flex; 
     align-items: center;
-    border: 1px solid gold;
   }
   .telcontact, .emailcontact{
     width: 35% !important;
@@ -1404,14 +1402,20 @@ ul {
     
   }
   .overonsh12, .overonsp12, .overonsh14, .overonsp14 {
-    margin-left: 8%; /* Pas dit aan op basis van je behoeften */
+    margin-left: 10%; /* Pas dit aan op basis van je behoeften */
     text-align: left;
   }
   .overonsfoto2{
     padding-top: 5%;
   }
-  .responsivepaddingoveronsRF1, .overonsfoto3right, .overonsfoto3left{
+  .responsivepaddingoveronsRF1, .overonsfoto3left{
     text-align: center;
+    padding-left: 10%;
+  }
+  .overonsfoto3right{
+    padding-left: 2%;
+    text-align: center;
+    margin-top: -25% !important;
   }
   .laatsterowoveronsresponsive{
     padding-top: 10%;
@@ -1419,11 +1423,38 @@ ul {
   .beleidsplan, .Wijkplan, .Vrijwilligers{
     padding-bottom: 4% !important;
   }
-  .overonsbuttons{
+  .overonsbuttons {
     text-align: center;
-    align-items: center;
   }
-
+  .pdf-button {
+    display: flex;
+    flex-direction: row-reverse; /* Plaats het PDF-logo rechts van de tekst */
+    align-items: center; /* Verticaal centreren */
+    margin: 0 auto 10px;
+    padding: 10px 30px; /* Pas dit naar wens aan */
+    background-color: #e8613c;
+    color: #fff;
+    border: 1px solid #e8613c;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .pdf-background {
+    margin-left: 0; /* Standaard marge links opheffen */
+    margin-right: 0; /* Standaard marge rechts opheffen */
+  }
+  .pdf-button {
+    flex-direction: row; /* Zet de flexrichting terug naar standaard (rij) */
+    justify-content: space-between;
+  }
+  .beleidsplan{
+    padding-left: 2%;
+  }
+  .Wijkplan{
+    padding-left: 23%;
+  }
+  .Vrijwilligers{
+    padding: 1%;
+  }
   
 }
 
@@ -1434,3 +1465,4 @@ ul {
     justify-content: flex-end;
   }
 }
+
