@@ -43,7 +43,7 @@
         <div class="telefoondiv">
             <div class="infoopmaakcontact">
                 <img src="img/telcontact.png" class="telcontact" alt="telefoonnummer">
-                <p style="margin: 0;" class="emailphonecss">0118-855523</p>
+                <p style="margin: 0;" class="emailphonecss mobielformaattelnummer">0118-855523</p>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@
     <div class="col-sm-4">
         <div class="infoopmaakcontact2">
             <img src="img/At.png" class="emailcontact" alt="telefoonnummer">
-            <p style="margin: 0;" class="emailphonecss">Wijkcentrumdeburgerij@gmail.com</p>
+            <p style="margin: 0;" class="emailphonecss mobielformaatemail">Wijkcentrumdeburgerij@gmail.com</p>
         </div>
     </div>
     <div class="col-sm-2"></div>

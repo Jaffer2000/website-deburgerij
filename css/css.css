@@ -1380,6 +1380,7 @@ ul {
   }
 }
 
+/* telefoon formaat */
 @media screen and (min-width: 350px) and (max-width: 900px) {
   .telefoondiv {
     padding-left: 25%;
@@ -1477,9 +1478,27 @@ ul {
     padding: 0;
     padding-left: 2%;
   }
-  
+  .mobielformaattelnummer{
+    margin-top: -16% !important;
+    font-size: 15px;
+    margin-left: 15% !important;
+  }
+  .mobielformaatemail{
+    width: 50% !important;
+    margin-left: 18% !important;
+    margin-top: -14% !important;
+    font-size: 15px !important;
+  }
+  .emailcontact{
+    margin-left: 0%;
+  }
+  .telcontact{
+    margin-left: -4%;
+    margin-top: 7%;
+  }
 }
 
+/* speciaal mobiel formaat */
 @media screen and (min-width: 390px) and (max-width: 939px) {
   .infoopmaakcontact {
     display: flex; 
@@ -1488,6 +1507,7 @@ ul {
   }
 }
 
+/* ipad formaat */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .verhuurh12, .verhuurtekst2 {
     margin-left: 20% !important;
