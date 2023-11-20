@@ -1488,3 +1488,21 @@ ul {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .verhuurh12, .verhuurtekst2 {
+    margin-left: 20% !important;
+    width: 100%;
+  }
+  .verhuurimg2{
+    margin-left: 25%;
+    width: 50% !important;
+    padding-top: 13%;
+  }
+  .verhuurimg4{
+    margin-right: 2%;
+  }
+  .orange-dot{
+    padding-top: 8%;
+  }
+}
+
