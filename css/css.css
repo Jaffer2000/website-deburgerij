@@ -1156,6 +1156,11 @@ ul {
   text-align: center;
 }
 
+/* Activiteiten toevoegen */
+.activiteitenformulieraligncenter{
+  text-align: center;
+}
+
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
   .custom-header {
