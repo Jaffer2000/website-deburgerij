@@ -1138,6 +1138,24 @@ ul {
   font-size: 20px;
 }
 
+
+
+/* Admin omgeving */
+.adminbutton{
+  padding: 3px 30px;
+  background-color: #e8613c; /* Orange background color */
+  border: none;
+  border-radius: 30px; /* Round border */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.adminbuttonalign{
+  text-align: center;
+}
+
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
   .custom-header {
@@ -1341,6 +1359,8 @@ ul {
 
 /* Media query */
 
+/* Computer formaat */
+
 @media screen and (min-width: 940px) and (max-width: 1920px) {
   .googlelocatielocatie {
     padding-left: 9% !important;  /* pas dit aan naar de gewenste padding-waarde */
@@ -1495,6 +1515,9 @@ ul {
   .telcontact{
     margin-left: -4%;
     margin-top: 7%;
+  }
+  .adminbuttonalign{
+    margin-bottom: 25%;
   }
 }
 

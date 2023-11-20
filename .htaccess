@@ -2,11 +2,25 @@ RewriteEngine On
 
 RewriteBase /wijkcentrumdeburgerij
 
-RewriteRule ^homepage              index.php?pagina=homepage
-RewriteRule ^overons               index.php?pagina=overons
-RewriteRule ^actueel               index.php?pagina=actueel
-RewriteRule ^agenda                index.php?pagina=agenda
-RewriteRule ^verhuur               index.php?pagina=verhuur
-RewriteRule ^contact               index.php?pagina=contact
+RewriteRule ^homepagebewerken             index.php?pagina=homepagebewerken [L]
+RewriteRule ^actueelbewerken              index.php?pagina=actueelbewerken [L]
+RewriteRule ^overonsbewerken              index.php?pagina=overonsbewerken [L]
+RewriteRule ^agendabewerken               index.php?pagina=agendabewerken [L]
+RewriteRule ^verhuurbewerken              index.php?pagina=verhuurbewerken [L]
+RewriteRule ^contactbewerken              index.php?pagina=contactbewerken [L]
+
+RewriteRule ^homepage                     index.php?pagina=homepage [L]
+RewriteRule ^overons                      index.php?pagina=overons [L]
+RewriteRule ^actueel                      index.php?pagina=actueel [L]
+RewriteRule ^agenda                       index.php?pagina=agenda [L]
+RewriteRule ^verhuur                      index.php?pagina=verhuur [L]
+RewriteRule ^contact                      index.php?pagina=contact [L]
+RewriteRule ^inlog                        index.php?pagina=inlog [L]
+RewriteRule ^admin                        index.php?pagina=admin [L]
+RewriteRule ^activiteitenbewerken         index.php?pagina=activiteitenbewerken [L]
+RewriteRule ^activiteitentoevoegen        index.php?pagina=activiteitentoevoegen [L]
+RewriteRule ^nieuwstoevoegen              index.php?pagina=nieuwstoevoegen [L]
+RewriteRule ^nieuwsbewerken               index.php?pagina=nieuwsbewerken [L]
+RewriteRule ^paginabewerkenoverzicht      index.php?pagina=paginabewerkenoverzicht [L]
 
 ErrorDocument 404 /wijkcentrumdeburgerij/404.php
