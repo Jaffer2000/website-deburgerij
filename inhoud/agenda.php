@@ -6,7 +6,7 @@ if (isset($_GET['newActivity']) && $_GET['newActivity'] == 1) {
 }
 
 // Prepare the query to retrieve all activities
-$query = "SELECT id, titel, tekst, foto, datum FROM agenda";
+$query = "SELECT id, titel, tekst, foto, datum, maand FROM agenda";
 
 // Execute the query
 $result = $conn->query($query);
@@ -105,4 +105,52 @@ if ($result && $result->num_rows > 0) {
     </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+// JavaScript to handle the modal content
+$('.square-agenda').click(function() {
+    var imageSrc = $(this).find('img').attr('src');
+    var title = $(this).find('.footer-content-agenda h3').text();
+    var date = $(this).find('.footer-content-agenda p').text();
+
+    // Set modal content
+    $('#popupImage').attr('src', imageSrc);
+    $('#popupTitle').text(title);
+    $('#popupDate').text(date);
+
+    // Show the modal
+    $('#myModal').modal('show');
+});
+</script>
+
+<script>
+// JavaScript to update the modal content when shown
+$('.activiteit').on('click', function() {
+    var tekst = $(this).data('tekst');
+    var modal = $('#myModal');
+    modal.find('#popupText').text(tekst);
+    modal.modal('show');
+});
+</script>
+
+<script>
+// JavaScript to filter activities based on selected month
+$('.filter-agenda').on('click', 'a', function(e) {
+    e.preventDefault();
+
+    var selectedMonth = $(this).data('month');
+    $('.activiteit').hide();
+
+    if (selectedMonth === '0') {
+        $('.activiteit').show();
+    } else {
+        $('.activiteit[data-maand="' + selectedMonth + '"]').show();
+    }
+
+    // Check if any activities are visible
+    if ($('.activiteit:visible').length === 0) {
+        $('.no-activities-message').show();
+    } else {
+        $('.no-activities-message').hide();
+    }
+});
+</script>
