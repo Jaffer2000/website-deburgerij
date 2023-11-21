@@ -704,10 +704,6 @@ ul {
   margin-left: 2%;
 }
 
-
-
-
-
 .openingstijdentekst {
   color: #03629d;
   margin-left: 2%;
@@ -719,10 +715,6 @@ ul {
   font-size: 20px;
   text-decoration: underline;
 }
-
-
-
-
 
 .phonemargin {
   margin-left: 200px;
@@ -1159,6 +1151,26 @@ ul {
 /* Activiteiten toevoegen */
 .activiteitenformulieraligncenter{
   text-align: center;
+}
+.activiteitennaamform{
+  color: #03629d;
+  font-weight: 600;
+  font-size: 24px;
+}
+#activiteitnaam, #datum, #bericht, #foto{
+  background-color: #a3d0eb;
+  width: 15%;
+  border: none;
+}
+.activiteitentoevoegenbutton{
+  padding: 3px 30px;
+background-color: #e8613c; /* Orange background color */
+border: none;
+border-radius: 30px; /* Round border */
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px;
 }
 
 /* Media query for tablet and mobile devices */

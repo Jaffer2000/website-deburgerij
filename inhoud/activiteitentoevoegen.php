@@ -13,21 +13,59 @@
     <div class="col-sm-12 activiteitenformulieraligncenter">
 
     <form action="" method="post" enctype="multipart/form-data">
-        <label for="activiteitnaam">Naam van de activiteit:</label> <br>
+        <label class="activiteitennaamform" for="activiteitnaam">Naam van de activiteit:</label> <br>
         <input type="text" id="activiteitnaam" name="activiteitnaam" required> <br><br>
 
-        <label for="datum">Datum van de activiteit:</label><br>
+        <label class="activiteitennaamform" for="datum">Datum van de activiteit:</label><br>
         <input type="date" id="datum" name="datum" required> <br><br>
 
-        <label for="bericht">Beschrijving van de activiteit:</label><br>
+        <label class="activiteitennaamform" for="bericht">Beschrijving van de activiteit:</label><br>
         <textarea id="bericht" name="bericht" rows="4" required></textarea> <br><br>
 
-        <label for="foto">Foto voor de activiteit:</label><br>
+        <label class="activiteitennaamform" for="foto">Foto voor de activiteit:</label><br>
         <input type="file" id="foto" name="foto" accept="image/*"> <br><br>
 
-        <button type="submit">Toevoegen</button>
+        <button class="activiteitentoevoegenbutton" type="submit">Toevoegen</button>
     </form>
 
     </div>
 
 </div>
+
+<?php
+
+    // Controleren of het formulier is ingediend
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Gegevens van het formulier ophalen
+    $activiteitnaam = isset($_POST['activiteitnaam']) ? $_POST['activiteitnaam'] : '';
+    $datum = isset($_POST['datum']) ? $_POST['datum'] : '';
+    $bericht = isset($_POST['bericht']) ? $_POST['bericht'] : '';
+
+    // Afbeelding uploaden (indien gewenst)
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
+        $foto = $_FILES['foto']['name'];
+        move_uploaded_file($_FILES['foto']['tmp_name'], "upload/" . $foto);
+    } else {
+        $foto = null; // Of een standaardafbeelding toewijzen als er geen foto is geüpload
+    }
+
+    // Controleren of ten minste één veld is ingevuld
+    if (!empty($activiteitnaam) || !empty($datum) || !empty($bericht) || !empty($foto)) {
+        // SQL-query voor het invoegen van gegevens
+        $sql = "INSERT INTO agenda (titel, tekst, foto, datum) VALUES ('$activiteitnaam', '$datum', '$bericht', '$foto')";
+
+        // Query uitvoeren
+        if ($conn->query($sql) === TRUE) {
+            echo "Activiteit succesvol toegevoegd!";
+        } else {
+            echo "Fout bij het toevoegen van de activiteit: " . $conn->error;
+        }
+    } else {
+        echo "Vul ten minste één veld in voordat je het formulier indient.";
+    }
+}
+
+// Verbinding sluiten
+$conn->close();
+
+?>
