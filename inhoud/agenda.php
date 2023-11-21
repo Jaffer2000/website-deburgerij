@@ -6,7 +6,7 @@ if (isset($_GET['newActivity']) && $_GET['newActivity'] == 1) {
 }
 
 // Prepare the query to retrieve all activities
-$query = "SELECT id, titel, tekst, foto, datum, maand FROM agenda";
+$query = "SELECT id, titel, tekst, foto, datum FROM agenda";
 
 // Execute the query
 $result = $conn->query($query);
