@@ -1,8 +1,29 @@
+<script>
+    // JavaScript function to navigate to a different page
+    function adminterug() {
+    var url = "admin";
+    window.open(url, "_self"); // Opent de link in dezelfde tab
+}
+</script>
 <div class="row">
 
     <div class="jumbotron contactbackgroundimg"
         style="background-image: url('img/');">
         <h1 class="headertext">Activiteit toevoegen</h1>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-sm-12">
+
+        <div class="terugbuttonadmin">
+        
+            <button class="activiteitentoevoegenbutton" onClick="adminterug()">Adminoverzicht</button>
+        
+        </div>
+
     </div>
 
 </div>
@@ -44,7 +65,7 @@
     // Afbeelding uploaden (indien gewenst)
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
         $foto = $_FILES['foto']['name'];
-        move_uploaded_file($_FILES['foto']['tmp_name'], "upload/" . $foto);
+        move_uploaded_file($_FILES['foto']['tmp_name'], "img/" . $foto);
     } else {
         $foto = null; // Of een standaardafbeelding toewijzen als er geen foto is geüpload
     }
@@ -52,7 +73,7 @@
     // Controleren of ten minste één veld is ingevuld
     if (!empty($activiteitnaam) || !empty($datum) || !empty($bericht) || !empty($foto)) {
         // SQL-query voor het invoegen van gegevens
-        $sql = "INSERT INTO agenda (titel, tekst, foto, datum) VALUES ('$activiteitnaam', '$datum', '$bericht', '$foto')";
+        $sql = "INSERT INTO agenda (titel, tekst, foto, datum) VALUES ('$activiteitnaam', '$bericht ','$foto', '$datum')";
 
         // Query uitvoeren
         if ($conn->query($sql) === TRUE) {

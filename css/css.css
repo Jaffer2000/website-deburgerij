@@ -1238,14 +1238,19 @@ ul {
   text-align: center;
 }
 
+
+
 /* Activiteiten toevoegen */
-.activiteitenformulieraligncenter{
-  text-align: center;
-}
 .activiteitennaamform{
   color: #03629d;
   font-weight: 600;
   font-size: 24px;
+  width: 300px !important;
+}
+.formwidth{
+  width: 2000px;
+  text-align: center;
+  margin-left: -35% !important;
 }
 #activiteitnaam, #datum, #bericht, #foto{
   background-color: #a3d0eb;
@@ -1263,6 +1268,18 @@ cursor: pointer;
 font-size: 20px;
 }
 
+.terugbuttonadmin{
+  text-align: right;
+  padding-right: 3%;
+}
+
+/* Activiteiten bewerken */
+.overzichtopmaak{
+  padding-bottom: 5%;
+}
+.activiteitbewerkenimg{
+  width: 25%;
+}
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
   .custom-header {
