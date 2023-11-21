@@ -1,115 +1,16 @@
-<style>
-.filter-agenda {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    color: #03629D;
+<?php
+
+// Check if a new activity is added via phpMyAdmin
+if (isset($_GET['newActivity']) && $_GET['newActivity'] == 1) {
+    echo "New activity added successfully!";
 }
 
-.square-agenda {
-    width: 280px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    margin-bottom: 20px;
-}
+// Prepare the query to retrieve all activities
+$query = "SELECT id, titel, tekst, foto, datum, maand FROM agenda";
 
-.square-agenda img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0;
-}
-
-.square-footer-agenda {
-    background-color: #3d67ad;
-    padding: 50px;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    text-align: left;
-}
-
-.footer-content-agenda h3 {
-    font-size: 18px;
-    color: #fff;
-}
-
-.footer-content-agenda p {
-    color: #A2A2A2;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-.footer-content-agenda {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
-
-.activiteit {
-    margin: 0 -25px;
-}
-
-.modal-header button {
-    color: #03629D;
-}
-
-.modal-button {
-    background-color: #03629D;
-}
-
-.modal-button:hover {
-    background-color: #03629D;
-}
-
-.modal-title {
-    color: #03629d;
-    font-weight: bold;
-}
-
-#popupTitle {
-    color: #03629d;
-    font-weight: bold;
-}
-
-#popupDate {
-    color: #A2A2A2;
-}
-
-#popupText {
-    color: #03629d;
-    font-weight: 600;
-}
-
-@media (max-width: 750px) {
-
-    .activiteit {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-agenda {
-        padding: 12px;
-    }
-}
-
-@media (max-width: 1026px) {
-    .activiteit {
-        margin: 0 0px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-agenda {
-        padding: 12px;
-    }
-}
-</style>
+// Execute the query
+$result = $conn->query($query);
+?>
 
 <div class="jumbotron jumbotron-img-agenda">
     <img src="img/agendabanner.png" alt="Jumbotron Image" class="img-fluid">
@@ -118,47 +19,64 @@
     </div>
 </div>
 
-<p class="filter-agenda">Januari | Februari | Maart | April | Mei | Juni | Juli | Augustus | September | Oktober |
-    November | December </p>
+<p class="filter-agenda">
+    <a href="#" data-month="1">Januari</a> |
+    <a href="#" data-month="2">Februari</a> |
+    <a href="#" data-month="3">Maart</a> |
+    <a href="#" data-month="4">April</a> |
+    <a href="#" data-month="5">Mei</a> |
+    <a href="#" data-month="6">Juni</a> |
+    <a href="#" data-month="7">Juli</a> |
+    <a href="#" data-month="8">Augustus</a> |
+    <a href="#" data-month="9">September</a> |
+    <a href="#" data-month="10">Oktober</a> |
+    <a href="#" data-month="11">November</a> |
+    <a href="#" data-month="12">December</a>
+</p>
 
 <div class="container activiteiten">
     <div class="row text-center justify-content-center">
-        <div class="col-md-4 mb-4 activiteit">
-            <div class="square-agenda">
-                <img src="img/agenda1" alt="Image 1">
-                <div class="square-footer-agenda">
-                    <div class="footer-content-agenda">
-                        <p>Wo. 15 Nov 2023</p>
-                        <h3>Computercursus voor <br>
-                            65+ ers</h3>
-                    </div>
-                </div>
-            </div>
+        <?php
+// Check if the query was successful
+if ($result && $result->num_rows > 0) {
+    // Loop through all existing activities
+    while ($row = $result->fetch_assoc()) {
+        $id = $row['id'];
+        $titel = $row['titel'];
+        $tekst = $row['tekst'];
+        $foto = $row['foto'];
+        $datum = $row['datum'];
+        $maand = date('n', strtotime($datum));  // Extract the month (1-12) from the date
+
+        // Your existing code for displaying the existing activity
+
+        $dutchDays = ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'];
+        $dutchMonths = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+
+        echo "<div class='col-md-4 mb-4 activiteit' data-toggle='modal' data-target='#myModal' data-tekst='$tekst' data-maand='$maand'>";
+        echo "<div class='square-agenda'>";
+        echo "<img src='img/$foto' alt='Image $id'>";
+        echo "<div class='square-footer-agenda'>";
+        echo "<div class='footer-content-agenda'>";
+        echo "<p>" . $dutchDays[date('w', strtotime($datum))] . ". " . date('j', strtotime($datum)) . " " . $dutchMonths[date('n', strtotime($datum)) - 1] . " " . date('Y', strtotime($datum)) . "</p>";
+        echo "<h3>$titel</h3>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+    }
+
+    // Close the result set for existing activities
+    $result->close();
+} else {
+    echo "Er zijn momenteel geen activiteiten gepland";
+}
+?>
+
+        <div class='no-activities-message' style='display: none; margin: 10%;'>
+            <p>Er zijn geen geplande activiteiten voor deze maand.</p>
         </div>
-        <div class="col-md-4 mb-4 activiteit">
-            <div class="square-agenda">
-                <img src="img/homepage3" alt="Image 2">
-                <div class="square-footer-agenda">
-                    <div class="footer-content-agenda">
-                        <p>Wo. 15 Nov 2023</p>
-                        <h3>Dit is ook een <br>
-                            activiteit</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4 activiteit">
-            <div class="square-agenda">
-                <img src="img/homepage4" alt="Image 3">
-                <div class="square-footer-agenda">
-                    <div class="footer-content-agenda">
-                        <p>Wo. 15 Nov 2023</p>
-                        <h3>Dit is ook een <br>
-                            activiteit</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 
@@ -178,15 +96,7 @@
                 </div>
                 <h3 id="popupTitle"></h3>
                 <p id="popupDate" class="mb-3"></p>
-                <p id="popupText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <p id="popupText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut dolore
-                    molestias possimus
-                    ullam animi itaque, expedita voluptatum doloribus nostrum in quia aspernatur accusamus illum hic
-                    deleniti cupiditate, mollitia corrupti.</p>
+                <p id="popupText"></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary modal-button" data-dismiss="modal">Sluit</button>
@@ -209,5 +119,38 @@ $('.square-agenda').click(function() {
 
     // Show the modal
     $('#myModal').modal('show');
+});
+</script>
+
+<script>
+// JavaScript to update the modal content when shown
+$('.activiteit').on('click', function() {
+    var tekst = $(this).data('tekst');
+    var modal = $('#myModal');
+    modal.find('#popupText').text(tekst);
+    modal.modal('show');
+});
+</script>
+
+<script>
+// JavaScript to filter activities based on selected month
+$('.filter-agenda').on('click', 'a', function(e) {
+    e.preventDefault();
+
+    var selectedMonth = $(this).data('month');
+    $('.activiteit').hide();
+
+    if (selectedMonth === '0') {
+        $('.activiteit').show();
+    } else {
+        $('.activiteit[data-maand="' + selectedMonth + '"]').show();
+    }
+
+    // Check if any activities are visible
+    if ($('.activiteit:visible').length === 0) {
+        $('.no-activities-message').show();
+    } else {
+        $('.no-activities-message').hide();
+    }
 });
 </script>
