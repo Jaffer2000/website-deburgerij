@@ -98,6 +98,9 @@ if ($result && $result->num_rows > 0) {
         $foto = $row['foto'];
         $datum = $row['date_added'];
 
+        $dateObject = new DateTime($datum);
+        $formattedDate = $dateObject->format('Y-m-d');
+
         // Formulier voor elke rij met col-sm-6
         echo '
         <div class="col-sm-6 overzichtopmaak">
@@ -109,7 +112,9 @@ if ($result && $result->num_rows > 0) {
                 <input type="text" id="activiteitnaam" name="activiteitnaam" value="' . $titel . '" required> <br><br>
 
                 <label class="activiteitennaamform" for="datum">Datum veranderen:</label><br>
-                <input type="date" id="datum" name="datum" value="' . $datum . '" required> <br><br>
+                
+
+                <input type="date" id="datum" name="datum" value="' . $formattedDate . '" required> <br><br>
 
                 <label class="activiteitennaamform" for="bericht">Beschrijving veranderen:</label><br>
                 <textarea id="bericht" name="bericht" rows="4" required>' . $tekst . '</textarea> <br><br>
