@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="row">
+<div class="row borderclass">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if form is submitted
@@ -100,7 +100,8 @@ if ($result && $result->num_rows > 0) {
 
         // Formulier voor elke rij met col-sm-6
         echo '
-        <div class="col-sm-6 overzichtopmaak">
+        <div class="col-12 col-sm-6 col-md-6">
+        <div class="overzichtopmaak">
             <form action="" method="post" enctype="multipart/form-data" class="formwidth">
                 <input type="hidden" name="activiteitId" value="' . $id . '">
                 <input type="hidden" name="huidigeFoto" value="' . $foto . '">
@@ -123,6 +124,7 @@ if ($result && $result->num_rows > 0) {
 
                 <button class="activiteitentoevoegenbutton" type="submit">Bijwerken</button>
             </form>
+        </div>
         </div>
         ';
     }

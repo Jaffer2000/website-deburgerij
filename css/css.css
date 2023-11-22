@@ -1756,6 +1756,18 @@ font-size: 20px;
   .adminbuttonalign{
     margin-bottom: 25%;
   }
+  .overzichtopmaak {
+    border: 1px solid blue !important;
+    text-align: left !important;
+    padding-left: 50% !important; /* Pas dit aan zoals nodig */
+    margin-left: 0px !important;
+    padding-right: 0% !important;
+    margin-right: 0% !important;
+   
+}
+  .borderclass{
+    border: 1px solid gold !important;
+  }
 }
 
 /* speciaal mobiel formaat */
@@ -1765,6 +1777,7 @@ font-size: 20px;
     align-items: center; 
     justify-content: flex-end;
   }
+  
 }
 
 /* ipad formaat */
