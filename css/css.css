@@ -1333,6 +1333,10 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 font-size: 20px;
+z-index: 2 !important;
+}
+.terugbuttonadmin{
+  z-index: 2 !important;
 }
 
 .terugbuttonadmin{
@@ -1638,7 +1642,9 @@ font-size: 20px;
   .overzichtopmaak{
     text-align: center;
     margin-left: -15%;
-
+  }
+  #bericht{
+    height: 300px !important;
   }
 }
 
@@ -1772,9 +1778,11 @@ font-size: 20px;
     background-color: #a3d0eb;
     border: none;
   }
-  
   .activiteitentoevoegenbutton{
     margin-bottom: 5%;
+  }
+  .berichtnieuwstoevoegen{
+    height: 300px !important;
   }
 }
 
