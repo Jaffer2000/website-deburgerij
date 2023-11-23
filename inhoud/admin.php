@@ -43,7 +43,7 @@ function paginabewerken() {
 
         <button  onClick="nieuwstoevoegen()" class="adminbutton">Nieuws toevoegen</button> <br><br>
 
-        <button  onClick="nieuwsbewerken()" class="adminbutton">Nieuws Bewerken</button>
+        <button  onClick="nieuwsbewerken()" class="adminbutton">Nieuws bewerken</button>
 
     </div>
 
@@ -51,13 +51,13 @@ function paginabewerken() {
 
         <button  onClick="activiteittoevoegen()" class="adminbutton">Activiteiten toevoegen</button> <br><br>
 
-        <button  onClick="activiteitbewerken()" class="adminbutton">Activiteiten Bewerken</button>
+        <button  onClick="activiteitbewerken()" class="adminbutton">Activiteiten bewerken</button>
 
     </div>
 
     <div class="col-sm-4 adminbuttonalign">
 
-        <button  onClick="paginabewerken()" class="adminbutton">Pagina Bewerken</button> <br>
+        <button  onClick="paginabewerken()" class="adminbutton">Pagina bewerken</button> <br>
 
     </div>
 

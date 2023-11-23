@@ -9,7 +9,7 @@
 
     <div class="jumbotron contactbackgroundimg"
         style="background-image: url('img/');">
-        <h1 class="headertext">Nieuws toevoegen</h1>
+        <h1 class="headertext ">Nieuws toevoegen</h1>
     </div>
 
 </div>
@@ -35,16 +35,16 @@
 
     <form action="" method="post" enctype="multipart/form-data">
         <label class="activiteitennaamform" for="activiteitnaam">Naam van het nieuwsbericht:</label> <br>
-        <input type="text" id="activiteitnaam" name="activiteitnaam" required> <br><br>
+        <input type="text" id="activiteitnaam" class="activiteitnaamnieuwstoevoegen" name="activiteitnaam" required> <br><br>
 
         <label class="activiteitennaamform" for="datum">Datum van het nieuwsbericht:</label><br>
-        <input type="date" id="datum" name="datum" required> <br><br>
+        <input type="date" id="datum" class="datumnieuwstoevoegen" name="datum" required> <br><br>
 
         <label class="activiteitennaamform" for="bericht">Beschrijving van het nieuwsbericht:</label><br>
-        <textarea id="bericht" name="bericht" rows="4" required></textarea> <br><br>
+        <textarea id="bericht" class="berichtnieuwstoevoegen" name="bericht" rows="4" required></textarea> <br><br>
 
         <label class="activiteitennaamform" for="foto">Foto van het nieuwsbericht:</label><br>
-        <input type="file" id="foto" name="foto" accept="image/*"> <br><br>
+        <input type="file" id="foto" class="fotonieuwstoevoegen" name="foto" accept="image/*"> <br><br>
 
         <button class="activiteitentoevoegenbutton" type="submit">Toevoegen</button>
     </form>

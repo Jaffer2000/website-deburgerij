@@ -1341,9 +1341,6 @@ font-size: 20px;
 }
 
 /* Activiteiten bewerken */
-.overzichtopmaak{
-  padding-bottom: 5%;
-}
 .activiteitbewerkenimg{
   width: 25%;
 }
@@ -1635,6 +1632,14 @@ font-size: 20px;
   .pdf-button{
     margin: 0 10px;
   }
+  .activiteitenformulieraligncenter{
+    text-align: center;
+  }
+  .overzichtopmaak{
+    text-align: center;
+    margin-left: -15%;
+
+  }
 }
 
 /* telefoon formaat */
@@ -1756,17 +1761,20 @@ font-size: 20px;
   .adminbuttonalign{
     margin-bottom: 25%;
   }
-  .overzichtopmaak {
-    border: 1px solid blue !important;
-    text-align: left !important;
-    padding-left: 50% !important; /* Pas dit aan zoals nodig */
-    margin-left: 0px !important;
-    padding-right: 0% !important;
-    margin-right: 0% !important;
-   
-}
   .borderclass{
     border: 1px solid gold !important;
+  }
+  .activiteitenformulieraligncenter{
+    text-align: center;
+  }
+  .activiteitnaamnieuwstoevoegen, .datumnieuwstoevoegen, .berichtnieuwstoevoegen, .fotonieuwstoevoegen, .activiteitnaamtoevoegen, .datumtoevoegen, .berichttoevoegen, .fototoevoegen{
+    width: 65% !important;
+    background-color: #a3d0eb;
+    border: none;
+  }
+  
+  .activiteitentoevoegenbutton{
+    margin-bottom: 5%;
   }
 }
 

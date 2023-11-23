@@ -35,16 +35,16 @@
 
     <form action="" method="post" enctype="multipart/form-data">
         <label class="activiteitennaamform" for="activiteitnaam">Naam van de activiteit:</label> <br>
-        <input type="text" id="activiteitnaam" name="activiteitnaam" required> <br><br>
+        <input type="text" id="activiteitnaam" class="activiteitnaamtoevoegen" name="activiteitnaam" required> <br><br>
 
         <label class="activiteitennaamform" for="datum">Datum van de activiteit:</label><br>
-        <input type="date" id="datum" name="datum" required> <br><br>
+        <input type="date" id="datum" class="datumtoevoegen" name="datum" required> <br><br>
 
         <label class="activiteitennaamform" for="bericht">Beschrijving van de activiteit:</label><br>
-        <textarea id="bericht" name="bericht" rows="4" required></textarea> <br><br>
+        <textarea id="bericht" class="berichttoevoegen" name="bericht" rows="4" required></textarea> <br><br>
 
         <label class="activiteitennaamform" for="foto">Foto voor de activiteit:</label><br>
-        <input type="file" id="foto" name="foto" accept="image/*"> <br><br>
+        <input type="file" id="foto" class="fototoevoegen" name="foto" accept="image/*"> <br><br>
 
         <button class="activiteitentoevoegenbutton" type="submit">Toevoegen</button>
     </form>
