@@ -50,7 +50,9 @@
 </header>
 
 <div class="overlay" id="overlay">
+    <!-- Container for search bar and close button -->
     <div class="search-bar-mobile">
+        <!-- Search bar for mobile and tablet -->
         <div class="search-bar-content">
             <input type="text" placeholder="Zoek...">
         </div>
@@ -85,3 +87,30 @@
 </div>
 
 <script src="script.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Toggle search bar on mobile and tablet
+    $('.search-icon').click(function() {
+        // Check if it's a mobile or tablet view
+        if ($(window).width() <= 1030) { // Adjusted the width to 991 for tablets and smaller desktops
+            openSearchMobile();
+        } else {
+            // Toggle search bar on desktop
+            $('.search-icon').toggleClass('active');
+            $('.search-bar').toggleClass('active');
+        }
+    });
+
+    // Close search bar
+    $('.close-search').click(function() {
+        $('.search-icon').removeClass('active');
+        $('.search-bar').removeClass('active');
+
+        // Check if it's a mobile or tablet view
+        if ($(window).width() <= 1030) { // Adjusted the width to 991 for tablets and smaller desktops
+            closeSearchMobile();
+        }
+    });
+});
+</script>
