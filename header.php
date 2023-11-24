@@ -20,6 +20,12 @@
                 </svg>
             </div>
 
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Zoek...">
+                <button type="button" class="close-search">&times;</button>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -39,10 +45,18 @@
                     </li>
                 </ul>
             </div>
-
         </nav>
     </div>
 </header>
+
+<div class="overlay" id="overlay">
+    <div class="search-bar-mobile">
+        <div class="search-bar-content">
+            <input type="text" placeholder="Zoek...">
+        </div>
+    </div>
+    <button type="button" class="close-search" onclick="closeSearchMobile()">&times;</button>
+</div>
 
 <!-- Sidebar -->
 <div id="sidebar" class="sidebar">
@@ -70,47 +84,4 @@
     </ul>
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.getElementById("sidebar");
-    const openButton = document.querySelector(".navbar-toggler");
-
-    let isSidebarOpen = false; // Track the state of the sidebar
-
-    // Function to open and close the sidebar
-    openButton.addEventListener("click", function() {
-        if (isSidebarOpen) {
-            // Close the sidebar
-            closeSidebar();
-        } else {
-            // Open the sidebar
-            openSidebar();
-        }
-    });
-
-    // Function to open the sidebar
-    function openSidebar() {
-        sidebar.style.right = "0";
-        document.body.classList.add("sidebar-open");
-        isSidebarOpen = true;
-        // Add a click event listener to close the sidebar when clicking outside
-        document.addEventListener("click", closeSidebarOnClickOutside);
-    }
-
-    // Function to close the sidebar
-    function closeSidebar() {
-        sidebar.style.right = "-100%";
-        document.body.classList.remove("sidebar-open");
-        isSidebarOpen = false;
-        // Remove the click event listener
-        document.removeEventListener("click", closeSidebarOnClickOutside);
-    }
-
-    // Function to close the sidebar when clicking outside
-    function closeSidebarOnClickOutside(event) {
-        if (!sidebar.contains(event.target) && !openButton.contains(event.target)) {
-            closeSidebar();
-        }
-    }
-});
-</script>
+<script src="script.js"></script>

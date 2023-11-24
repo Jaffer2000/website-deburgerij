@@ -56,3 +56,85 @@ $(".filter-agenda").on("click", "a", function (e) {
     $(".no-activities-message").hide();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.getElementById("sidebar");
+  const openButton = document.querySelector(".navbar-toggler");
+
+  let isSidebarOpen = false; // Track the state of the sidebar
+
+  // Function to open and close the sidebar
+  openButton.addEventListener("click", function () {
+    if (isSidebarOpen) {
+      // Close the sidebar
+      closeSidebar();
+    } else {
+      // Open the sidebar
+      openSidebar();
+    }
+  });
+
+  // Function to open the sidebar
+  function openSidebar() {
+    sidebar.style.right = "0";
+    document.body.classList.add("sidebar-open");
+    isSidebarOpen = true;
+    // Add a click event listener to close the sidebar when clicking outside
+    document.addEventListener("click", closeSidebarOnClickOutside);
+  }
+
+  // Function to close the sidebar
+  function closeSidebar() {
+    sidebar.style.right = "-100%";
+    document.body.classList.remove("sidebar-open");
+    isSidebarOpen = false;
+    // Remove the click event listener
+    document.removeEventListener("click", closeSidebarOnClickOutside);
+  }
+
+  // Function to close the sidebar when clicking outside
+  function closeSidebarOnClickOutside(event) {
+    if (!sidebar.contains(event.target) && !openButton.contains(event.target)) {
+      closeSidebar();
+    }
+  }
+});
+
+// Open search on mobile and tablet
+function openSearchMobile() {
+  $(".search-bar").addClass("active");
+  $(".overlay").addClass("active");
+}
+
+// Close search on mobile and tablet
+function closeSearchMobile() {
+  $(".search-bar").removeClass("active");
+  $(".overlay").removeClass("active");
+}
+
+$(document).ready(function () {
+  // Toggle search bar on mobile and tablet
+  $(".search-icon").click(function () {
+    // Check if it's a mobile or tablet view
+    if ($(window).width() <= 1030) {
+      // Adjusted the width to 991 for tablets and smaller desktops
+      openSearchMobile();
+    } else {
+      // Toggle search bar on desktop
+      $(".search-icon").toggleClass("active");
+      $(".search-bar").toggleClass("active");
+    }
+  });
+
+  // Close search bar
+  $(".close-search").click(function () {
+    $(".search-icon").removeClass("active");
+    $(".search-bar").removeClass("active");
+
+    // Check if it's a mobile or tablet view
+    if ($(window).width() <= 1030) {
+      // Adjusted the width to 991 for tablets and smaller desktops
+      closeSearchMobile();
+    }
+  });
+});
