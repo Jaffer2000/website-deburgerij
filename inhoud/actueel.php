@@ -64,18 +64,20 @@ $result = $conn->query($query);
         $formattedDate = $formatter->format($publishedDate);
 
         echo "<div class='newsitem row'>";
-        echo "<div class='col-md-auto col-sm-12 text-center'>";
-        echo "<img src='img/$foto' alt='Image' class='mb-3'>"; // Remove img-fluid class
+        echo "<div class='col-lg-auto col-sm-12'>";
+        echo "<div class='row'>";
+        echo "<div class='col-lg-7 col-sm-12 text-center'>";
+        echo "<img src='img/$foto' alt='Image' class='img-fluid mb-3'>"; // Add img-fluid class
         echo "</div>";
-        echo "<div class='col-md-8 col-sm-12 newsitem-content'>";
+        echo "<div class='col-lg-5 col-sm-12 newsitem-content'>";
         echo "<p class='newsitem-date'>$formattedDate</p>";
         echo "<h4>$titel</h4>";
-
+        
         // Check if $tekst is not empty before splitting into words
         if (!empty($tekst)) {
             // Split the text into words
             $words = str_word_count($tekst, 1);
-
+        
             // Display only the 50th word initially
             if (count($words) > 50) {
                 echo "<p class='newsitem-text truncated' id='text$id'>" . implode(' ', array_slice($words, 0, 50)) . "...</p>";
@@ -84,11 +86,13 @@ $result = $conn->query($query);
                 // If there are fewer than 50 words, display the full text
                 echo "<p class='newsitem-text'>$tekst</p>";
             }
-
+        
             // Hidden div for the full text
             echo "<div class='full-text' id='fullText$id' style='display:none;'>$tekst</div>";
         }
-
+        
+        echo "</div>";
+        echo "</div>";
         echo "</div>";
         echo "</div>";
 
@@ -130,20 +134,3 @@ $result = $conn->query($query);
 }
 ?>
 </div>
-
-<script>
-function toggleText(element, id) {
-    var contentDiv = element.previousElementSibling;
-    var fullTextDiv = document.getElementById('fullText' + id);
-
-    if (contentDiv.classList.contains('truncated')) {
-        // Show the full text
-        contentDiv.classList.remove('truncated');
-        contentDiv.textContent = fullTextDiv.textContent;
-    } else {
-        // Display only the 50th word
-        contentDiv.classList.add('truncated');
-        contentDiv.textContent = fullTextDiv.textContent.split(' ').slice(0, 50).join(' ') + '...';
-    }
-}
-</script>

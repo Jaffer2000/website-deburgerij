@@ -18,6 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function toggleText(element, id) {
+  var contentDiv = element.previousElementSibling;
+  var fullTextDiv = document.getElementById("fullText" + id);
+
+  if (contentDiv.classList.contains("truncated")) {
+    // Show the full text
+    contentDiv.classList.remove("truncated");
+    contentDiv.textContent = fullTextDiv.textContent;
+  } else {
+    // Display only the 50th word
+    contentDiv.classList.add("truncated");
+    contentDiv.textContent =
+      fullTextDiv.textContent.split(" ").slice(0, 50).join(" ") + "...";
+  }
+}
+
 // JavaScript to handle the modal content
 $(".square-agenda").click(function () {
   var imageSrc = $(this).find("img").attr("src");
