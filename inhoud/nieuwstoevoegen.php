@@ -77,6 +77,7 @@
         // Query uitvoeren
         if ($conn->query($sql) === TRUE) {
             echo "Nieuwsbericht succesvol toegevoegd!";
+            var_dump($foto);
         } else {
             echo "Fout bij het toevoegen van het nieuwsbericht: " . $conn->error;
         }

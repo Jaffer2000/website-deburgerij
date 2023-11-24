@@ -32,53 +32,66 @@
 <div class="row">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if form is submitted
+    if (isset($_POST['verwijder'])) {
+        // Verwijderactie uitvoeren
+        $activiteitId = $_POST['activiteitId'];
+        $verwijderQuery = "DELETE FROM actueel WHERE id = $activiteitId";
 
-    // Verkrijg de gegevens van het formulier
-    $activiteitId = $_POST['activiteitId']; // Voeg een verborgen veld toe in het formulier om de activiteit-ID te behouden
-    $nieuweTitel = $_POST['activiteitnaam'];
-    $nieuweDatum = $_POST['datum'];
-    $nieuweTekst = $_POST['bericht'];
-    
-    // Upload nieuwe foto als deze is geselecteerd
-    $fotoNaam = '';
-
-    if ($_FILES['foto']['size'] > 0) {
-        $fotoMime = mime_content_type($_FILES['foto']['tmp_name']);
-        
-        if ($fotoMime == 'image/jpeg' || $fotoMime == 'image/png' || $fotoMime == 'image/gif') {
-            // Het is een geldig afbeeldingstype, verwerk de upload
-            $fotoNaam = $_FILES['foto']['name'];
-            $fotoPad = 'img/' . $fotoNaam;
-    
-            if (move_uploaded_file($_FILES['foto']['tmp_name'], $fotoPad)) {
-                echo '<script>alert("Afbeelding succesvol geüpload.");</script>';
-            } else {
-                echo '<script>alert("Fout bij het verplaatsen van het bestand.");</script>';
-            }
+        if ($conn->query($verwijderQuery) === TRUE) {
+            echo '<script>alert("Activiteit verwijderd!");</script>';
         } else {
-            echo '<script>alert("Ongeldig bestandstype. Alleen JPG, PNG en GIF zijn toegestaan.");</script>';
+            echo '<script>alert("Fout bij het verwijderen van de activiteit: ' . $conn->error . '");</script>';
         }
     } else {
-        echo '<script>alert("Geen afbeelding geüpload.");</script>';
-    }
-    
-    // Controleer of $fotoNaam is ingesteld voordat je het gebruikt
-    if (!empty($fotoNaam)) {
-        // Voer de code uit die $fotoNaam gebruikt
-    } else {
-        // Doe iets anders of geef een foutmelding weer
-        echo '<script>alert("Fout bij het uploaden van de afbeelding.");</script>';
-    }
-    
-    // Voorbereid de update-query
-    $updateQuery = "UPDATE actueel SET titel = '$nieuweTitel', date_added = '$nieuweDatum', tekst = '$nieuweTekst', foto = '$fotoNaam' WHERE id = $activiteitId";
+        // Bijwerkactie uitvoeren
+        $activiteitId = $_POST['activiteitId'];
+        $huidigeFoto = $_POST['huidigeFoto'];
 
-    // Voer de update-query uit
-    if ($conn->query($updateQuery) === TRUE) {
-        echo '<script>alert("Activiteit bijgewerkt!");</script>';
-    } else {
-        echo '<script>alert("Fout bijwerken activiteit: ' . $conn->error . '");</script>';
+        // Verkrijg de gegevens van het formulier
+        $nieuweTitel = $_POST['activiteitnaam'];
+        $nieuweDatum = $_POST['datum'];
+        $nieuweTekst = $_POST['bericht'];
+
+        // Upload nieuwe foto als deze is geselecteerd
+        $fotoNaam = '';
+
+        if ($_FILES['foto']['size'] > 0) {
+            $fotoMime = mime_content_type($_FILES['foto']['tmp_name']);
+
+            if ($fotoMime == 'image/jpeg' || $fotoMime == 'image/png' || $fotoMime == 'image/gif') {
+                // Het is een geldig afbeeldingstype, verwerk de upload
+                $fotoNaam = $_FILES['foto']['name'];
+                $fotoPad = 'img/' . $fotoNaam;
+
+                if (move_uploaded_file($_FILES['foto']['tmp_name'], $fotoPad)) {
+                    echo '<script>alert("Afbeelding succesvol geüpload.");</script>';
+                } else {
+                    echo '<script>alert("Fout bij het verplaatsen van het bestand.");</script>';
+                }
+            } else {
+                echo '<script>alert("Ongeldig bestandstype. Alleen JPG, PNG en GIF zijn toegestaan.");</script>';
+            }
+        } else {
+            echo '<script>alert("Geen afbeelding geüpload.");</script>';
+        }
+
+        // Controleer of $fotoNaam is ingesteld voordat je het gebruikt
+        if (!empty($fotoNaam)) {
+            // Voer de code uit die $fotoNaam gebruikt
+        } else {
+            // Doe iets anders of geef een foutmelding weer
+            echo '<script>alert("Fout bij het uploaden van de afbeelding.");</script>';
+        }
+
+        // Voorbereid de update-query
+        $updateQuery = "UPDATE actueel SET titel = '$nieuweTitel', date_added = '$nieuweDatum', tekst = '$nieuweTekst', foto = '$fotoNaam' WHERE id = $activiteitId";
+
+        // Voer de update-query uit
+        if ($conn->query($updateQuery) === TRUE) {
+            echo '<script>alert("Activiteit bijgewerkt!");</script>';
+        } else {
+            echo '<script>alert("Fout bijwerken activiteit: ' . $conn->error . '");</script>';
+        }
     }
 }
 
@@ -126,7 +139,8 @@ if ($result && $result->num_rows > 0) {
                 <label class="activiteitennaamform" for="foto">Foto veranderen:</label><br>
                 <input type="file" id="foto" name="foto"/> <br><br>
 
-                <button class="activiteitentoevoegenbutton" type="submit">Bijwerken</button>
+                <button class="activiteitentoevoegenbutton" type="submit">Bijwerken</button> <br><br><br>
+                <button class="verwijderbutton activiteitentoevoegenbutton" type="submit" name="verwijder">Verwijderen</button>
             </form>
         </div>
         ';
