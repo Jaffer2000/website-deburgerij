@@ -4,25 +4,23 @@ body {
   padding: 0;
 }
 
+
 /* nav */
 .nav-list li {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .nav-list li a:hover:before {
   margin-left: 0;
   opacity: 1;
   visibility: visible;
 }
-
 ul,
 ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .social-inner {
   display: flex;
   flex-direction: column;
@@ -49,14 +47,12 @@ ol {
   visibility: hidden;
   transition: 0.22s ease;
 }
-
 .custom-header {
   background-color: #c0db8f;
   padding: 32px 0;
   position: relative;
   z-index: 1;
 }
-
 .logo-container {
   position: absolute;
   top: -197px;
@@ -69,11 +65,9 @@ ol {
   justify-content: center;
   overflow: hidden;
 }
-
 .logo-image {
   z-index: 1;
 }
-
 .logo-img {
   max-width: 100%;
   height: auto;
@@ -81,25 +75,20 @@ ol {
   width: 100%;
   padding-bottom: 10%;
 }
-
 .navbar {
   justify-content: flex-end;
   position: relative;
 }
-
 .nav-item {
   margin: 0px;
 }
-
 .nav-link {
   color: #01619d;
   font-weight: 800;
 }
-
 ul {
   margin-left: 45%;
 }
-
 .search-icon {
   fill: #01619d;
   position: absolute;
@@ -107,6 +96,7 @@ ul {
   right: 10px;
   transform: translateY(-50%);
 }
+
 
 /* Sidebar Styles */
 .sidebar {
@@ -121,292 +111,66 @@ ul {
   transition: right 0.3s ease;
   color: #01619d;
 }
-
 .sidebar ul li a {
   color: #01619d;
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .sidebar li {
   padding: 0;
 }
-
 .navbar-toggler {
   color: #01619d;
   border: none;
   position: relative;
 }
-
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #a2be70;
   margin-top: 4%;
 }
-
 .info {
   background-color: #c0db8f;
   color: #606060;
   padding-top: 3%;
   padding-bottom: 0.8%;
 }
-
 .navbar-footer {
   padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .links {
   display: flex;
   align-items: center;
   margin-left: 15%;
 }
-
 .navbar-footer a {
   font-size: 14px;
   text-decoration: none;
   margin: 5px 10px;
   color: #606060;
 }
-
 .social-icons {
   display: flex;
   align-items: center;
   margin-left: 8%;
 }
-
 .info p {
   margin-left: 30%;
 }
-
 .boekhouden-logo {
   margin-top: 11%;
   margin-right: 2%;
 }
 
-/* Media query for tablet and mobile devices */
-@media (max-width: 768px) {
-  .custom-header {
-    padding: 12px 0;
-  }
-
-  .logo-container {
-    width: 220px;
-    height: 220px;
-    top: -120px;
-    border-radius: 70%;
-  }
-
-  .logo-img {
-    padding-bottom: 5%;
-    padding-left: 13%;
-    padding-right: 13%;
-  }
-
-  .navbar-nav {
-    display: none;
-  }
-
-  ul {
-    margin-left: 0;
-  }
-
-  .navbar-toggler:focus {
-    outline: none;
-  }
-
-  .sidebar-square {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #e9603a;
-    margin-left: 8%;
-    margin-right: 10px;
-  }
-
-  .sidebar-line {
-    border-top: 2px solid #a2be70;
-    margin-top: 12px;
-    padding-bottom: 5%;
-    width: 100%;
-  }
-
-  .content {
-    transition: transform 0.3s ease;
-  }
-
-  .sidebar-open .content {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .custom-header {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .logo-container {
-    transform: translateX(-70%);
-  }
-
-  .sidebar-open .sidebar {
-    right: 0;
-  }
-
-  button {
-    margin-right: 7%;
-  }
-
-  .sidebar ul li a {
-    text-decoration: none;
-  }
-
-  .info {
-    text-align: center;
-  }
-
-  .info p {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
-  .navbar-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-footer a {
-    margin: 5px 6px;
-  }
-
-  .links {
-    margin: 10px 0;
-  }
-
-  .social-icons {
-    margin-left: 0;
-  }
-
-  .boekhouden-logo,
-  .anbi-logo {
-    width: 100%;
-    max-width: 120px;
-    margin: 10px 0;
-  }
-
-  .boekhouden-logo {
-    width: 120px;
-    margin-top: 16%;
-    margin-right: 2%;
-  }
-
-  .anbi-logo {
-    width: 100px;
-  }
-
-  .info {
-    padding-top: 6%;
-  }
-
-  .info p {
-    font-size: 14px;
-    margin-left: 20%;
-  }
-
-  .homeh1-1 {
-    font-size: 26px;
-    padding: 0 2%;
-  }
-
-  .homeh1-2 {
-    font-size: 26px;
-  }
-
-  .hometekst1 {
-    max-width: 95%;
-    font-size: 14px;
-  }
-
-  .breaks {
-    display: none;
-  }
-
-  .buttons-homepage {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .overons-homepage {
-    margin-top: -100px;
-  }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 750px) {
-  .logo-container {
-    width: 220px;
-    height: 220px;
-    top: -120px;
-    border-radius: 70%;
-  }
-
-  .logo-img {
-    padding-bottom: 5%;
-    padding-left: 13%;
-    padding-right: 13%;
-  }
-
-  .welkom {
-    margin-top: 7%;
-  }
-
-  .container.references {
-    padding-top: 5%;
-  }
-
-  .square {
-    padding: 30px;
-    margin-bottom: 35px;
-  }
-
-  .overons-homepage {
-    margin-top: 30px;
-    padding-bottom: 8%;
-  }
-
-  .hometekst2 {
-    padding: 0 2px;
-  }
-
-  .overons-homepage-text {
-    margin-top: 20px;
-    padding: 30px;
-  }
-
-  .info {
-    text-align: center;
-  }
-
-  .info p {
-    margin-left: 0;
-  }
-
-  .jumbotron-img-home img {
-    height: 250px;
-  }
-
-  .jumbotron-content h1 {
-    font-size: 40px !important;
-  }
-}
 
 /* Homepage */
-
 .jumbotron-img-home {
   padding: 0;
   margin: 0;
@@ -414,12 +178,10 @@ ul {
   display: flex;
   align-items: center;
 }
-
 .jumbotron-img-home img {
   width: 100%;
   margin-top: -24px;
 }
-
 .jumbotron-content {
   position: absolute;
   top: 50%;
@@ -427,19 +189,16 @@ ul {
   transform: translate(0, -50%);
   text-align: left;
 }
-
 .jumbotron-content h1 {
   font-size: 60px;
   margin-bottom: 10px;
   color: white;
 }
-
 .jumbotron-content p {
   font-size: 1.2em;
   margin-bottom: 20px;
   color: white;
 }
-
 .jumbotron-content button {
   border-radius: 50px;
   width: 160px;
@@ -453,16 +212,13 @@ ul {
   justify-content: center;
   border: none;
 }
-
 .jumbotron-content button:focus {
   outline: none;
 }
-
 .welkom {
   padding-top: 4%;
   text-align: center;
 }
-
 .custom-button {
   border-radius: 50px;
   width: 170px;
@@ -499,7 +255,6 @@ ul {
   justify-content: center;
   border: none;
 }
-
 .custom-button3 {
   border-radius: 50px;
   width: 180px;
@@ -512,23 +267,19 @@ ul {
   justify-content: center;
   border: none;
 }
-
 .custom-button1:focus,
 .custom-button2:focus,
 .custom-button3:focus {
   outline: none;
 }
-
 .homeh1-1 {
   color: #03629d;
   font-weight: bold;
 }
-
 .homeh1-2 {
   color: #03629d;
   font-weight: bold;
 }
-
 .hometekst1 {
   padding-top: 1%;
   color: #03629d;
@@ -537,24 +288,20 @@ ul {
   margin: 0 auto;
   text-align: center;
 }
-
 .hometekst2 {
   color: #03629d;
   font-weight: 600;
   font-size: 20px;
 }
-
 .buttons-homepage {
   padding-top: 2%;
   padding-bottom: 6%;
 }
-
 .container.references {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .square {
   width: 100%;
   height: 320px;
@@ -565,14 +312,12 @@ ul {
   position: relative;
   margin-bottom: 40px;
 }
-
 .square img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0;
 }
-
 .square-footer {
   background-color: #3d67ad;
   padding: 50px;
@@ -582,7 +327,6 @@ ul {
   position: relative;
   text-align: center;
 }
-
 .square-footer h3 {
   position: absolute;
   bottom: 0;
@@ -592,95 +336,80 @@ ul {
   left: 0;
   right: 0;
 }
-
 .overons-homepage {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-
 .overons-img {
   padding-left: 7%;
 }
-
 .overons-img.img {
   border-radius: 10px;
   max-width: 100%;
 }
-
 .overons-homepage-text {
   padding-right: 7%;
   padding-top: 3%;
 }
 
-/* Actueel */
 
+/* Actueel */
 .titlecontainer {
   display: flex;
   align-items: center;
   padding-bottom: 80px;
 }
-
 .actueelh1-1 {
   color: #03629d;
   font-weight: bold;
 }
-
 .header-line {
   background-color: #e9603a;
   width: 7px;
   height: 40px;
   margin-right: 7px;
 }
-
 .actueel-content {
   display: flex;
   flex-wrap: wrap;
   padding: 5% 12%;
 }
-
 .newsitem {
   display: flex;
   margin-bottom: 100px;
 }
-
 .newsitem img {
   max-width: 100%;
   margin-right: 10px;
 }
-
 .newsitem-content {
   flex: 1;
   margin: 12px;
 }
-
 .newsitem-date {
   color: #a2a2a2;
 }
-
 .newsitem-content h4 {
   color: #03629d;
   font-weight: bold;
   margin-top: -10px;
   margin-bottom: 20px;
 }
-
 .newsitem-text {
   color: #03629d;
   font-weight: 600;
   font-size: 16px;
 }
-
 .newsitem-leesMeer {
   color: #e9603a;
   font-weight: bold;
 }
-
 .newsitem-leesMeer {
   cursor: pointer;
 }
 
-/* Agenda */
 
+/* Agenda */
 .jumbotron-img-agenda {
   padding: 0;
   margin: 0;
@@ -688,23 +417,19 @@ ul {
   display: flex;
   align-items: center;
 }
-
 .jumbotron-img-agenda img {
   width: 100%;
   margin-top: -24px;
 }
-
 .filter-agenda {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   color: #03629d;
 }
-
 .filter-agenda a {
   color: #03629d;
 }
-
 .square-agenda {
   width: 280px;
   height: 320px;
@@ -715,14 +440,12 @@ ul {
   position: relative;
   margin-bottom: 20px;
 }
-
 .square-agenda img {
   width: 100%;
   height: 100%;
   display: block;
   margin: 0;
 }
-
 .square-footer-agenda {
   background-color: #3d67ad;
   padding: 50px;
@@ -731,81 +454,68 @@ ul {
   position: relative;
   text-align: left;
 }
-
 .footer-content-agenda h3 {
   font-size: 18px;
   color: #fff;
 }
-
 .footer-content-agenda p {
   color: #a2a2a2;
   font-size: 13px;
   margin-bottom: 8px;
 }
-
 .footer-content-agenda {
   position: absolute;
   top: 10%;
   left: 10%;
 }
-
 .activiteit {
   margin: 0 -25px;
 }
-
 .modal-header button {
   color: #03629d;
 }
-
 .modal-button {
   background-color: #03629d;
 }
-
 .modal-button:hover {
   background-color: #03629d;
 }
-
 .modal-title {
   color: #03629d;
   font-weight: bold;
 }
-
 #popupTitle {
   color: #03629d;
   font-weight: bold;
 }
-
 #popupDate {
   color: #a2a2a2;
 }
-
 #popupText {
   color: #03629d;
   font-weight: 600;
 }
 
-/* 404 */
 
+/* 404 */
 .rowpadding404 {
   padding-top: 75px;
 }
-
 .h1404 {
   text-align: center;
   color: #03629d;
   font-size: bold;
 }
-
 .p404 {
   text-align: none;
   color: #03629d;
   font-weight: 600;
   font-size: 20px;
 }
-
 .a404 {
   color: #a2be70;
 }
+
 
 /* universeel CSS */
 .contactbackgroundimg {
@@ -817,7 +527,6 @@ ul {
   width: 100%;
   margin-top: -50px;
 }
-
 .contactbackgroundimg::before {
   content: "";
   position: absolute;
@@ -833,7 +542,6 @@ ul {
   ); /* RGB-waarden van lichtblauw met een transparantie van 0.5 */
   z-index: 0; /* Zet de z-index naar 0, zodat de transparante laag onder de tekst ligt */
 }
-
 .headertext {
   font-size: 75px;
   color: white;
@@ -842,15 +550,24 @@ ul {
   position: relative; /* Voeg position: relative toe aan de tekst om de z-index te beïnvloeden */
   z-index: 1; /* Zet de z-index naar 1, zodat de tekst boven de transparante laag ligt */
 }
+.cmswijzigenknop{
+  padding: 3px 30px;
+  background-color: #e8613c; /* Orange background color */
+  border: none;
+  border-radius: 30px; /* Round border */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 
 /* contact */
-
 .contacth3 {
   text-align: center;
   color: #03629d;
   font-weight: bold;
 }
-
 .telnummer {
   display: inline-block;
 }
@@ -860,43 +577,22 @@ ul {
   margin-top: 15%;
   margin-left: 2%;
 }
-
 .openingstijdentekst {
   color: #03629d;
   margin-left: 2%;
 }
-
 .emailphonecss {
   color: #03629d;
   font-weight: bold;
   font-size: 20px;
   text-decoration: underline;
 }
-
-.phonemargin {
-  margin-left: 200px;
-}
-
-.atbackground {
-  margin-left: 35px;
-  background-color: #e9603a;
-  width: 45px;
-  height: 45px;
-  padding: 10px 10px;
-  border-radius: 35px;
-}
-
-.atinfo {
-  color: white;
-}
-
 .contacth2 {
   color: #03629d;
   font-weight: bold;
   text-align: center;
   margin-bottom: 35px;
 }
-
 .contactformnaamfill,
 .contactformtelefoonnummerfill {
   width: 65%;
@@ -905,7 +601,6 @@ ul {
   border-radius: 10px; /* Adjust the value to control the roundness of the corners */
   outline: none;
 }
-
 .contactformberichtfill {
   width: 65%;
   height: 250px;
@@ -913,7 +608,6 @@ ul {
   border: none;
   border-radius: 25px; /* Adjust the value to control the roundness of the corners */
 }
-
 .contactformbutton {
   background-color: #e9603a;
   font-weight: bold;
@@ -922,38 +616,31 @@ ul {
   border-radius: 25px;
   color: white;
 }
-
 .contactformbutten,
 .contactformcenter {
   text-align: center;
 }
-
 .contactformspacing {
   margin-bottom: 35px;
 }
-
 .contactformtekst {
   border: 0px solid blue;
   width: 25%;
   margin-left: 17.5%;
 }
-
 .contactformnaam,
 .contactformtelefoonnummer,
 .contactformbericht {
   color: #03629d;
   font-weight: 600;
 }
-
 .contactformbox {
   margin-bottom: 25px;
 }
-
 .googlelocatie {
   border-radius: 25px; /* Adjust the value to control the roundness of the corners */
   margin-bottom: 45px;
 }
-
 .googlelocatielocatie {
   color: #03629d;
   font-weight: 700;
@@ -962,37 +649,26 @@ ul {
   width: 75%;
   /* margin-left: 15%; */
 }
-
 .telcontact,
 .emailcontact {
   width: 20%;
   margin-right: -50px;
   margin-left: -50px;
 }
-
-
-
-.contactgegevens {
-  margin-top: 25px;
-  text-align: right;
-}
-
 .telefoondiv {
   padding: 10px; /* Add padding for better appearance */
 }
-
 .googlefotolocatie{
   text-align: center;
 }
 
-/* verhuur */
 
+/* verhuur */
 .verhuurh11 {
   color: #03629d;
   text-align: center;
   font-weight: bold;
 }
-
 .verhuurtekst1 {
   margin-top: -25px;
   color: #03629d;
@@ -1000,7 +676,6 @@ ul {
   font-weight: 600;
   font-size: 20px;
 }
-
 #prijslijstbutton {
   background-color: #e9603a;
   font-weight: bold;
@@ -1009,33 +684,28 @@ ul {
   border-radius: 25px;
   color: white;
 }
-
 .prijslijstbuttondiv {
   margin-top: 35px;
   text-align: center;
   margin-bottom: 100px;
 }
-
 .verhuurh12 {
   color: #03629d;
   margin-left: 430px;
   font-weight: bold;
 }
-
 .verhuurtekst2 {
   color: #03629d;
   margin-left: 430px;
   font-weight: 600;
   font-size: 20px;
 }
-
 .verhuurh13 {
   color: #03629d;
   text-align: center;
   font-weight: bold;
   margin-top: 50px;
 }
-
 .verhuurtekst3 {
   margin-top: -25px;
   color: #03629d;
@@ -1044,13 +714,11 @@ ul {
   font-size: 20px;
   margin-bottom: 100px;
 }
-
 .verhuurh14 {
   color: #03629d;
   font-weight: bold;
   margin-top: -60px;
 }
-
 .verhuurtekst4 {
   margin-top: -25px;
   color: #03629d;
@@ -1059,14 +727,12 @@ ul {
   width: 60%;
   padding-left: 20px;
 }
-
 .verhuurh15 {
   color: #03629d;
   text-align: center;
   font-weight: bold;
   margin-top: 50px;
 }
-
 .bullet1,
 .bullet2,
 .bullet3 {
@@ -1074,39 +740,33 @@ ul {
   font-size: 1.1em; /* You can adjust the font size using em units */
   font-weight: 600;
 }
-
 .verhuurklaarh1 {
   text-align: center;
   color: #03629d;
   font-weight: bold;
   padding-top: 5%;
 }
-
 .verhuurh36 {
   margin-top: -25px;
   text-align: center;
   font-weight: 600;
   color: #03629d;
 }
-
 .verhuurh16 {
   padding-left: -150px;
   color: #03629d;
   font-weight: bold;
 }
-
 .verhuurtekst6 {
   color: #03629d;
   font-weight: 600;
   width: 65%;
 }
-
 .orange-dot {
   position: relative;
   margin-right: 10px;
   margin-left: 55px;
 }
-
 .orange-dot::before {
   content: "\2022"; /* Unicode character for bullet point */
   color: orange;
@@ -1116,52 +776,44 @@ ul {
   transform: translateY(-50%);
   left: -20px; /* Adjust the distance between dot and text */
 }
-
 .verhuurimg3 {
   width: 50%;
 }
-
 .paddingbullet {
   padding-bottom: 0.5em; /* Adjust the padding as needed */
 }
-
 .img3right {
   text-align: right;
 }
-
 .verhuurimg4 {
   width: 75%;
   margin-top: -15%;
   margin-right: -150px;
 }
-
 .img4right {
   text-align: right;
 }
+
 
 /* Over ons */
 .overonsh11 {
   color: #03629d;
   font-weight: bold;
 }
-
 .overonsp11 {
   color: #03629d;
   font-size: 20px;
   font-weight: 600;
   width: 75%;
 }
-
 .overonsfoto1 {
   border: 1px solid gold;
 }
-
 .overonsh12 {
   color: #03629d;
   font-weight: bold;
   margin-left: 275px;
 }
-
 .overonsp12 {
   color: #03629d;
   font-size: 20px;
@@ -1170,40 +822,33 @@ ul {
   text-align: right;
   margin-left: 225px;
 }
-
 .overonsfoto2 {
   width: 100%;
   margin-left: -25%;
   margin-top: -19%;
 }
-
 .overonsh13 {
   color: #03629d;
   font-weight: bold;
 }
-
 .overonsp13 {
   color: #03629d;
   font-size: 20px;
   font-weight: 600;
   width: 60%;
 }
-
 .overonsfoto3 {
   border: 0px solid gold;
   width: 65%;
 }
-
 .overonsfoto3right {
   text-align: right;
 }
-
 .overonsh14 {
   color: #03629d;
   font-weight: bold;
   margin-left: 275px;
 }
-
 .overonsp14 {
   color: #03629d;
   font-size: 20px;
@@ -1212,21 +857,13 @@ ul {
   text-align: right;
   margin-left: 225px;
 }
-
 .overonsfoto4 {
   border: 0px solid gold;
   width: 65%;
 }
-
 .overonsfoto3left {
   text-align: left;
 }
-
-.pdffoto {
-  background-color: white;
-  width: 15%;
-}
-
 .pdf-button {
   display: flex;
   align-items: center;
@@ -1240,13 +877,6 @@ ul {
   cursor: pointer;
   font-size: 20px;
 }
-
-.pdf-icon {
-  width: 55px; /* Adjust the width of the PDF icon */
-  height: 55px; /* Adjust the height of the PDF icon */
-  padding: 5px;
-}
-
 .pdfbackground {
   margin-left: 25px;
   margin-right: -25px;
@@ -1254,11 +884,6 @@ ul {
   border: 3px solid white;
   border-radius: 30px;
 }
-
-.row-centered .pdf-button {
-  margin: 0 100px; /* Voeg hier de gewenste ruimte toe tussen de knoppen */
-}
-
 .verkort {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1266,27 +891,19 @@ ul {
   -webkit-line-clamp: 3; /* Toon maximaal 3 regels */
   -webkit-box-orient: vertical;
 }
-
-.toonVolledig {
-  -webkit-line-clamp: initial; /* Toon alle regels */
-}
-
 .hidden {
   display: none;
 }
-
 #leesMeerBtn,
 #verminderBtn {
   color: #e9603a;
   font-weight: bold;
 }
-
 #volledigeTekst {
   color: #03629d;
   font-weight: 600;
   font-size: 20px;
 }
-
 
 
 /* Admin omgeving */
@@ -1300,11 +917,9 @@ ul {
   cursor: pointer;
   font-size: 20px;
 }
-
 .adminbuttonalign{
   text-align: center;
 }
-
 
 
 /* Activiteiten toevoegen */
@@ -1313,11 +928,6 @@ ul {
   font-weight: 600;
   font-size: 24px;
   width: 300px !important;
-}
-.formwidth{
-  width: 2000px;
-  text-align: center;
-  margin-left: -35% !important;
 }
 #activiteitnaam, #datum, #bericht, #foto{
   background-color: #a3d0eb;
@@ -1333,21 +943,27 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 font-size: 20px;
-z-index: 2 !important;
+position: relative;
+bottom: 100px;
 }
-.terugbuttonadmin{
-  z-index: 2 !important;
-}
-
 .terugbuttonadmin{
   text-align: right;
   padding-right: 3%;
 }
 
+
 /* Activiteiten bewerken */
 .activiteitbewerkenimg{
   width: 25%;
 }
+
+
+/* Verhuur bewerken */
+.verhuurknopalign{
+  text-align: center;
+}
+
+
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
   .custom-header {
@@ -1646,6 +1262,27 @@ z-index: 2 !important;
   #bericht{
     height: 300px !important;
   }
+  .contactbewerkform{
+    width: 300px !important;
+    background-color: #a3d0eb;
+    border: none;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
+  }
+  #contacttekst{
+    height: 300px !important;
+  }
+  .opmaakcontactbewerkpagina{
+    text-align: center;
+  }
+  .verhuurbulletpoints{
+    height: 100px !important;
+    width: 600px !important;
+    background-color: #a3d0eb;
+    border: none;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
+  }
 }
 
 /* telefoon formaat */
@@ -1784,6 +1421,27 @@ z-index: 2 !important;
   .berichtnieuwstoevoegen{
     height: 300px !important;
   }
+  .contactbewerkform{
+    width: 300px !important;
+    background-color: #a3d0eb;
+    border: none;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
+  }
+  #contacttekst{
+    height: 300px !important;
+  }
+  .opmaakcontactbewerkpagina{
+    text-align: center;
+  }
+  .verhuurbulletpoints{
+    height: 100px !important;
+    width: 300px !important;
+    background-color: #a3d0eb;
+    border: none;
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    outline: none;
+  }
 }
 
 /* speciaal mobiel formaat */
@@ -1813,5 +1471,221 @@ z-index: 2 !important;
   .orange-dot{
     padding-top: 8%;
   }
+  .verhuurbulletpoints{
+    width: 250px !important;
+  } 
 }
 
+/* Media query for tablet and mobile devices */
+@media (max-width: 768px) {
+  .custom-header {
+    padding: 12px 0;
+  }
+
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .sidebar-square {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #e9603a;
+    margin-left: 8%;
+    margin-right: 10px;
+  }
+
+  .sidebar-line {
+    border-top: 2px solid #a2be70;
+    margin-top: 12px;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+
+  .content {
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-open .content {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .custom-header {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .logo-container {
+    transform: translateX(-70%);
+  }
+
+  .sidebar-open .sidebar {
+    right: 0;
+  }
+
+  button {
+    margin-right: 7%;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .navbar-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-footer a {
+    margin: 5px 6px;
+  }
+
+  .links {
+    margin: 10px 0;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  .boekhouden-logo,
+  .anbi-logo {
+    width: 100%;
+    max-width: 120px;
+    margin: 10px 0;
+  }
+
+  .boekhouden-logo {
+    width: 120px;
+    margin-top: 16%;
+    margin-right: 2%;
+  }
+
+  .anbi-logo {
+    width: 100px;
+  }
+
+  .info {
+    padding-top: 6%;
+  }
+
+  .info p {
+    font-size: 14px;
+    margin-left: 20%;
+  }
+
+  .homeh1-1 {
+    font-size: 26px;
+    padding: 0 2%;
+  }
+
+  .homeh1-2 {
+    font-size: 26px;
+  }
+
+  .hometekst1 {
+    max-width: 95%;
+    font-size: 14px;
+  }
+
+  .breaks {
+    display: none;
+  }
+
+  .buttons-homepage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .overons-homepage {
+    margin-top: -100px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 750px) {
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    top: -120px;
+    border-radius: 70%;
+  }
+
+  .logo-img {
+    padding-bottom: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .welkom {
+    margin-top: 7%;
+  }
+
+  .container.references {
+    padding-top: 5%;
+  }
+
+  .square {
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  .overons-homepage {
+    margin-top: 30px;
+    padding-bottom: 8%;
+  }
+
+  .hometekst2 {
+    padding: 0 2px;
+  }
+
+  .overons-homepage-text {
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    margin-left: 0;
+  }
+
+  .jumbotron-img-home img {
+    height: 250px;
+  }
+
+  .jumbotron-content h1 {
+    font-size: 40px !important;
+  }
+}

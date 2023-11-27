@@ -22,7 +22,7 @@
 
         // Close the result set
         $result->close();
-        ?>
+?>
 
 <div class="row headerblauw">
     <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
