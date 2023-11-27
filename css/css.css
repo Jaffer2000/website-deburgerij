@@ -884,6 +884,9 @@ ul {
   border: 3px solid white;
   border-radius: 30px;
 }
+.pdf-icon{
+  width: 15%;
+}
 .verkort {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -963,6 +966,11 @@ bottom: 100px;
   text-align: center;
 }
 
+
+/* Over ons bewerken */
+.overonsbewerkenalign{
+  text-align: center;
+}
 
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
@@ -1214,7 +1222,6 @@ bottom: 100px;
 /* Media query */
 
 /* Computer formaat */
-
 @media screen and (min-width: 940px) and (max-width: 1920px) {
   .googlelocatielocatie {
     padding-left: 9% !important;  /* pas dit aan naar de gewenste padding-waarde */
@@ -1277,7 +1284,7 @@ bottom: 100px;
   }
   .verhuurbulletpoints{
     height: 100px !important;
-    width: 600px !important;
+    width: 500px !important;
     background-color: #a3d0eb;
     border: none;
     border-radius: 10px; /* Adjust the value to control the roundness of the corners */
