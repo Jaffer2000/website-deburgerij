@@ -22,7 +22,6 @@
         $result->close();
         ?>
 
-
 <div class="jumbotron jumbotron-img-home">
     <img src="img/<?php echo $backgroundImagePath; ?>" alt="Jumbotron Image" class="img-fluid">
     <div class="jumbotron-content">
@@ -43,38 +42,44 @@
 <div class="row buttons-homepage">
     <div class="col-md-12 text-center">
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-4">
-            <button class="custom-button1 mx-2 mb-3 mb-md-0">Onze activiteiten ></button>
-            <button class="custom-button2 mx-2 mb-3 mb-md-0">Aanmelden nieuwsbrief ></button>
-            <button class="custom-button3 mx-2 mb-3 mb-md-0">Ruimte huren? ></button>
+            <a href="agenda"><button class="custom-button1 mx-2 mb-3 mb-md-0">Onze activiteiten ></button></a>
+            <a href="actueel"><button class="custom-button2 mx-2 mb-3 mb-md-0">Aanmelden nieuwsbrief ></button></a>
+            <a href="verhuur"><button class="custom-button3 mx-2 mb-3 mb-md-0">Ruimte huren? ></button></a>
         </div>
     </div>
 </div>
 
 <div class="container references">
     <div class="row text-center justify-content-center">
-        <div class="col-md-4 mb-4">
-            <div class="square">
-                <img src="img/homepage2" alt="Image 1">
-                <div class="square-footer">
-                    <h3>Bekijk foto’s van vorige <br> activiteiten!</h3>
+        <div class="col-md-4 mb-4 reference">
+            <a href="">
+                <div class="square">
+                    <img src="img/homepage2" alt="Image 1">
+                    <div class="square-footer">
+                        <h3>Bekijk foto’s van vorige <br> activiteiten!</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="square">
-                <img src="img/homepage3" alt="Image 2">
-                <div class="square-footer">
-                    <h3>Bekijk onze <br> activiteiten!</h3>
+        <div class="col-md-4 mb-4 reference">
+            <a href="agenda">
+                <div class="square">
+                    <img src="img/homepage3" alt="Image 2">
+                    <div class="square-footer">
+                        <h3>Bekijk onze <br> activiteiten!</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="square">
-                <img src="img/homepage4" alt="Image 3">
-                <div class="square-footer">
-                    <h3>Wilt u een ruimte <br> huren? Neem <br> contact met ons op!</h3>
+        <div class="col-md-4 mb-4 reference">
+            <a href="verhuur">
+                <div class="square">
+                    <img src="img/homepage4" alt="Image 3">
+                    <div class="square-footer">
+                        <h3>Wilt u een ruimte <br> huren? Neem <br> contact met ons op!</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

@@ -3,9 +3,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* nav */
+.content {
+  flex: 1;
+}
+
 .nav-list li {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -269,12 +275,8 @@ ul {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
   background-color: #a2be70;
-  margin-top: 4%;
-  max-width: 100%;
-  overflow: hidden;
+  margin-top: auto; /* Push the footer to the bottom */
 }
 
 .info {
@@ -459,32 +461,39 @@ ul {
 }
 
 .buttons-homepage {
-  padding-top: 2%;
-  padding-bottom: 6%;
-}
-
-.container.references {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 4%;
 }
 
 .square {
-  width: 100%;
+  width: 280px;
   height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .square img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   margin: 0;
+}
+
+.references {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.reference {
+  margin: 0 -25px;
+}
+
+.buttons-homepage a:hover {
+  text-decoration: none;
 }
 
 .square-footer {
@@ -609,8 +618,7 @@ ul {
 }
 
 .filter-agenda {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 3%;
   text-align: center;
   color: #03629d;
 }
@@ -665,6 +673,7 @@ ul {
 
 .activiteit {
   margin: 0 -25px;
+  cursor: pointer;
 }
 
 .modal-header button {
@@ -1365,15 +1374,6 @@ ul {
     margin-top: 7%;
   }
 
-  .container.references {
-    padding-top: 5%;
-  }
-
-  .square {
-    padding: 30px;
-    margin-bottom: 35px;
-  }
-
   .overons-homepage {
     margin-top: 30px;
     padding-bottom: 8%;
@@ -1410,8 +1410,10 @@ ul {
     justify-content: center;
   }
 
-  .filter-agenda {
-    padding: 12px;
+  .reference {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .titlecontainer {
@@ -1436,8 +1438,10 @@ ul {
     justify-content: center;
   }
 
-  .filter-agenda {
-    padding: 12px;
+  .reference {
+    margin: 0 0px;
+    display: flex;
+    justify-content: center;
   }
 
   .actueelh1-1 {
@@ -1448,6 +1452,15 @@ ul {
 @media (min-width: 550px) and (max-width: 772px) {
   .header-line {
     height: 75px;
+  }
+
+  .square {
+    width: 220px;
+    height: 260px;
+  }
+
+  .references {
+    padding-bottom: 70px;
   }
 }
 
