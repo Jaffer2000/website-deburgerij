@@ -323,44 +323,22 @@ ul {
 
 /* Homepage */
 
-.jumbotron-img-home {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.jumbotron-img-home img {
-  width: 100%;
+#carouselExample {
   margin-top: -24px;
 }
 
-.jumbotron-content {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(0, -50%);
-  text-align: left;
+.carousel-caption a {
+  color: #e9603a;
+  text-decoration: none;
 }
 
-.jumbotron-content h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.jumbotron-content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.jumbotron-content button {
+.carousel-caption button,
+.carousel-caption button:focus,
+.carousel-caption button:active {
   border-radius: 50px;
   width: 160px;
   height: 60px;
-  background-color: #e9603a;
+  background-color: #e9603a !important;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -370,7 +348,45 @@ ul {
   border: none;
 }
 
-.jumbotron-content button:focus {
+.carousel-caption button:hover,
+.carousel-caption button:focus:hover,
+.carousel-caption button:active:hover {
+  background-color: #e9603a;
+}
+
+.carousel-item {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-height: 510px;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.carousel-caption p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.carousel-caption button:focus {
   outline: none;
 }
 
@@ -379,18 +395,6 @@ ul {
   text-align: center;
 }
 
-.custom-button {
-  border-radius: 50px;
-  width: 170px;
-  height: 60px;
-  background-color: #e9603a;
-  color: white;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
 .custom-button1 {
   border-radius: 50px;
   width: 180px;
@@ -764,6 +768,44 @@ ul {
   padding-left: 15%;
   position: relative; /* Voeg position: relative toe aan de tekst om de z-index te beïnvloeden */
   z-index: 1; /* Zet de z-index naar 1, zodat de tekst boven de transparante laag ligt */
+}
+
+.jumbotron-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+.jumbotron-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.jumbotron-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.jumbotron-content button {
+  border-radius: 50px;
+  width: 160px;
+  height: 60px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.jumbotron-content button:focus {
+  outline: none;
 }
 
 /* contact */
@@ -1428,6 +1470,26 @@ ul {
   .header-line {
     width: 7px;
     height: 50px;
+  }
+
+  .carousel-item {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    align-items: center;
+    height: 230px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translate(0, -50%);
+    text-align: left;
+  }
+
+  .carousel-caption h1 {
+    font-size: 34px;
   }
 }
 

@@ -22,14 +22,57 @@
         $result->close();
         ?>
 
-<div class="jumbotron jumbotron-img-home">
-    <img src="img/<?php echo $backgroundImagePath; ?>" alt="Jumbotron Image" class="img-fluid">
-    <div class="jumbotron-content">
-        <h1>Lunch 2023</h1>
-        <p>Meld je aan voor de wijklunch!</p>
-        <button>Meer info</button>
+<?php 
+    // Prepare the query
+    $query = "SELECT id, title, text, img, reference FROM slider";
+    // Execute the query
+    $result = $conn->query($query);
+    // Check if the query was successful
+    if ($result && $result->num_rows > 0) {
+        // Output the HTML structure for the Bootstrap Carousel
+        ?>
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <?php
+                // Fetch the data from the result set
+                while ($row = $result->fetch_assoc()) {
+                    $id = $row['id'];
+                    $title = $row['title'];
+                    $text = $row['text'];
+                    $imagePath = $row['img'];
+                    $reference = $row['reference'];
+
+                    // Check if this is the first item, and set the 'active' class
+                    $activeClass = ($id == 1) ? 'active' : '';
+                    ?>
+        <div class="carousel-item <?php echo $activeClass; ?>">
+            <img src="img/<?php echo $imagePath; ?>" class="d-block w-100 h-100" alt="Slide <?php echo $id; ?>">
+            <div class="carousel-caption d-md-block">
+                <h1><?php echo $title; ?></h1>
+                <p><?php echo $text; ?></p>
+                <a href="<?php echo $reference; ?>"><button class="btn btn-primary">Meer info</button></a>
+            </div>
+        </div>
+        <?php
+                }
+                ?>
     </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
+<?php
+    } else {
+        echo "There is no data found!";
+    }
+    // Close the result set
+    $result->close();
+?>
 
 <div class="row">
     <div class="col-md-12 welkom">
