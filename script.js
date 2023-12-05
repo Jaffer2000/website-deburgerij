@@ -18,6 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function toggleText(element, id) {
+  var contentDiv = element.previousElementSibling;
+  var fullTextDiv = document.getElementById("fullText" + id);
+
+  if (contentDiv.classList.contains("truncated")) {
+    // Show the full text
+    contentDiv.classList.remove("truncated");
+    contentDiv.textContent = fullTextDiv.textContent;
+  } else {
+    // Display only the 50th word
+    contentDiv.classList.add("truncated");
+    contentDiv.textContent =
+      fullTextDiv.textContent.split(" ").slice(0, 50).join(" ") + "...";
+  }
+}
+
 // JavaScript to handle the modal content
 $(".square-agenda").click(function () {
   var imageSrc = $(this).find("img").attr("src");
@@ -56,3 +72,58 @@ $(".filter-agenda").on("click", "a", function (e) {
     $(".no-activities-message").hide();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.getElementById("sidebar");
+  const openButton = document.querySelector(".navbar-toggler");
+
+  let isSidebarOpen = false; // Track the state of the sidebar
+
+  // Function to open and close the sidebar
+  openButton.addEventListener("click", function () {
+    if (isSidebarOpen) {
+      // Close the sidebar
+      closeSidebar();
+    } else {
+      // Open the sidebar
+      openSidebar();
+    }
+  });
+
+  // Function to open the sidebar
+  function openSidebar() {
+    sidebar.style.right = "0";
+    document.body.classList.add("sidebar-open");
+    isSidebarOpen = true;
+    // Add a click event listener to close the sidebar when clicking outside
+    document.addEventListener("click", closeSidebarOnClickOutside);
+  }
+
+  // Function to close the sidebar
+  function closeSidebar() {
+    sidebar.style.right = "-100%";
+    document.body.classList.remove("sidebar-open");
+    isSidebarOpen = false;
+    // Remove the click event listener
+    document.removeEventListener("click", closeSidebarOnClickOutside);
+  }
+
+  // Function to close the sidebar when clicking outside
+  function closeSidebarOnClickOutside(event) {
+    if (!sidebar.contains(event.target) && !openButton.contains(event.target)) {
+      closeSidebar();
+    }
+  }
+});
+
+// Open search on mobile and tablet
+function openSearchMobile() {
+  $(".search-bar").addClass("active");
+  $(".overlay").addClass("active");
+}
+
+// Close search on mobile and tablet
+function closeSearchMobile() {
+  $(".search-bar").removeClass("active");
+  $(".overlay").removeClass("active");
+}

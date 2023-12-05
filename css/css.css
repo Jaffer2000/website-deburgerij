@@ -2,10 +2,16 @@ body {
   background-color: #fafaf5 !important;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+.content {
+  flex: 1;
+}
 
-/* nav */
 .nav-list li {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -95,6 +101,130 @@ ul {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  background-color: #a2be70;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: right 0.3s ease-in-out;
+  display: none;
+}
+
+.search-bar input {
+  background-color: #a2be70;
+  border: none;
+  outline: none;
+  color: #00619d;
+  width: 100%;
+}
+
+.search-bar input:focus {
+  border: none;
+}
+
+.search-bar input::placeholder {
+  color: #00619d;
+}
+
+.close-search {
+  border: none;
+  background: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #00619d;
+  outline: none;
+}
+
+.close-search:focus {
+  outline: none;
+}
+
+.search-icon.active + .search-bar {
+  right: -8%;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c0db8f;
+  z-index: 999;
+  padding: 60px;
+}
+
+.search-bar-mobile {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #a2be70;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay .search-bar-mobile {
+  position: relative;
+}
+
+.overlay .search-bar-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.overlay .close-search {
+  border: none;
+  background: none;
+  font-size: 3em;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  color: #00619d;
+  outline: none;
+}
+
+.search-bar-mobile input {
+  background-color: #a2be70;
+  border: none;
+  outline: none;
+  color: #00619d;
+  box-sizing: border-box;
+}
+
+.search-bar-content input {
+  font-size: 24px;
+  height: 50px;
+  padding: 20px;
+}
+
+.search-bar-mobile input::placeholder {
+  color: #00619d;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.search-bar.active {
+  right: -8%;
+  display: block;
 }
 
 
@@ -128,10 +258,8 @@ ul {
   position: relative;
 }
 .footer {
-  display: flex;
-  flex-direction: column;
   background-color: #a2be70;
-  margin-top: 4%;
+  margin-top: auto; /* Push the footer to the bottom */
 }
 .info {
   background-color: #c0db8f;
@@ -170,40 +298,22 @@ ul {
 }
 
 
-/* Homepage */
-.jumbotron-img-home {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.jumbotron-img-home img {
-  width: 100%;
+#carouselExample {
   margin-top: -24px;
 }
-.jumbotron-content {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(0, -50%);
-  text-align: left;
+
+.carousel-caption a {
+  color: #e9603a;
+  text-decoration: none;
 }
-.jumbotron-content h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
-  color: white;
-}
-.jumbotron-content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: white;
-}
-.jumbotron-content button {
+
+.carousel-caption button,
+.carousel-caption button:focus,
+.carousel-caption button:active {
   border-radius: 50px;
   width: 160px;
   height: 60px;
-  background-color: #e9603a;
+  background-color: #e9603a !important;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -212,24 +322,48 @@ ul {
   justify-content: center;
   border: none;
 }
-.jumbotron-content button:focus {
+
+.carousel-caption button:hover,
+.carousel-caption button:focus:hover,
+.carousel-caption button:active:hover {
+  background-color: #e9603a;
+}
+
+.carousel-item {
+  height: 510px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.carousel-caption p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.carousel-caption button:focus {
   outline: none;
 }
 .welkom {
   padding-top: 4%;
   text-align: center;
-}
-.custom-button {
-  border-radius: 50px;
-  width: 170px;
-  height: 60px;
-  background-color: #e9603a;
-  color: white;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
 }
 .custom-button1 {
   border-radius: 50px;
@@ -243,6 +377,7 @@ ul {
   justify-content: center;
   border: none;
 }
+
 .custom-button2 {
   border-radius: 50px;
   width: 250px;
@@ -294,30 +429,39 @@ ul {
   font-size: 20px;
 }
 .buttons-homepage {
-  padding-top: 2%;
-  padding-bottom: 6%;
-}
-.container.references {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 4%;
 }
 .square {
-  width: 100%;
+  width: 280px;
   height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .square img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   margin: 0;
 }
+
+.references {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.reference {
+  margin: 0 -25px;
+}
+
+.buttons-homepage a:hover {
+  text-decoration: none;
+}
+
 .square-footer {
   background-color: #3d67ad;
   padding: 50px;
@@ -422,8 +566,7 @@ ul {
   margin-top: -24px;
 }
 .filter-agenda {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 3%;
   text-align: center;
   color: #03629d;
 }
@@ -470,6 +613,7 @@ ul {
 }
 .activiteit {
   margin: 0 -25px;
+  cursor: pointer;
 }
 .modal-header button {
   color: #03629d;
@@ -561,6 +705,44 @@ ul {
   font-size: 20px;
 }
 
+
+.jumbotron-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+.jumbotron-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.jumbotron-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.jumbotron-content button {
+  border-radius: 50px;
+  width: 160px;
+  height: 60px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.jumbotron-content button:focus {
+  outline: none;
+}
 
 /* contact */
 .contacth3 {
@@ -1139,15 +1321,6 @@ bottom: 100px;
     margin-top: 7%;
   }
 
-  .container.references {
-    padding-top: 5%;
-  }
-
-  .square {
-    padding: 30px;
-    margin-bottom: 35px;
-  }
-
   .overons-homepage {
     margin-top: 30px;
     padding-bottom: 8%;
@@ -1184,8 +1357,10 @@ bottom: 100px;
     justify-content: center;
   }
 
-  .filter-agenda {
-    padding: 12px;
+  .reference {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .titlecontainer {
@@ -1201,6 +1376,23 @@ bottom: 100px;
     width: 7px;
     height: 50px;
   }
+
+  .carousel-item {
+    overflow: hidden;
+    height: 230px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translate(0, -50%);
+    text-align: left;
+  }
+
+  .carousel-caption h1 {
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 1026px) {
@@ -1210,8 +1402,10 @@ bottom: 100px;
     justify-content: center;
   }
 
-  .filter-agenda {
-    padding: 12px;
+  .reference {
+    margin: 0 0px;
+    display: flex;
+    justify-content: center;
   }
 
   .actueelh1-1 {
@@ -1222,6 +1416,37 @@ bottom: 100px;
 @media (min-width: 550px) and (max-width: 772px) {
   .header-line {
     height: 75px;
+  }
+
+  .square {
+    width: 220px;
+    height: 260px;
+  }
+
+  .references {
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-bar {
+    display: block;
+    width: 250px;
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .search-icon.active + .search-bar {
+    right: -8%;
+    display: block;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .search-bar-mobile {
+    display: none;
   }
 }
 
