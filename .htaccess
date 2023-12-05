@@ -17,10 +17,13 @@ RewriteRule ^verhuur                      index.php?pagina=verhuur [L]
 RewriteRule ^contact                      index.php?pagina=contact [L]
 RewriteRule ^inlog                        index.php?pagina=inlog [L]
 RewriteRule ^admin                        index.php?pagina=admin [L]
-RewriteRule ^activiteitenbewerken         index.php?pagina=activiteitenbewerken [L]
+RewriteRule ^activiteitenoverzicht        index.php?pagina=activiteitenoverzicht [L]
 RewriteRule ^activiteitentoevoegen        index.php?pagina=activiteitentoevoegen [L]
+RewriteRule ^activiteitbewerken           index.php?pagina=activiteitbewerken [L]
+RewriteRule ^activiteitverwijderen        index.php?pagina=activiteitverwijderen [L]
 RewriteRule ^nieuwstoevoegen              index.php?pagina=nieuwstoevoegen [L]
 RewriteRule ^nieuwsbewerken               index.php?pagina=nieuwsbewerken [L]
 RewriteRule ^paginabewerkenoverzicht      index.php?pagina=paginabewerkenoverzicht [L]
+
 
 ErrorDocument 404 /wijkcentrumdeburgerij/404.php

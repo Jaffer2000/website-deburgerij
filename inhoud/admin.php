@@ -16,7 +16,7 @@ function activiteittoevoegen() {
 }
 
 function activiteitbewerken() {
-    var url = "activiteitenbewerken";
+    var url = "activiteitenoverzicht";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 
