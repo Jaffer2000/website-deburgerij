@@ -64,7 +64,7 @@
                         <td>$titel</td>
                         <td>$datum</td>
                         <td>
-                            <a onclick='bewerken($id)'>Bewerken</a>
+                            <a href=\"index.php?pagina=activiteitbewerken&id=$id\" data-id=\"$id\">Bewerken</a>
                         </td>
                         <td>
                         <a href=\"index.php?pagina=activiteitverwijderen&id=$id\" data-id=\"$id\" >Verwijderen</a>
