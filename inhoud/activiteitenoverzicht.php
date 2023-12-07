@@ -4,19 +4,6 @@
     var url = "admin";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
-
-    // JavaScript function to confirm deletion and navigate to delete page
-    function deleteActivity(id) {
-        var confirmation = confirm("Weet je zeker dat je deze activiteit wilt verwijderen?");
-        if (confirmation) {
-            var url = "activiteitverwijderen.php?id=" + id;
-            window.open(url, "_self"); // Opent de link in dezelfde tab
-        }
-    }
-    function bewerken() {
-    var url = "activiteitbewerken";
-    window.open(url, "_self"); // Opent de link in dezelfde tab
-}
 </script>
 
 <div class="row">
@@ -80,7 +67,8 @@
                             <a onclick='bewerken($id)'>Bewerken</a>
                         </td>
                         <td>
-                        <a onclick='deleteActivity($id)'>Verwijderen</a>
+                        <a href=\"index.php?pagina=activiteitverwijderen&id=$id\" data-id=\"$id\" >Verwijderen</a>
+
                         </td>
                       </tr>"; 
             }
