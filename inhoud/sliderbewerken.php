@@ -86,20 +86,29 @@
             $text = mysqli_real_escape_string($conn, $_POST['slider'][$slider_id]['text']);
             $reference = mysqli_real_escape_string($conn, $_POST['slider'][$slider_id]['reference']);
 
+            // Retrieve the existing image path
+            $result = $conn->query("SELECT img FROM slider WHERE id = $slider_id");
+            $row = $result->fetch_assoc();
+            $existingImagePath = $row['img'];
+
             if (!empty($_FILES['slider_image_' . $slider_id]['name'])) {
+                // Update the image only if a new image is uploaded
                 $imagePath = uploadImage($slider_id);
-        
+
                 // Update the image source in the response
                 echo "<script>
                         document.getElementById('previewImage_" . $slider_id . "').src = 'img/" . $imagePath . "?" . time() . "';
-                      </script>";
+                    </script>";
+            } else {
+                // If no new image is uploaded, retain the existing image path
+                $imagePath = $existingImagePath;
             }
 
             // Update query
             $updateQuery = "UPDATE slider SET 
-               title = '$title', text = '$text',
-               img = '$imagePath', reference = '$reference'
-               WHERE id = $slider_id";
+            title = '$title', text = '$text',
+            img = '$imagePath', reference = '$reference'
+            WHERE id = $slider_id";
 
             // After successful update
             if ($conn->query($updateQuery) === TRUE) {
