@@ -1,7 +1,7 @@
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
-    var url = "nieuwsbewerken";
+    var url = "activiteitenoverzicht";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 </script>
@@ -21,7 +21,7 @@
 
         <div class="terugbuttonadmin">
         
-            <button class="activiteitentoevoegenbutton" onClick="adminterug()">Nieuws overzicht</button>
+            <button class="activiteitentoevoegenbutton" onClick="adminterug()">Activiteiten overzicht</button>
         
         </div>
 
@@ -41,11 +41,11 @@
             $id = $_GET['id'];
 
             // Bereid de verwijderquery voor
-            $deleteQuery = "DELETE FROM agenda WHERE id = $id";
+            $deleteQuery = "DELETE FROM actueel WHERE id = $id";
 
             // Voer de query uit
             if ($conn->query($deleteQuery) === TRUE) {
-                echo "<script> alert(\"De activiteit is succesvol verwijderd\")</script>";
+                echo "<script> alert(\Het nieuwsbericht is succesvol verwijderd\")</script>";
                 echo"<p class=\"verwijderopmaak\">U kunt terug gaan naar de overzicht</p>";
             } else {
                 echo "Error: " . $deleteQuery . "<br>" . $conn->error;

@@ -704,7 +704,9 @@ ul {
   cursor: pointer;
   font-size: 20px;
 }
-
+.verwijderopmaak{
+  text-align: center;
+}
 
 .jumbotron-content {
   position: absolute;
