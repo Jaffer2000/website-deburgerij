@@ -74,8 +74,42 @@ if ($result->num_rows > 0) {
 } else {
     echo "Geen resultaten gevonden voor ID: $id";
 }
+  // Update query uitvoeren
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verwerk de formuliergegevens
+    $activiteitnaam = $_POST['activiteitnaam'];
+    $datum = $_POST['datum'];
+    $bericht = $_POST['bericht'];
+
+    // Update query
+    $update_query = "UPDATE agenda
+                    SET titel = '$activiteitnaam', datum = '$datum', tekst = '$bericht'
+                    WHERE id = $id;";
+
+    // Optioneel: Verwerk het uploaden van de nieuwe foto
+    if ($_FILES['foto']['size'] > 0) {
+        $foto_naam = $_FILES['foto']['name'];
+        $foto_tmp = $_FILES['foto']['tmp_name'];
+        move_uploaded_file($foto_tmp, "img/" . $foto_naam);
+
+        // Voeg de foto-naam toe aan de update query
+        $update_query = "UPDATE agenda
+                        SET titel = '$activiteitnaam', datum = '$datum', tekst = '$bericht', foto = '$foto_naam'
+                        WHERE id = $id;";
+    }
+
+    // Update query uitvoeren
+    if ($conn->query($update_query) === TRUE) {
+        echo "<script>alert(\"De activiteit is succesvol veranderd!\")</script>";
+    } else {
+        echo "Fout bijwerken record: " . $conn->error;
+    }
+} else {
+echo "Geen resultaten gevonden voor ID: $id";
+}
 
 // Verbinding sluiten
 $conn->close();
+
 ?>
 
