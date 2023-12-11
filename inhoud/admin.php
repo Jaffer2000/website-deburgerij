@@ -6,7 +6,7 @@
 }
 
 function nieuwsbewerken() {
-    var url = "nieuwsbewerken";
+    var url = "nieuwsoverzicht";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 

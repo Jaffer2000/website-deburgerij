@@ -36,9 +36,6 @@
         <label class="activiteitennaamform" for="activiteitnaam">Naam van het nieuwsbericht:</label> <br>
         <input type="text" id="activiteitnaam" class="activiteitnaamnieuwstoevoegen" name="activiteitnaam" required> <br><br>
 
-        <label class="activiteitennaamform" for="datum">Datum van het nieuwsbericht:</label><br>
-        <input type="date" id="datum" class="datumnieuwstoevoegen" name="datum" required> <br><br>
-
         <label class="activiteitennaamform" for="bericht">Beschrijving van het nieuwsbericht:</label><br>
         <textarea id="bericht" class="berichtnieuwstoevoegen" name="bericht" rows="4" required></textarea> <br><br>
 

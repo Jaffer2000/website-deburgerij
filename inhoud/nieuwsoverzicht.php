@@ -63,7 +63,7 @@
                         <td>$titel</td>
                         <td>$datum</td>
                         <td>
-                            <a href='edit.php?id=$id'>Bewerken</a>
+                            <a href=\"index.php?pagina=nieuwsbewerken&id=$id\" data-id=\"$id\">Bewerken</a>
                         </td>
                         <td>
                             <a href=\"index.php?pagina=nieuwsverwijderen&id=$id\" data-id=\"$id\" >Verwijderen</a>
