@@ -1,7 +1,7 @@
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
-    var url = "nieuwsbewerken";
+    var url = "activiteitenoverzicht";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 </script>
