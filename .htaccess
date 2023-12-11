@@ -3,6 +3,9 @@ RewriteEngine On
 RewriteBase /wijkcentrumdeburgerij
 
 RewriteRule ^homepagebewerken             index.php?pagina=homepagebewerken [L]
+RewriteRule ^slidertoevoegen              index.php?pagina=slidertoevoegen [L]
+RewriteRule ^sliderbewerken               index.php?pagina=sliderbewerken [L]
+RewriteRule ^tekstbewerken                index.php?pagina=tekstbewerken [L]
 RewriteRule ^actueelbewerken              index.php?pagina=actueelbewerken [L]
 RewriteRule ^overonsbewerken              index.php?pagina=overonsbewerken [L]
 RewriteRule ^agendabewerken               index.php?pagina=agendabewerken [L]
