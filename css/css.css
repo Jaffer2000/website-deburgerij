@@ -746,6 +746,24 @@ ul {
   outline: none;
 }
 
+.oranjebutton{
+  border-radius: 50px;
+  width: 180px;
+  height: 50px;
+  background-color: #e9603a;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.buttoncenter{
+  text-align: center !important;
+  object-position: center !important;
+}
+
 /* contact */
 .contacth3 {
   text-align: center;
@@ -1147,7 +1165,7 @@ bottom: 100px;
 
 /* Activiteiten bewerken */
 .activiteitbewerkenimg{
-  width: 25%;
+  width: 25% !important;
 }
 
 
