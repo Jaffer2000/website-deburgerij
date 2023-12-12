@@ -38,9 +38,9 @@
             $titel6 = $row['titel6'];
             $tekst6 = $row['tekst6'];
 
-            $img1 = $row['img2'];
-            $img2 = $row['img3'];
-            $img3 = $row['img4'];
+            $img1 = $row['img1'];
+            $img2 = $row['img2'];
+            $img3 = $row['img3'];
                
         }
     } else {
@@ -151,73 +151,58 @@
 
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Update query for text fields
-    $updateTextQuery = "UPDATE verhuur SET 
-    titel1 = '" . $_POST['titel1'] . "',
-    tekst1 = '" . $_POST['tekst1'] . "',
-    titel2 = '" . $_POST['titel2'] . "',
-    tekst2 = '" . $_POST['tekst2'] . "',
-    titel3 = '" . $_POST['titel3'] . "',
-    tekst3 = '" . $_POST['tekst3'] . "',
-    titel4 = '" . $_POST['titel4'] . "',
-    tekst4 = '" . $_POST['tekst4'] . "',
-    titel5 = '" . $_POST['titel5'] . "',
-    bullet1 = '" . $_POST['bullet1'] . "',
-    bullet2 = '" . $_POST['bullet2'] . "',
-    bullet3 = '" . $_POST['bullet3'] . "',
-    titel6 = '" . $_POST['titel6'] . "',
-    tekst6 = '" . $_POST['tekst6'] . "'
-    WHERE id = $id";
 
-    if ($conn->query($updateTextQuery) === TRUE) {
-    // Text fields updated successfully
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verwerk de formuliergegevens
+    $titel1 = $_POST['titel1'];
+    $tekst1 = $_POST['tekst1'];
+    $titel2 = $_POST['titel2'];
+    $tekst2 = $_POST['tekst2'];
+    $titel3 = $_POST['titel3'];
+    $tekst3 = $_POST['tekst3'];
+    $titel4 = $_POST['titel4'];
+    $tekst4 = $_POST['tekst4'];
+    $titel5 = $_POST['titel5'];
+    $bullet1 = $_POST['bullet1'];
+    $bullet2 = $_POST['bullet2'];
+    $bullet3 = $_POST['bullet3'];
+    $tekst6 = $_POST['tekst6'];
 
-    // Now, let's handle the image uploads
-    $targetDir = "img/";
+    // Update query
+    $update_query = "UPDATE verhuur SET 
+        titel1 = '$titel1', tekst1 = '$tekst1',
+        titel2 = '$titel2', tekst2 = '$tekst2',
+        titel3 = '$titel3', tekst3 = '$tekst3',
+        titel4 = '$titel4', tekst4 = '$tekst4',
+        titel5 = '$titel5', bullet1 = '$bullet1', bullet2 = '$bullet2', bullet3 = '$bullet3',
+        tekst6 = '$tekst6'";
 
-    // Update this based on your actual field names for the images
-    $img1Field = 'foto1';
-    $img2Field = 'foto2';
-    $img3Field = 'foto3';
+    // Loop through each photo and handle it
+    for ($i = 1; $i <= 3; $i++) {
+        $foto_old = isset($_POST["img{$i}_old"]) ? $_POST["img{$i}_old"] : '';
 
-    // Update Image 1
-    if ($_FILES[$img1Field]['name'] != "") {
-        $img1FileName = basename($_FILES[$img1Field]['name']);
-        $targetFilePath1 = $targetDir . $img1FileName;
-        move_uploaded_file($_FILES[$img1Field]['tmp_name'], $targetFilePath1);
+        // Optioneel: Verwerk het uploaden van de nieuwe foto
+        if ($_FILES["foto{$i}"]['size'] > 0) {
+            $foto_naam = $_FILES["foto{$i}"]['name'];
+            $foto_tmp = $_FILES["foto{$i}"]['tmp_name'];
+            move_uploaded_file($foto_tmp, "img/" . $foto_naam);
 
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto1 = '$img1FileName' WHERE id = $id");
+            // Voeg de foto-naam toe aan de update query
+            $update_query .= ", img{$i} = '$foto_naam'";
+        } else {
+            // Geen nieuwe foto geüpload, behoud de oude foto-naam
+            $update_query .= ", img{$i} = '$foto_old'";
+        }
     }
 
-    // Update Image 2
-    if ($_FILES[$img2Field]['name'] != "") {
-        $img2FileName = basename($_FILES[$img2Field]['name']);
-        $targetFilePath2 = $targetDir . $img2FileName;
-        move_uploaded_file($_FILES[$img2Field]['tmp_name'], $targetFilePath2);
+    $update_query .= " WHERE id = $id";
 
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto2 = '$img2FileName' WHERE id = $id");
-    }
-
-    // Update Image 3
-    if ($_FILES[$img3Field]['name'] != "") {
-        $img3FileName = basename($_FILES[$img3Field]['name']);
-        $targetFilePath3 = $targetDir . $img3FileName;
-        move_uploaded_file($_FILES[$img3Field]['tmp_name'], $targetFilePath3);
-
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto3 = '$img3FileName' WHERE id = $id");
-    }
-
-    echo "Records updated successfully";
+    // Update query uitvoeren
+    if ($conn->query($update_query) === TRUE) {
+        echo "<script>alert(\"De pagina is succesvol bijgewerkt!\")</script>";
     } else {
-        echo "Error updating records: " . $conn->error;
+        echo "Fout, pagina niet kunnen bijwerken: " . $conn->error;
     }
-
-    // Close the database connection
-    $conn->close();
 }
 
 ?>
