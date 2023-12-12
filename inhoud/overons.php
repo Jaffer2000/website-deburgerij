@@ -22,11 +22,11 @@
             $titel4 = $row['titel4'];
             $tekst4 = $row['tekst4'];
 
-            $backgroundImagePath = $row['foto1'];
-            $img2 = $row['foto2'];
-            $img3 = $row['foto3'];
-            $img4 = $row['foto4'];
-            $img5 = $row['foto5'];
+            $backgroundImagePath = $row['foto5'];
+            $img2 = $row['foto1'];
+            $img3 = $row['foto2'];
+            $img4 = $row['foto3'];
+            $img5 = $row['foto4'];
                
         }
     } else {
@@ -51,7 +51,7 @@
 
     <div class="col-sm-6">
 
-        <img class="overonsfoto1" alt="foto1" src="img/<?php echo $img2; ?>">
+        <img class="overonsfoto1" alt="foto1" src="img/<?php echo $img2; ?>" style="width:150px;">
 
     </div>
 
