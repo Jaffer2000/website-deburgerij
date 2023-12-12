@@ -137,6 +137,11 @@
             <label class="activiteitennaamform" for="bericht">tekst 6 veranderen:</label><br>
             <textarea id="contacttekst" name="tekst6" class="contactbewerkform" name="tekst6" rows="4" required> <?php echo$tekst6;?></textarea> <br><br>
 
+            <input type="hidden" name="foto1_old" value="<?php echo $img1; ?>">
+            <input type="hidden" name="foto2_old" value="<?php echo $img2; ?>">
+            <input type="hidden" name="foto3_old" value="<?php echo $img3; ?>">
+
+
             <button class="cmswijzigenknop" type="submit">Bijwerken</button>
         
         
@@ -151,35 +156,37 @@
 
 
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verwerk de formuliergegevens
-    $titel1 = $_POST['titel1'];
-    $tekst1 = $_POST['tekst1'];
-    $titel2 = $_POST['titel2'];
-    $tekst2 = $_POST['tekst2'];
-    $titel3 = $_POST['titel3'];
-    $tekst3 = $_POST['tekst3'];
-    $titel4 = $_POST['titel4'];
-    $tekst4 = $_POST['tekst4'];
-    $titel5 = $_POST['titel5'];
-    $bullet1 = $_POST['bullet1'];
-    $bullet2 = $_POST['bullet2'];
-    $bullet3 = $_POST['bullet3'];
-    $tekst6 = $_POST['tekst6'];
+    // Verwerk de formuliergegevens
+$titel1 = $_POST['titel1'];
+$tekst1 = $_POST['tekst1'];
+$titel2 = $_POST['titel2'];
+$tekst2 = $_POST['tekst2'];
+$titel3 = $_POST['titel3'];
+$tekst3 = $_POST['tekst3'];
+$titel4 = $_POST['titel4'];
+$tekst4 = $_POST['tekst4'];
+$titel5 = $_POST['titel5'];
+$bullet1 = $_POST['bullet1'];
+$bullet2 = $_POST['bullet2'];
+$bullet3 = $_POST['bullet3'];
+$tekst6 = $_POST['tekst6'];
+
 
     // Update query
     $update_query = "UPDATE verhuur SET 
-        titel1 = '$titel1', tekst1 = '$tekst1',
-        titel2 = '$titel2', tekst2 = '$tekst2',
-        titel3 = '$titel3', tekst3 = '$tekst3',
-        titel4 = '$titel4', tekst4 = '$tekst4',
-        titel5 = '$titel5', bullet1 = '$bullet1', bullet2 = '$bullet2', bullet3 = '$bullet3',
-        tekst6 = '$tekst6'";
+    titel1 = '$titel1', tekst1 = '$tekst1',
+    titel2 = '$titel2', tekst2 = '$tekst2',
+    titel3 = '$titel3', tekst3 = '$tekst3',
+    titel4 = '$titel4', tekst4 = '$tekst4',
+    titel5 = '$titel5', bullet1 = '$bullet1', bullet2 = '$bullet2', bullet3 = '$bullet3',
+    tekst6 = '$tekst6'";
+
 
     // Loop through each photo and handle it
-    for ($i = 1; $i <= 3; $i++) {
-        $foto_old = isset($_POST["img{$i}_old"]) ? $_POST["img{$i}_old"] : '';
+    for ($i = 1; $i <= 3; $i++) { // Verander naar 3 omdat je maar 3 foto's hebt
+        $foto_old = $_POST["foto{$i}_old"];
 
         // Optioneel: Verwerk het uploaden van de nieuwe foto
         if ($_FILES["foto{$i}"]['size'] > 0) {
@@ -204,5 +211,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Fout, pagina niet kunnen bijwerken: " . $conn->error;
     }
 }
+
 
 ?>
