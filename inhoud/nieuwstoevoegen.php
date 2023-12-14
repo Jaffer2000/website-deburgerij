@@ -68,10 +68,9 @@
 <?php
 
     // Controleren of het formulier is ingediend
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gegevens van het formulier ophalen
     $activiteitnaam = isset($_POST['activiteitnaam']) ? $_POST['activiteitnaam'] : '';
-    $datum = isset($_POST['datum']) ? $_POST['datum'] : '';
     $bericht = isset($_POST['bericht']) ? $_POST['bericht'] : '';
 
     // Afbeelding uploaden (indien gewenst)
@@ -82,15 +81,19 @@
         $foto = null; // Of een standaardafbeelding toewijzen als er geen foto is geüpload
     }
 
+    // Huidige datum ophalen
+    date_default_timezone_set('Europe/Amsterdam'); // Stel de tijdzone in op Nederlandse tijd
+    $datum = date("Y-m-d H:i:s"); // Pas het formaat aan zoals nodig
+    // Pas het formaat aan zoals nodig
+
     // Controleren of ten minste één veld is ingevuld
-    if (!empty($activiteitnaam) || !empty($datum) || !empty($bericht) || !empty($foto)) {
+    if (!empty($activiteitnaam) || !empty($bericht) || !empty($foto)) {
         // SQL-query voor het invoegen van gegevens
-        $sql = "INSERT INTO actueel (titel, tekst, foto, date_added) VALUES ('$activiteitnaam', '$bericht ','$foto', '$datum')";
+        $sql = "INSERT INTO actueel (titel, tekst, foto, date_added) VALUES ('$activiteitnaam', '$bericht','$foto', '$datum')";
 
         // Query uitvoeren
         if ($conn->query($sql) === TRUE) {
-            echo "Nieuwsbericht succesvol toegevoegd!";
-            var_dump($foto);
+            echo "<script>alert(\"Het nieuwsartikel is succesvol toegevoegd!\")</script>";
         } else {
             echo "Fout bij het toevoegen van het nieuwsbericht: " . $conn->error;
         }
@@ -101,5 +104,6 @@
 
 // Verbinding sluiten
 $conn->close();
+
 
 ?>
