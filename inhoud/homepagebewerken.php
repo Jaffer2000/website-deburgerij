@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <style>
 .admin-home-buttons {
     padding: 70px;

@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -61,17 +64,24 @@
 
     <div class="col-sm-4 opmaakcontactbewerkpagina">
 
-        <form action="" method="post" enctype="multipart/form-data">
+    <div class="container mt-4">
+    <form action="" method="post" enctype="multipart/form-data">
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel veranderen:</label> <br>
-            <input type="text" id="titelbewerkcontact" class="contactbewerkform" name="contactbewerkform" value=" <?php echo$titel;  ?>" required> <br><br>
+        <div class="form-group">
+            <label for="titelbewerkcontact">Titel veranderen:</label><br>
+            <input type="text" id="titelbewerkcontact" class="form-control contactbewerkform" name="contactbewerkform" value="<?php echo $titel; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">Tekst veranderen:</label><br>
-            <textarea id="contacttekst" name="bericht" class="contactbewerkform" rows="4" required> <?php echo$tekst;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="bericht">Tekst veranderen:</label><br>
+            <textarea id="contacttekst" name="bericht" class="form-control contactbewerkform" rows="4" required><?php echo $tekst; ?></textarea>
+        </div>
 
-            <button class="cmswijzigenknop" type="submit">Bijwerken</button>
+        <button class="btn btn-primary cmswijzigenknop" type="submit">Bijwerken</button>
 
-        </form>
+    </form>
+</div>
+
 
     </div>
 

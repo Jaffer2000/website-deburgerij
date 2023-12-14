@@ -1,3 +1,7 @@
+<?php
+    include("check_login.php")
+?>
+
 <script>
     // JavaScript function to navigate to a different page
     function nieuwstoevoegen() {

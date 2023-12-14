@@ -4,7 +4,7 @@
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
-    var url = "activiteitenoverzicht";
+    var url = "sliderbewerken";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 </script>
@@ -13,7 +13,7 @@
 
     <div class="jumbotron contactbackgroundimg"
         style="background-image: url('img/');">
-        <h1 class="headertext">Activiteit is verwijderd</h1>
+        <h1 class="headertext">Slider is verwijderd</h1>
     </div>
 
 </div>
@@ -24,7 +24,7 @@
 
         <div class="terugbuttonadmin">
         
-            <button class="activiteitentoevoegenbutton" onClick="adminterug()">Nieuws overzicht</button>
+            <button class="activiteitentoevoegenbutton" onClick="adminterug()">Slider bewerken</button>
         
         </div>
 
@@ -44,11 +44,11 @@
             $id = $_GET['id'];
 
             // Bereid de verwijderquery voor
-            $deleteQuery = "DELETE FROM agenda WHERE id = $id";
+            $deleteQuery = "DELETE FROM slider WHERE id = $id";
 
             // Voer de query uit
             if ($conn->query($deleteQuery) === TRUE) {
-                echo "<script> alert(\"De activiteit is succesvol verwijderd\")</script>";
+                echo "<script> alert(\"De slider is succesvol verwijderd\")</script>";
                 echo"<p class=\"verwijderopmaak\">U kunt terug gaan naar de overzicht</p>";
             } else {
                 echo "Error: " . $deleteQuery . "<br>" . $conn->error;

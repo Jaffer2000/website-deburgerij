@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -46,31 +49,42 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
    
     echo '
-    <div class="row">
-        <div class="col-sm-12 activiteitenformulieraligncenter">
-            <form action="" method="post" enctype="multipart/form-data">
-                <label class="activiteitennaamform" for="activiteitnaam">Naam van de activiteit:</label> <br>
-                <input type="text" id="activiteitnaam" value="' . $row['titel'] . '" class="activiteitnaamtoevoegen" name="activiteitnaam" required> <br><br>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-12 activiteitenformulieraligncenter">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="activiteitnaam">Naam van de activiteit:</label>
+                        <input type="text" value="' . $row['titel'] . '" class="form-control activiteitnaamtoevoegen" name="activiteitnaam" required>
+                    </div>
     
-                <label class="activiteitennaamform" for="datum">Datum van de activiteit:</label><br>
-                <input type="date" id="datum"  value="' . $row['datum'] . '" class="datumtoevoegen" name="datum" required> <br><br>
+                    <div class="form-group">
+                        <label for="datum">Datum van de activiteit:</label>
+                        <input type="date" id="datum" value="' . $row['datum'] . '" class="form-control datumtoevoegen" name="datum" required>
+                    </div>
     
-                <label class="activiteitennaamform" for="bericht">Beschrijving van de activiteit:</label><br>
-                <textarea id="bericht" class="berichttoevoegen"  name="bericht" rows="4" required>' . $row['tekst'] . '</textarea> <br><br>
+                    <div class="form-group">
+                        <label for="bericht">Beschrijving van de activiteit:</label>
+                        <textarea id="bericht" class="form-control berichttoevoegen" name="bericht" rows="4" required>' . $row['tekst'] . '</textarea>
+                    </div>
     
-                <label class="activiteitennaamform" for="foto">Huidige foto:</label><br>
-                <img src="img/' . $row['foto'] .  '" class="activiteitbewerkenimg" alt="foto"><br><br>
-
-                <label class="activiteitennaamform " id="" for="foto">Foto voor de activiteit:</label><br>
-                <input type="file" id="foto" class="fototoevoegen" name="foto" accept="image/*"> <br><br>
+                    <div class="form-group">
+                        <label for="foto">Huidige foto:</label><br>
+                        <img src="img/' . $row['foto'] . '" class="img-fluid activiteitbewerkenimg" alt="foto"><br><br>
+                    </div>
     
-                <div class="buttoncenter">
-                    <button class="oranjebutton" type="submit">Toevoegen</button>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label for="foto">Foto voor de activiteit:</label>
+                        <input type="file" id="foto" class="form-control-file fototoevoegen" name="foto" accept="image/*">
+                    </div>
+    
+                    <div class="buttoncenter">
+                        <button class="oranjebutton" type="submit">Toevoegen</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>';
-
 } else {
     echo "Geen resultaten gevonden voor ID: $id";
 }

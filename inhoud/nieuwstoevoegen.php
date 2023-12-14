@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -30,20 +33,33 @@
 
 <div class="row">
 
-    <div class="col-sm-12 activiteitenformulieraligncenter">
+    <div class="col-sm-12">
+    <div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data">
 
-    <form action="" method="post" enctype="multipart/form-data">
-        <label class="activiteitennaamform" for="activiteitnaam">Naam van het nieuwsbericht:</label> <br>
-        <input type="text" id="activiteitnaam" class="activiteitnaamnieuwstoevoegen" name="activiteitnaam" required> <br><br>
+                <div class="form-group">
+                    <label for="activiteitnaam">Naam van het nieuwsbericht:</label>
+                    <input type="text" class="form-control" name="activiteitnaam" required>
+                </div>
 
-        <label class="activiteitennaamform" for="bericht">Beschrijving van het nieuwsbericht:</label><br>
-        <textarea id="bericht" class="berichtnieuwstoevoegen" name="bericht" rows="4" required></textarea> <br><br>
+                <div class="form-group">
+                    <label for="bericht">Beschrijving van het nieuwsbericht:</label>
+                    <textarea class="form-control" name="bericht" rows="4" required></textarea>
+                </div>
 
-        <label class="activiteitennaamform" for="foto">Foto van het nieuwsbericht:</label><br>
-        <input type="file" id="foto" class="fotonieuwstoevoegen" name="foto" accept="image/*"> <br><br>
+                <div class="form-group">
+                    <label for="foto">Foto van het nieuwsbericht:</label>
+                    <input type="file" class="form-control-file" name="foto" accept="image/*">
+                </div>
 
-        <button class="activiteitentoevoegenbutton" type="submit">Toevoegen</button>
-    </form>
+                <button class="btn btn-primary" type="submit">Toevoegen</button>
+
+            </form>
+        </div>
+</div>
+    </div>
 
     </div>
 

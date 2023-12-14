@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -73,64 +76,102 @@
 
     <div class="col-sm-4 overonsbewerkenalign">
 
-        <form action="" method="post" enctype="multipart/form-data">
-        
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 1 veranderen:</label> <br>
-            <input type="text" id="titel1" class="contactbewerkform" name="titel1" value="<?php echo $titel1; ?>" required> <br><br>
+    <div class="container mt-4">
+    <form action="" method="post" enctype="multipart/form-data">
+        <!-- Section for Titel 1 -->
+        <div class="form-group">
+            <label for="titel1">Titel 1 veranderen:</label>
+            <input type="text" class="form-control" name="titel1" value="<?php echo $titel1; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 1 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst1" class="contactbewerkform" rows="4" required> <?php echo$tekst1;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="tekst1">Tekst 1 veranderen:</label>
+            <textarea id="tekst1" name="tekst1" class="form-control" rows="4" required><?php echo $tekst1; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 1</label> <br>
-            <img src="img/<?php echo$foto1;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <div class="form-group">
+            <label for="foto1">Foto 1</label><br>
+            <img src="img/<?php echo $foto1; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 1 veranderen:</label><br>
+        <div class="form-group">
+            <label for="foto1">Foto 1 veranderen:</label><br>
             <input type="hidden" name="foto1_old" value="<?php echo $foto1; ?>">
-            <input type="file" id="foto1"  class="verhuurfotobewerken" name="foto1"/> <br><br>
+            <input type="file" id="foto1" class="form-control-file verhuurfotobewerken" name="foto1"/>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 2 veranderen:</label> <br>
-            <input type="text" id="titel2" class="contactbewerkform" name="titel2" value="<?php echo $titel2; ?>" required> <br><br>
+        <div class="form-group">
+            <label for="titel2">Titel 2 veranderen:</label>
+            <input type="text" id="titel2" class="form-control" name="titel2" value="<?php echo $titel2; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 2 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst2" class="contactbewerkform" rows="4" required> <?php echo$tekst2;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="tekst2">Tekst 2 veranderen:</label>
+            <textarea id="tekst2" name="tekst2" class="form-control" rows="4" required><?php echo $tekst2; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 2</label> <br>
-            <img src="img/<?php echo$foto2;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <div class="form-group">
+            <label for="foto2">Foto 2</label><br>
+            <img src="img/<?php echo $foto2; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 2 veranderen:</label><br>
-            <input type="hidden" name="foto2_old" value="<?php echo $foto1; ?>">
-            <input type="file" id="foto2"  class="verhuurfotobewerken" name="foto2"/> <br><br>
+        <div class="form-group">
+            <label for="foto2">Foto 2 veranderen:</label><br>
+            <input type="hidden" name="foto2_old" value="<?php echo $foto2; ?>">
+            <input type="file" id="foto2" class="form-control-file verhuurfotobewerken" name="foto2"/>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 3 veranderen:</label> <br>
-            <input type="text" id="titel3" class="contactbewerkform" name="titel3" value="<?php echo $titel3; ?>" required> <br><br>
+        <div class="form-group">
+            <label for="titel3">Titel 3 veranderen:</label>
+            <input type="text" id="titel3" class="form-control" name="titel3" value="<?php echo $titel3; ?>" required>
+        </div>
 
+        <div class="form-group">
+            <label for="tekst3">Tekst 3 veranderen (Lees meer knop):</label>
+            <textarea id="tekst3" name="tekst3" class="form-control" rows="4" required><?php echo $tekst3; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 3 veranderen (Lees meer knop):</label><br>
-            <textarea id="tekst3" name="tekst3" class="contactbewerkform" rows="4" required> <?php echo$tekst3;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="foto3">Foto 3</label><br>
+            <img src="img/<?php echo $foto3; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 3</label> <br>
-            <img src="img/<?php echo$foto3;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <div class="form-group">
+            <label for="foto3">Foto 3 veranderen:</label><br>
+            <input type="hidden" name="foto3_old" value="<?php echo $foto3; ?>">
+            <input type="file" id="foto3" class="form-control-file verhuurfotobewerken" name="foto3"/>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 3 veranderen:</label><br>
-            <input type="hidden" name="foto3_old" value="<?php echo $foto1; ?>">
-            <input type="file" id="foto3"  class="verhuurfotobewerken" name="foto3"/> <br><br>
+        <div class="form-group">
+            <label for="titel4">Titel 4 veranderen:</label>
+            <input type="text" id="titel4" class="form-control" name="titel4" value="<?php echo $titel4; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 4 veranderen:</label> <br>
-            <input type="text" id="titel4" class="contactbewerkform" name="titel4" value="<?php echo $titel4; ?>" required> <br><br>
+        <div class="form-group">
+            <label for="tekst4">Tekst 4 veranderen:</label>
+            <textarea id="tekst4" name="tekst4" class="form-control" rows="4" required><?php echo $tekst4; ?></textarea>
+        </div> 
 
-            <label class="activiteitennaamform" for="bericht">tekst 4 veranderen:</label><br>
-            <textarea id="tekst4" name="tekst4" class="contactbewerkform" rows="4" required> <?php echo$tekst4;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="foto4">Foto 4</label><br>
+            <img src="img/<?php echo $foto4; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 4</label> <br>
-            <img src="img/<?php echo$foto4;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <div class="form-group">
+            <label for="foto4">Foto 4 veranderen:</label><br>
+            <input type="hidden" name="foto4_old" value="<?php echo $foto4; ?>">
+            <input type="file" id="foto4" class="form-control-file verhuurfotobewerken" name="foto4"/>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 4 veranderen:</label><br>
-            <input type="hidden" name="foto4_old" value="<?php echo $foto1; ?>">
-            <input type="file" id="fotoverhuur"  class="verhuurfotobewerken" name="foto4"/> <br><br>
+        <input type="hidden" name="foto1_old" value="<?php echo $foto1; ?>">
+        <input type="hidden" name="foto2_old" value="<?php echo $foto2; ?>">
+        <input type="hidden" name="foto3_old" value="<?php echo $foto3; ?>">
+        <input type="hidden" name="foto4_old" value="<?php echo $foto4; ?>">
 
-            <button class="cmswijzigenknop" type="submit">Bijwerken</button>
+        <button class="btn btn-primary cmswijzigenknop" type="submit">Bijwerken</button>
+    </form>
+</div>
 
-        </form>
 
     </div>
 

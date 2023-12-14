@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <div class="row">
     <div class="jumbotron contactbackgroundimg" style="background-image: url('img/');">
         <h1 class="headertext">Slider bewerken</h1>
@@ -62,9 +65,13 @@
                         value="<?php echo isset($_POST['slider'][$id]['reference']) ? htmlspecialchars($_POST['slider'][$id]['reference']) : htmlspecialchars($reference); ?>">
                 </div>
             </div>
-            <div class="card-footer">
+           <!-- Voeg deze knop toe binnen de card-footer -->
+           <div class="card-footer">
                 <input type="submit" class="btn btn-primary" value="Save Changes">
+                <a href="index.php?pagina=delete_slider&id=<?php echo$id?>" data-id="<?php echo$id ?>" class="btn btn-danger">Verwijderen</a>
             </div>
+
+
         </div>
     </form>
     <?php
