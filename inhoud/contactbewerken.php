@@ -62,9 +62,11 @@
 
     <div class="col-sm-4"></div>
 
-    <div class="col-sm-4 opmaakcontactbewerkpagina">
+    <div class="col-sm-4">
 
     <div class="container mt-4">
+    <div class="card">
+    <div class="card-body">
     <form action="" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
@@ -80,7 +82,7 @@
         <button class="btn btn-primary cmswijzigenknop" type="submit">Bijwerken</button>
 
     </form>
-</div>
+</div></div></div>
 
 
     </div>

@@ -52,6 +52,8 @@ if ($result->num_rows > 0) {
     <div class="container mt-4">
         <div class="row">
             <div class="col-sm-12 activiteitenformulieraligncenter">
+            <div class="card">
+            <div class="card-body">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="activiteitnaam">Naam van de activiteit:</label>
@@ -83,6 +85,7 @@ if ($result->num_rows > 0) {
                     </div>
                 </form>
             </div>
+            </div></div>
         </div>
     </div>';
 } else {
