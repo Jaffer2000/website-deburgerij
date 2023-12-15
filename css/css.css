@@ -565,6 +565,7 @@ ul {
 .jumbotron-img-agenda img {
   width: 100%;
   margin-top: -24px;
+  height: 78vh;
 }
 .filter-agenda {
   padding: 3%;
@@ -763,6 +764,10 @@ ul {
 .buttoncenter{
   text-align: center !important;
   object-position: center !important;
+}
+
+.adminheader{
+  text-align: center;
 }
 
 /* contact */
@@ -1150,8 +1155,6 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 font-size: 20px;
-position: relative;
-bottom: 100px;
 }
 .terugbuttonadmin{
   text-align: right;

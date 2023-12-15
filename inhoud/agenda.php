@@ -11,13 +11,13 @@ $query = "SELECT id, titel, tekst, foto, datum FROM agenda";
 // Execute the query
 $result = $conn->query($query);
 ?>
-
-<div class="jumbotron jumbotron-img-agenda">
+<div class="jumbotron jumbotron-img-agenda contactbackgroundimg">
     <img src="img/agendabanner.png" alt="Jumbotron Image" class="img-fluid">
     <div class="jumbotron-content">
         <h1>Agenda</h1>
     </div>
 </div>
+
 
 <p class="filter-agenda">
     <a href="#" data-month="1">Januari</a> |

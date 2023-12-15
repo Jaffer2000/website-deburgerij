@@ -35,10 +35,8 @@
 ?>
 
 <div class="row">
-
-    <div class="jumbotron contactbackgroundimg"
-        style="background-image: url('img/');">
-        <h1 class="headertext">Contact bijwerken</h1>
+<div class="col-sm-12" >
+        <h1 class="headertext" style="color:black;">Contact bijwerken</h1>
     </div>
 
 </div>

@@ -24,7 +24,7 @@
         $result->close();
 ?>
 
-<div class="row headerblauw">
+<div class="row ">
     <div class="jumbotron contactbackgroundimg" style="background-image: url('img/<?php echo $backgroundImagePath; ?>');">
        <h1 class="headertext">Contact</h1>
     </div>

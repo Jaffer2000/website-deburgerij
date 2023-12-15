@@ -10,9 +10,8 @@
 </script>
 <div class="row">
 
-    <div class="jumbotron contactbackgroundimg"
-        style="background-image: url('img/');">
-        <h1 class="headertext">Nieuws bewerken</h1>
+<div class="col-sm-12" >
+        <h1 class="headertext" style="color:black;">Nieuws bewerken</h1>
     </div>
 
 </div>
