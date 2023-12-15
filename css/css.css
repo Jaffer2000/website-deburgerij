@@ -260,6 +260,7 @@ ul {
 .footer {
   background-color: #a2be70;
   margin-top: auto; /* Push the footer to the bottom */
+  margin-top: 5%;
 }
 .info {
   background-color: #c0db8f;
