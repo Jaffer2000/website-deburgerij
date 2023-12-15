@@ -30,10 +30,10 @@
             $titel6 = $row['titel6'];
             $tekst6 = $row['tekst6'];
 
-            $backgroundImagePath = $row['img1'];
-            $img2 = $row['img2'];
-            $img3 = $row['img3'];
-            $img4 = $row['img4'];
+            $backgroundImagePath = $row['img4'];
+            $img2 = $row['img1'];
+            $img3 = $row['img2'];
+            $img4 = $row['img3'];
                
         }
     } else {
@@ -43,7 +43,7 @@
     // Close the result set
     $result->close();
 ?>
-
+   
 <script>
     // JavaScript function to navigate to a different page
     function prijslijst() {

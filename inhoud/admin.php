@@ -1,3 +1,7 @@
+<?php
+    include("check_login.php")
+?>
+
 <script>
     // JavaScript function to navigate to a different page
     function nieuwstoevoegen() {
@@ -6,7 +10,7 @@
 }
 
 function nieuwsbewerken() {
-    var url = "nieuwsbewerken";
+    var url = "nieuwsoverzicht";
     window.open(url, "_self"); // Opent de link in dezelfde tab
 }
 
@@ -29,10 +33,8 @@ function paginabewerken() {
 </script>
 
 <div class="row">
-
-    <div class="jumbotron contactbackgroundimg"
-        style="background-image: url('img/');">
-        <h1 class="headertext">Admin</h1>
+<div class="col-sm-12" >
+        <h1 class="headertext" style="color:black;">Admin</h1><br><br>
     </div>
 
 </div>

@@ -260,6 +260,7 @@ ul {
 .footer {
   background-color: #a2be70;
   margin-top: auto; /* Push the footer to the bottom */
+  margin-top: 5%;
 }
 .info {
   background-color: #c0db8f;
@@ -564,6 +565,7 @@ ul {
 .jumbotron-img-agenda img {
   width: 100%;
   margin-top: -24px;
+  height: 78vh;
 }
 .filter-agenda {
   padding: 3%;
@@ -762,6 +764,10 @@ ul {
 .buttoncenter{
   text-align: center !important;
   object-position: center !important;
+}
+
+.adminheader{
+  text-align: center;
 }
 
 /* contact */
@@ -1140,11 +1146,6 @@ ul {
   font-size: 24px;
   width: 300px !important;
 }
-#activiteitnaam, #datum, #bericht, #foto{
-  background-color: #a3d0eb;
-  width: 15%;
-  border: none;
-}
 .activiteitentoevoegenbutton{
   padding: 3px 30px;
 background-color: #e8613c; /* Orange background color */
@@ -1154,8 +1155,6 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 font-size: 20px;
-position: relative;
-bottom: 100px;
 }
 .terugbuttonadmin{
   text-align: right;
@@ -1521,21 +1520,11 @@ bottom: 100px;
   .pdf-button{
     margin: 0 10px;
   }
-  .activiteitenformulieraligncenter{
-    text-align: center;
-  }
   .overzichtopmaak{
     text-align: center;
   }
   #bericht{
     height: 300px !important;
-  }
-  .contactbewerkform{
-    width: 300px !important;
-    background-color: #a3d0eb;
-    border: none;
-    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
-    outline: none;
   }
   #contacttekst{
     height: 300px !important;
@@ -1675,9 +1664,6 @@ bottom: 100px;
   .borderclass{
     border: 1px solid gold !important;
   }
-  .activiteitenformulieraligncenter{
-    text-align: center;
-  }
   .activiteitnaamnieuwstoevoegen, .datumnieuwstoevoegen, .berichtnieuwstoevoegen, .fotonieuwstoevoegen, .activiteitnaamtoevoegen, .datumtoevoegen, .berichttoevoegen, .fototoevoegen{
     width: 65% !important;
     background-color: #a3d0eb;
@@ -1688,13 +1674,6 @@ bottom: 100px;
   }
   .berichtnieuwstoevoegen{
     height: 300px !important;
-  }
-  .contactbewerkform{
-    width: 300px !important;
-    background-color: #a3d0eb;
-    border: none;
-    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
-    outline: none;
   }
   #contacttekst{
     height: 300px !important;

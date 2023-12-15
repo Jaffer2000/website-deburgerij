@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -8,9 +11,8 @@
 
 <div class="row">
 
-    <div class="jumbotron contactbackgroundimg"
-        style="background-image: url('img/');">
-        <h1 class="headertext">Nieuws bijwerken</h1>
+<div class="col-sm-12" >
+        <h1 class="headertext" style="color:black;">Nieuws bijwerken</h1>
     </div>
 
 </div>
@@ -63,7 +65,7 @@
                         <td>$titel</td>
                         <td>$datum</td>
                         <td>
-                            <a href='edit.php?id=$id'>Bewerken</a>
+                            <a href=\"index.php?pagina=nieuwsbewerken&id=$id\" data-id=\"$id\">Bewerken</a>
                         </td>
                         <td>
                             <a href=\"index.php?pagina=nieuwsverwijderen&id=$id\" data-id=\"$id\" >Verwijderen</a>

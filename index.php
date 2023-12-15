@@ -7,6 +7,9 @@ if (isset($_GET["pagina"])) {
 } else {
     $pagina = "homepage";
 }
+
+// Start de sessie
+session_start();
 ?>
 
 <head>

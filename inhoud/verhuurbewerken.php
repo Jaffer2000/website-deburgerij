@@ -1,3 +1,6 @@
+<?php
+    include("check_login.php")
+?>
 <script>
     // JavaScript function to navigate to a different page
     function adminterug() {
@@ -38,9 +41,9 @@
             $titel6 = $row['titel6'];
             $tekst6 = $row['tekst6'];
 
-            $img1 = $row['img2'];
-            $img2 = $row['img3'];
-            $img3 = $row['img4'];
+            $img1 = $row['img1'];
+            $img2 = $row['img2'];
+            $img3 = $row['img3'];
                
         }
     } else {
@@ -77,70 +80,95 @@
 
     <div class="col-sm-4"></div>
 
-    <div class="col-sm-4 opmaakcontactbewerkpagina">
+    <div class="col-sm-4">
 
-        <form action="" method="post" enctype="multipart/form-data">
+    <div class="container mt-4">
+    <div class="card">
+    <div class="card-body">
+    <form action="" method="post" enctype="multipart/form-data">
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 1 veranderen:</label> <br>
-            <input type="text" id="titel1" class="contactbewerkform" name="titel1" value=" <?php echo$titel1;  ?>" required> <br><br>
+        <!-- Section for Titel 1 -->
+        <div class="form-group">
+            <label for="titel1">Titel 1 veranderen:</label><br>
+            <input type="text" id="titel1" class="form-control" name="titel1" value="<?php echo $titel1; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 1 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst1" class="contactbewerkform" rows="4" required> <?php echo$tekst1;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="tekst1">Tekst 1 veranderen:</label><br>
+            <textarea id="contacttekst" name="tekst1" class="form-control" rows="4" required><?php echo $tekst1; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 2 veranderen:</label> <br>
-            <input type="text" id="titel2" class="contactbewerkform" name="titel2" value=" <?php echo$titel2;  ?>" required> <br><br>
+        <div class="form-group">
+            <label for="foto1">Foto 1</label><br>
+            <img src="img/<?php echo $img1; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 2 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst2" class="contactbewerkform" name="tekst2" rows="4" required> <?php echo$tekst2;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="foto1">Foto 1 veranderen:</label><br>
+            <input type="file" id="foto1" class="form-control-file verhuurfotobewerken" name="foto1"/><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 1</label> <br>
-            <img src="img/<?php echo$img1;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <!-- Section for Titel 2 -->
+        <div class="form-group">
+            <label for="titel2">Titel 2 veranderen:</label><br>
+            <input type="text" id="titel2" class="form-control" name="titel2" value="<?php echo $titel2; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 1 veranderen:</label><br>
-            <input type="file" id="foto1" class="verhuurfotobewerken" name="foto1"/> <br><br>
+        <div class="form-group">
+            <label for="tekst2">Tekst 2 veranderen:</label><br>
+            <textarea id="contacttekst" name="tekst2" class="form-control" rows="4" required><?php echo $tekst2; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 3 veranderen:</label> <br>
-            <input type="text" id="titel3" class="contactbewerkform" name="titel3" value=" <?php echo$titel3;  ?>" required> <br><br>
+        <div class="form-group">
+            <label for="foto2">Foto 2</label><br>
+            <img src="img/<?php echo $img2; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 3 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst3" class="contactbewerkform" name="contacttekst" rows="4" required> <?php echo$tekst3;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="foto2">Foto 2 veranderen:</label><br>
+            <input type="file" id="foto2" class="form-control-file verhuurfotobewerken" name="foto2"/><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 2</label> <br>
-            <img src="img/<?php echo$img2;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <!-- Section for Titel 3 -->
+        <div class="form-group">
+            <label for="titel3">Titel 3 veranderen:</label><br>
+            <input type="text" id="titel3" class="form-control" name="titel3" value="<?php echo $titel3; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 2 veranderen:</label><br>
-            <input type="file" id="foto2" class="verhuurfotobewerken" name="foto2"/> <br><br>
+        <div class="form-group">
+            <label for="tekst3">Tekst 3 veranderen:</label><br>
+            <textarea id="contacttekst" name="tekst3" class="form-control" rows="4" required><?php echo $tekst3; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 4 veranderen:</label> <br>
-            <input type="text" id="titel4" class="contactbewerkform" name="titel4" value=" <?php echo$titel4;  ?>" required> <br><br>
+        <div class="form-group">
+            <label for="foto3">Foto 3</label><br>
+            <img src="img/<?php echo $img3; ?>" alt="foto van activiteit" class="img-fluid activiteitbewerkenimg"><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">tekst 4 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst4" class="contactbewerkform" rows="4" required> <?php echo$tekst4;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="foto3">Foto 3 veranderen:</label><br>
+            <input type="file" id="foto3" class="form-control-file verhuurfotobewerken" name="foto3"/><br><br>
+        </div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 5 veranderen:</label> <br>
-            <input type="text" id="titel5" class="contactbewerkform" name="titel5" value=" <?php echo$titel5;  ?>" required> <br><br>
+        <!-- Section for Titel 4 -->
+        <div class="form-group">
+            <label for="titel4">Titel 4 veranderen:</label><br>
+            <input type="text" id="titel4" class="form-control" name="titel4" value="<?php echo $titel4; ?>" required>
+        </div>
 
-            <label class="activiteitennaamform" for="bericht">Bulletpoints veranderen:</label><br>
-            <textarea id="verhuurbulletpoints" name="bullet1" class="verhuurbulletpoints"  required> <?php echo$bullet1;?></textarea> <br><br>
-            <textarea id="verhuurbulletpoints" name="bullet2" class="verhuurbulletpoints"  required> <?php echo$bullet2;?></textarea> <br><br>
-            <textarea id="verhuurbulletpoints" name="bullet3" class="verhuurbulletpoints"  required> <?php echo$bullet3;?></textarea> <br><br>
+        <div class="form-group">
+            <label for="tekst4">Tekst 4 veranderen:</label><br>
+            <textarea id="contacttekst" name="tekst4" class="form-control" rows="4" required><?php echo $tekst4; ?></textarea>
+        </div>
 
-            <label class="activiteitennaamform" for="foto">Foto 3</label> <br>
-            <img src="img/<?php echo$img3;?>" alt="foto van activiteit" class="activiteitbewerkenimg"> <br><br>
+        <input type="hidden" name="foto1_old" value="<?php echo $img1; ?>">
+        <input type="hidden" name="foto2_old" value="<?php echo $img2; ?>">
+        <input type="hidden" name="foto3_old" value="<?php echo $img3; ?>">
 
-            <label class="activiteitennaamform" for="foto">Foto 3 veranderen:</label><br>
-            <input type="file" id="foto3" class="verhuurfotobewerken" name="foto3"/> <br><br>
+        <button class="btn btn-primary cmswijzigenknop" type="submit">Bijwerken</button>
+    </form>
+</div></div></div>
 
-            <label class="activiteitennaamform" for="activiteitnaam">Titel 6 veranderen:</label> <br>
-            <input type="text" id="titel6" class="contactbewerkform" name="titel6" value=" <?php echo$titel6;  ?>" required> <br><br>
-
-            <label class="activiteitennaamform" for="bericht">tekst 6 veranderen:</label><br>
-            <textarea id="contacttekst" name="tekst6" class="contactbewerkform" name="tekst6" rows="4" required> <?php echo$tekst6;?></textarea> <br><br>
-
-            <button class="cmswijzigenknop" type="submit">Bijwerken</button>
-        
-        
-        </form>
 
     </div>
 
@@ -151,73 +179,61 @@
 
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Update query for text fields
-    $updateTextQuery = "UPDATE verhuur SET 
-    titel1 = '" . $_POST['titel1'] . "',
-    tekst1 = '" . $_POST['tekst1'] . "',
-    titel2 = '" . $_POST['titel2'] . "',
-    tekst2 = '" . $_POST['tekst2'] . "',
-    titel3 = '" . $_POST['titel3'] . "',
-    tekst3 = '" . $_POST['tekst3'] . "',
-    titel4 = '" . $_POST['titel4'] . "',
-    tekst4 = '" . $_POST['tekst4'] . "',
-    titel5 = '" . $_POST['titel5'] . "',
-    bullet1 = '" . $_POST['bullet1'] . "',
-    bullet2 = '" . $_POST['bullet2'] . "',
-    bullet3 = '" . $_POST['bullet3'] . "',
-    titel6 = '" . $_POST['titel6'] . "',
-    tekst6 = '" . $_POST['tekst6'] . "'
-    WHERE id = $id";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verwerk de formuliergegevens
+    // Verwerk de formuliergegevens
+$titel1 = $_POST['titel1'];
+$tekst1 = $_POST['tekst1'];
+$titel2 = $_POST['titel2'];
+$tekst2 = $_POST['tekst2'];
+$titel3 = $_POST['titel3'];
+$tekst3 = $_POST['tekst3'];
+$titel4 = $_POST['titel4'];
+$tekst4 = $_POST['tekst4'];
+$titel5 = $_POST['titel5'];
+$bullet1 = $_POST['bullet1'];
+$bullet2 = $_POST['bullet2'];
+$bullet3 = $_POST['bullet3'];
+$tekst6 = $_POST['tekst6'];
 
-    if ($conn->query($updateTextQuery) === TRUE) {
-    // Text fields updated successfully
 
-    // Now, let's handle the image uploads
-    $targetDir = "img/";
+    // Update query
+    $update_query = "UPDATE verhuur SET 
+    titel1 = '$titel1', tekst1 = '$tekst1',
+    titel2 = '$titel2', tekst2 = '$tekst2',
+    titel3 = '$titel3', tekst3 = '$tekst3',
+    titel4 = '$titel4', tekst4 = '$tekst4',
+    titel5 = '$titel5', bullet1 = '$bullet1', bullet2 = '$bullet2', bullet3 = '$bullet3',
+    tekst6 = '$tekst6'";
 
-    // Update this based on your actual field names for the images
-    $img1Field = 'foto1';
-    $img2Field = 'foto2';
-    $img3Field = 'foto3';
 
-    // Update Image 1
-    if ($_FILES[$img1Field]['name'] != "") {
-        $img1FileName = basename($_FILES[$img1Field]['name']);
-        $targetFilePath1 = $targetDir . $img1FileName;
-        move_uploaded_file($_FILES[$img1Field]['tmp_name'], $targetFilePath1);
+    // Loop through each photo and handle it
+    for ($i = 1; $i <= 3; $i++) { // Verander naar 3 omdat je maar 3 foto's hebt
+        $foto_old = $_POST["foto{$i}_old"];
 
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto1 = '$img1FileName' WHERE id = $id");
+        // Optioneel: Verwerk het uploaden van de nieuwe foto
+        if ($_FILES["foto{$i}"]['size'] > 0) {
+            $foto_naam = $_FILES["foto{$i}"]['name'];
+            $foto_tmp = $_FILES["foto{$i}"]['tmp_name'];
+            move_uploaded_file($foto_tmp, "img/" . $foto_naam);
+
+            // Voeg de foto-naam toe aan de update query
+            $update_query .= ", img{$i} = '$foto_naam'";
+        } else {
+            // Geen nieuwe foto geüpload, behoud de oude foto-naam
+            $update_query .= ", img{$i} = '$foto_old'";
+        }
     }
 
-    // Update Image 2
-    if ($_FILES[$img2Field]['name'] != "") {
-        $img2FileName = basename($_FILES[$img2Field]['name']);
-        $targetFilePath2 = $targetDir . $img2FileName;
-        move_uploaded_file($_FILES[$img2Field]['tmp_name'], $targetFilePath2);
+    $update_query .= " WHERE id = $id";
 
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto2 = '$img2FileName' WHERE id = $id");
-    }
-
-    // Update Image 3
-    if ($_FILES[$img3Field]['name'] != "") {
-        $img3FileName = basename($_FILES[$img3Field]['name']);
-        $targetFilePath3 = $targetDir . $img3FileName;
-        move_uploaded_file($_FILES[$img3Field]['tmp_name'], $targetFilePath3);
-
-        // Update the database with the new image filename
-        $conn->query("UPDATE activiteiten SET foto3 = '$img3FileName' WHERE id = $id");
-    }
-
-    echo "Records updated successfully";
+    // Update query uitvoeren
+    if ($conn->query($update_query) === TRUE) {
+        echo "<script>alert(\"De pagina is succesvol bijgewerkt!\")</script>";
     } else {
-        echo "Error updating records: " . $conn->error;
+        echo "Fout, pagina niet kunnen bijwerken: " . $conn->error;
     }
-
-    // Close the database connection
-    $conn->close();
 }
+
 
 ?>

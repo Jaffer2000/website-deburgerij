@@ -12,7 +12,7 @@ $query = "SELECT id, titel, tekst, foto, date_added FROM actueel";
 $result = $conn->query($query);
 ?>
 
-<div class="jumbotron jumbotron-img-agenda">
+<div class="jumbotron jumbotron-img-agenda contactbackgroundimg">
     <img src="img/actueel headere.png" alt="Jumbotron Image" class="img-fluid">
     <div class="jumbotron-content">
         <h1>Actueel</h1>
